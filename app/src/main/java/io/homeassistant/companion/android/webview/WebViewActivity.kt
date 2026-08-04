@@ -1520,9 +1520,9 @@ class WebViewActivity : BaseActivity(), io.homeassistant.companion.android.webvi
         }
     }
 
-    override fun dispatchKeyEvent(event: KeyEvent?): Boolean {
+    override fun dispatchKeyEvent(event: KeyEvent): Boolean {
         // Temporary workaround to sideload on Android TV and use a remote for basic navigation in WebView
-        if (event?.keyCode == KeyEvent.KEYCODE_DPAD_DOWN && event.action == KeyEvent.ACTION_DOWN) {
+        if (event.keyCode == KeyEvent.KEYCODE_DPAD_DOWN && event.action == KeyEvent.ACTION_DOWN) {
             dispatchKeyEvent(KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_TAB))
             return true
         }
@@ -1587,10 +1587,10 @@ class WebViewActivity : BaseActivity(), io.homeassistant.companion.android.webvi
         }
     }
 
-    override fun onNewIntent(intent: Intent?) {
+    override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
         this.intent = intent
-        if (intent?.extras?.containsKey(EXTRA_SERVER) == true) {
+        if (intent.extras?.containsKey(EXTRA_SERVER) == true) {
             intent.extras?.getInt(EXTRA_SERVER)?.let {
                 presenter.setActiveServer(it)
                 intent.removeExtra(EXTRA_SERVER)

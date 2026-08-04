@@ -7,6 +7,7 @@ google-services.json
 .idea/
 .gradle/
 build/
+.compose-preview-history/
 *.keystore
 
 version.txt

@@ -5,9 +5,17 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.kapt)
     alias(libs.plugins.kotlin.parcelize)
+    alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.firebase.appdistribution)
     alias(libs.plugins.google.services)
     alias(libs.plugins.hilt)
+    alias(libs.plugins.compose.ai.preview)
+}
+
+// Renders the full-flavor phone/tablet @Preview functions used by catalog.spec.json.
+composePreview {
+    variant.set("fullDebug")
+    sdkVersion.set(35)
 }
 
 android {
@@ -40,10 +48,6 @@ android {
     buildFeatures {
         viewBinding = true
         compose = true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
     }
 
     kotlinOptions {
@@ -168,7 +172,6 @@ dependencies {
 
     implementation(platform(libs.compose.bom))
     implementation(libs.compose.animation)
-    implementation(libs.compose.compiler)
     implementation(libs.compose.foundation)
     implementation(libs.compose.material)
     implementation(libs.compose.material.icons.core)
@@ -176,6 +179,7 @@ dependencies {
     implementation(libs.compose.runtime)
     implementation(libs.compose.ui)
     implementation(libs.compose.uiTooling)
+    implementation(libs.compose.uiTooling.preview)
     implementation(libs.activity.compose)
     implementation(libs.navigation.compose)
     implementation(libs.accompanist.systemuicontroller)

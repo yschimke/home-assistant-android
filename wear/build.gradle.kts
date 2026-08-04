@@ -2,8 +2,16 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.hilt)
     alias(libs.plugins.google.services)
+    alias(libs.plugins.compose.ai.preview)
+}
+
+// Renders the Wear OS @Preview functions used by catalog.wear.spec.json.
+composePreview {
+    variant.set("debug")
+    sdkVersion.set(35)
 }
 
 android {
@@ -24,10 +32,6 @@ android {
     buildFeatures {
         viewBinding = true
         compose = true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
     }
 
     signingConfigs {
@@ -101,12 +105,12 @@ dependencies {
 
     implementation(libs.activity.ktx)
     implementation(libs.activity.compose)
-    implementation(libs.compose.compiler)
     implementation(platform(libs.compose.bom))
     implementation(libs.compose.foundation)
     implementation(libs.compose.material.icons.core)
     implementation(libs.compose.material.icons.extended)
     implementation(libs.compose.uiTooling)
+    implementation(libs.compose.uiTooling.preview)
     implementation(libs.wear.compose.foundation)
     implementation(libs.wear.compose.material)
     implementation(libs.wear.compose.navigation)
@@ -128,6 +132,6 @@ dependencies {
 // https://github.com/google/guava/releases/tag/v32.1.0: Reporting dependencies that overlap with Guava
 configurations.all {
     resolutionStrategy.capabilitiesResolution.withCapability("com.google.guava:listenablefuture") {
-        select("com.google.guava:guava:0")
+        select("com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava")
     }
 }

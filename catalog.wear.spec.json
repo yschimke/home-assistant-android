@@ -1,0 +1,206 @@
+{
+  "$schema": "https://raw.githubusercontent.com/yschimke/compose-ai-tools/main/scripts/design-artifacts/catalog.spec.schema.json",
+  "$comment": "Home Assistant Companion Wear OS catalog rendered from :wear. The authored previews pin Wear device canvases and deterministic fixture state; synthetic Hilt Activity captures are intentionally not catalog entries.",
+  "system": "home-assistant-wear",
+  "title": "Home Assistant Companion for Wear OS",
+  "library": [
+    "Wear Compose Material + Home Assistant surfaces"
+  ],
+  "module": ":wear",
+  "modes": [
+    "dark"
+  ],
+  "breakpoints": [
+    {
+      "size": "wear",
+      "widthDp": 227
+    }
+  ],
+  "display": {
+    "surface": "dark",
+    "hero": "Home/Entity list"
+  },
+  "groupOrder": [
+    "Home",
+    "Entities",
+    "Tiles",
+    "Sensors",
+    "Settings",
+    "Onboarding",
+    "Components"
+  ],
+  "groups": [
+    {
+      "name": "Home",
+      "section": "Screens",
+      "components": [
+        {
+          "componentId": "Home/Entity list",
+          "preview": "PreviewEntityListView",
+          "caption": "A Wear entity list with mixed on/off state.",
+          "variants": [
+            {
+              "preview": "PreviewEntityListScenes",
+              "caption": "Scene entities use action rows instead of switches.",
+              "state": "scenes"
+            },
+            {
+              "preview": "PreviewEntityListEmpty",
+              "caption": "Empty entity list.",
+              "state": "empty"
+            }
+          ]
+        },
+        {
+          "componentId": "Home/Sensors",
+          "preview": "PreviewSensorsView",
+          "caption": "Wear sensor overview screen."
+        },
+        {
+          "componentId": "Home/Conversation",
+          "preview": "PreviewSpeechBubble",
+          "caption": "Assist request and response bubbles on the small round canvas."
+        }
+      ]
+    },
+    {
+      "name": "Entities",
+      "section": "Components",
+      "components": [
+        {
+          "componentId": "Entities/Row",
+          "preview": "PreviewEntityUI",
+          "caption": "Standard entity row used in Wear lists."
+        },
+        {
+          "componentId": "Entities/Detail panel",
+          "preview": "PreviewDetailsPaneViewEntityLightOn",
+          "caption": "Light detail controls with brightness state.",
+          "variants": [
+            {
+              "preview": "PreviewDetailsPaneViewEntityLightOff",
+              "caption": "Light controls in the off state.",
+              "state": "off"
+            },
+            {
+              "preview": "PreviewDetailsPaneViewEntityFanOn",
+              "caption": "Fan detail controls.",
+              "state": "fan-on"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tiles",
+      "section": "Screens",
+      "components": [
+        {
+          "componentId": "Tiles/Shortcut selection",
+          "preview": "PreviewSelectShortcutsTileView",
+          "caption": "Shortcut tile selection with available entities.",
+          "variants": [
+            {
+              "preview": "PreviewSelectShortcutsTileEmptyView",
+              "caption": "No shortcuts available.",
+              "state": "empty"
+            }
+          ]
+        },
+        {
+          "componentId": "Tiles/Shortcut order",
+          "preview": "PreviewSetTileShortcutsView",
+          "caption": "Selected tile shortcuts and ordering."
+        },
+        {
+          "componentId": "Tiles/Camera selection",
+          "preview": "PreviewSelectCameraTileViewOne",
+          "caption": "Camera tile selection with one camera.",
+          "variants": [
+            {
+              "preview": "PreviewSelectCameraTileViewEmpty",
+              "caption": "No cameras available.",
+              "state": "empty"
+            }
+          ]
+        },
+        {
+          "componentId": "Tiles/Template settings",
+          "preview": "PreviewTemplateTileSettingView",
+          "caption": "Template tile configuration."
+        },
+        {
+          "componentId": "Tiles/Refresh interval",
+          "preview": "PreviewRefreshIntervalPickerView",
+          "caption": "Refresh interval picker for tile data."
+        }
+      ]
+    },
+    {
+      "name": "Sensors",
+      "section": "Components",
+      "components": [
+        {
+          "componentId": "Sensors/Manager row",
+          "preview": "PreviewSensorManagerUI",
+          "caption": "Sensor manager row with enabled state."
+        },
+        {
+          "componentId": "Sensors/Sensor row",
+          "preview": "PreviewSensorUI",
+          "caption": "Individual Wear sensor row."
+        }
+      ]
+    },
+    {
+      "name": "Settings",
+      "section": "Screens",
+      "components": [
+        {
+          "componentId": "Settings/Favorites",
+          "preview": "PreviewSettingsView",
+          "caption": "Wear favorites and visibility settings."
+        },
+        {
+          "componentId": "Settings/Complication",
+          "preview": "PreviewMainConfigView",
+          "caption": "Complication configuration landing screen."
+        }
+      ]
+    },
+    {
+      "name": "Onboarding",
+      "section": "Screens",
+      "components": [
+        {
+          "componentId": "Onboarding/Install phone app",
+          "preview": "PhoneInstallViewPreview",
+          "caption": "Prompt to install Home Assistant on the paired phone."
+        }
+      ]
+    },
+    {
+      "name": "Components",
+      "section": "Components",
+      "components": [
+        {
+          "componentId": "Components/List header",
+          "preview": "PreviewListHeader",
+          "caption": "Standard heading for a Wear list.",
+          "variants": [
+            {
+              "preview": "PreviewExpandableListHeader",
+              "caption": "Expandable list heading with disclosure affordance.",
+              "state": "expandable"
+            }
+          ]
+        },
+        {
+          "componentId": "Components/Time text",
+          "preview": "PreviewTimeText",
+          "caption": "Time label positioned for a large round device."
+        }
+      ]
+    }
+  ]
+}

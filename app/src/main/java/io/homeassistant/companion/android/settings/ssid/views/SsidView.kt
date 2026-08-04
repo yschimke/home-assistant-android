@@ -164,7 +164,7 @@ fun SsidView(
                 modifier = Modifier
                     .heightIn(min = 56.dp)
                     .padding(horizontal = 16.dp, vertical = 8.dp)
-                    .animateItemPlacement(),
+                    .animateItem(),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Icon(

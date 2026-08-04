@@ -1,0 +1,124 @@
+{
+  "$schema": "https://raw.githubusercontent.com/yschimke/compose-ai-tools/main/scripts/design-artifacts/catalog.spec.schema.json",
+  "$comment": "Home Assistant Companion phone/tablet catalog rendered from the fullDebug variant of :app. The catalog intentionally uses deterministic, state-hoisted @Preview functions rather than the renderer's synthetic Activity entries: the real activities depend on the Hilt Application and runtime server state, while these previews render without secrets or a Home Assistant instance.",
+  "system": "home-assistant-android",
+  "title": "Home Assistant Companion",
+  "library": [
+    "Jetpack Compose Material + Home Assistant theme"
+  ],
+  "module": ":app",
+  "modes": [
+    "light",
+    "dark"
+  ],
+  "breakpoints": [
+    {
+      "size": "compact",
+      "widthDp": 400
+    },
+    {
+      "size": "medium",
+      "widthDp": 700
+    }
+  ],
+  "display": {
+    "surface": "dark",
+    "hero": "Onboarding/Welcome"
+  },
+  "groupOrder": [
+    "Onboarding",
+    "Settings",
+    "Components"
+  ],
+  "groups": [
+    {
+      "name": "Onboarding",
+      "section": "Screens",
+      "components": [
+        {
+          "componentId": "Onboarding/Welcome",
+          "preview": "PreviewWelcome",
+          "caption": "The first-run Home Assistant Companion welcome screen, including its light and night-mode preview annotations and the system chrome used by the real activity."
+        },
+        {
+          "componentId": "Onboarding/Notification permission",
+          "preview": "NotificationPermissionViewPreview",
+          "caption": "The notification-permission education screen shown during onboarding."
+        },
+        {
+          "componentId": "Onboarding/Matter commissioning",
+          "preview": "PreviewMatterCommissioningView",
+          "caption": "Matter commissioning across the flow states supplied by MatterCommissioningViewPreviewStates."
+        }
+      ]
+    },
+    {
+      "name": "Settings",
+      "section": "Screens",
+      "components": [
+        {
+          "componentId": "Settings/Wi-Fi SSIDs",
+          "preview": "PreviewSsidViewItems",
+          "caption": "Wi-Fi SSID management with saved networks and connection state.",
+          "variants": [
+            {
+              "preview": "PreviewSsidViewEmpty",
+              "caption": "Empty state before any SSIDs are saved.",
+              "state": "empty"
+            }
+          ]
+        },
+        {
+          "componentId": "Settings/External URL",
+          "preview": "PreviewExternalUrlViewCloudOn",
+          "caption": "External connection settings when Home Assistant Cloud is connected.",
+          "variants": [
+            {
+              "preview": "PreviewExternalUrlViewCloudOff",
+              "caption": "Cloud is configured but disconnected.",
+              "state": "cloud-off"
+            },
+            {
+              "preview": "PreviewExternalUrlViewCloudNone",
+              "caption": "No cloud connection is configured.",
+              "state": "cloud-unavailable"
+            }
+          ]
+        },
+        {
+          "componentId": "Settings/Notification detail",
+          "preview": "PreviewNotificationDetails",
+          "caption": "Notification detail controls and explanatory content."
+        },
+        {
+          "componentId": "Settings/Wear companion",
+          "preview": "PreviewSettingWearLandingView",
+          "caption": "Phone-side landing screen for configuring a paired Wear OS companion."
+        }
+      ]
+    },
+    {
+      "name": "Components",
+      "section": "Components",
+      "components": [
+        {
+          "componentId": "Components/Icon dialog",
+          "preview": "IconDialogPreview",
+          "caption": "The icon picker dialog shell with search and results content.",
+          "variants": [
+            {
+              "preview": "IconDialogSearchPreview",
+              "caption": "Search-field component used by the icon picker.",
+              "state": "search"
+            },
+            {
+              "preview": "IconDialogGridPreview",
+              "caption": "Scrollable icon result grid.",
+              "state": "results"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
