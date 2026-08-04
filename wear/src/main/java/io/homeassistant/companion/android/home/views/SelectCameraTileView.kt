@@ -53,7 +53,7 @@ fun SelectCameraTileView(
     }
 }
 
-@Preview(device = WearDevices.LARGE_ROUND)
+@Preview(device = WearDevices.LARGE_ROUND, showBackground = true, backgroundColor = 0xFF000000)
 @Composable
 private fun PreviewSelectCameraTileViewOne() {
     SelectCameraTileView(
@@ -64,7 +64,7 @@ private fun PreviewSelectCameraTileViewOne() {
     )
 }
 
-@Preview(device = WearDevices.LARGE_ROUND)
+@Preview(device = WearDevices.LARGE_ROUND, showBackground = true, backgroundColor = 0xFF000000)
 @Composable
 private fun PreviewSelectCameraTileViewEmpty() {
     SelectCameraTileView(tiles = emptyList(), onSelectTile = {})

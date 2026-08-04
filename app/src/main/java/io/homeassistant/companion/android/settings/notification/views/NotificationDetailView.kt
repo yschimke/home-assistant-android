@@ -85,7 +85,7 @@ fun NotificationDetailViewHeader(
     )
 }
 
-@Preview
+@Preview(showBackground = true, backgroundColor = 0xFFFFFFFF)
 @Composable
 private fun PreviewNotificationDetails() {
     LoadNotification(notification = notificationItem)

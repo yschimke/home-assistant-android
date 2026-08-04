@@ -18,7 +18,6 @@ import androidx.wear.compose.material3.LocalContentColor
 import androidx.wear.compose.material3.LocalTextStyle
 import androidx.wear.compose.material3.MaterialTheme
 import androidx.wear.compose.material3.Text
-import androidx.wear.tooling.preview.devices.WearDevices
 import com.mikepenz.iconics.compose.Image
 import io.homeassistant.companion.android.common.data.integration.Entity
 import io.homeassistant.companion.android.common.data.integration.EntityExt
@@ -26,6 +25,7 @@ import io.homeassistant.companion.android.common.data.integration.domain
 import io.homeassistant.companion.android.common.data.integration.getIcon
 import io.homeassistant.companion.android.common.data.integration.isActive
 import io.homeassistant.companion.android.common.util.STATE_UNAVAILABLE
+import io.homeassistant.companion.android.theme.WearAppTheme
 import io.homeassistant.companion.android.theme.getFilledTonalButtonColors
 import io.homeassistant.companion.android.theme.wearColorScheme
 import io.homeassistant.companion.android.util.ToggleSwitch
@@ -129,30 +129,32 @@ fun EntityUi(
     }
 }
 
-@Preview(device = WearDevices.LARGE_ROUND)
+@Preview(showBackground = true, backgroundColor = 0xFF000000)
 @Composable
 private fun PreviewEntityUI() {
-    Column {
-        EntityUi(
-            entity = previewEntity1,
-            onEntityClicked = { _, _ -> },
-            isHapticEnabled = true,
-            isToastEnabled = false,
-            onEntityLongPressed = { }
-        )
-        EntityUi(
-            entity = previewEntity3,
-            onEntityClicked = { _, _ -> },
-            isHapticEnabled = false,
-            isToastEnabled = true,
-            onEntityLongPressed = { }
-        )
-        EntityUi(
-            entity = previewEntity4,
-            onEntityClicked = { _, _ -> },
-            isHapticEnabled = false,
-            isToastEnabled = true,
-            onEntityLongPressed = { }
-        )
+    WearAppTheme {
+        Column {
+            EntityUi(
+                entity = previewEntity1,
+                onEntityClicked = { _, _ -> },
+                isHapticEnabled = true,
+                isToastEnabled = false,
+                onEntityLongPressed = { }
+            )
+            EntityUi(
+                entity = previewEntity3,
+                onEntityClicked = { _, _ -> },
+                isHapticEnabled = false,
+                isToastEnabled = true,
+                onEntityLongPressed = { }
+            )
+            EntityUi(
+                entity = previewEntity4,
+                onEntityClicked = { _, _ -> },
+                isHapticEnabled = false,
+                isToastEnabled = true,
+                onEntityLongPressed = { }
+            )
+        }
     }
 }

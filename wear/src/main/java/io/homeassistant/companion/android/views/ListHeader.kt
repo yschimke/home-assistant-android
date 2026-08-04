@@ -39,7 +39,7 @@ fun ListHeader(string: String, modifier: Modifier = Modifier) {
     }
 }
 
-@Preview
+@Preview(showBackground = true, backgroundColor = 0xFF000000)
 @Composable
 private fun PreviewListHeader() {
     ListHeader(

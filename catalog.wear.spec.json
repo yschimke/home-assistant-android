@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/yschimke/compose-ai-tools/main/scripts/design-artifacts/catalog.spec.schema.json",
-  "$comment": "Home Assistant Companion Wear OS catalog rendered from :wear. The authored previews pin Wear device canvases and deterministic fixture state; synthetic Hilt Activity captures are intentionally not catalog entries.",
+  "$comment": "Home Assistant Companion Wear OS catalog rendered from :wear. Complete destinations and device-bound chrome use explicit Wear device canvases; isolated rows, bubbles, and headers remain wrap-content component previews. Synthetic Hilt Activity captures are intentionally not catalog entries.",
   "system": "home-assistant-wear",
   "title": "Home Assistant Companion for Wear OS",
   "library": [
@@ -12,7 +12,13 @@
   ],
   "breakpoints": [
     {
-      "size": "wear",
+      "size": "smallRound",
+      "device": "id:wearos_small_round",
+      "widthDp": 192
+    },
+    {
+      "size": "largeRound",
+      "device": "id:wearos_large_round",
       "widthDp": 227
     }
   ],
@@ -22,12 +28,16 @@
   },
   "groupOrder": [
     "Home",
-    "Entities",
+    "Entity details",
     "Tiles",
-    "Sensors",
+    "Sensor management",
     "Settings",
     "Onboarding",
-    "Components"
+    "Conversation",
+    "Entity rows",
+    "Sensor rows",
+    "List structure",
+    "Device chrome"
   ],
   "groups": [
     {
@@ -37,7 +47,7 @@
         {
           "componentId": "Home/Entity list",
           "preview": "PreviewEntityListView",
-          "caption": "A Wear entity list with mixed on/off state.",
+          "caption": "Large-round Wear destination with mixed on/off entities.",
           "variants": [
             {
               "preview": "PreviewEntityListScenes",
@@ -54,28 +64,18 @@
         {
           "componentId": "Home/Sensors",
           "preview": "PreviewSensorsView",
-          "caption": "Wear sensor overview screen."
-        },
-        {
-          "componentId": "Home/Conversation",
-          "preview": "PreviewSpeechBubble",
-          "caption": "Assist request and response bubbles on the small round canvas."
+          "caption": "Large-round Wear sensor overview destination."
         }
       ]
     },
     {
-      "name": "Entities",
-      "section": "Components",
+      "name": "Entity details",
+      "section": "Screens",
       "components": [
-        {
-          "componentId": "Entities/Row",
-          "preview": "PreviewEntityUI",
-          "caption": "Standard entity row used in Wear lists."
-        },
         {
           "componentId": "Entities/Detail panel",
           "preview": "PreviewDetailsPaneViewEntityLightOn",
-          "caption": "Light detail controls with brightness state.",
+          "caption": "Large-round light detail destination with brightness state.",
           "variants": [
             {
               "preview": "PreviewDetailsPaneViewEntityLightOff",
@@ -98,7 +98,7 @@
         {
           "componentId": "Tiles/Shortcut selection",
           "preview": "PreviewSelectShortcutsTileView",
-          "caption": "Shortcut tile selection with available entities.",
+          "caption": "Large-round shortcut tile selection destination.",
           "variants": [
             {
               "preview": "PreviewSelectShortcutsTileEmptyView",
@@ -110,12 +110,12 @@
         {
           "componentId": "Tiles/Shortcut order",
           "preview": "PreviewSetTileShortcutsView",
-          "caption": "Selected tile shortcuts and ordering."
+          "caption": "Large-round selected shortcut ordering destination."
         },
         {
           "componentId": "Tiles/Camera selection",
           "preview": "PreviewSelectCameraTileViewOne",
-          "caption": "Camera tile selection with one camera.",
+          "caption": "Large-round camera tile selection destination.",
           "variants": [
             {
               "preview": "PreviewSelectCameraTileViewEmpty",
@@ -127,28 +127,23 @@
         {
           "componentId": "Tiles/Template settings",
           "preview": "PreviewTemplateTileSettingView",
-          "caption": "Template tile configuration."
+          "caption": "Large-round template tile configuration destination."
         },
         {
           "componentId": "Tiles/Refresh interval",
           "preview": "PreviewRefreshIntervalPickerView",
-          "caption": "Refresh interval picker for tile data."
+          "caption": "Large-round refresh interval picker destination."
         }
       ]
     },
     {
-      "name": "Sensors",
-      "section": "Components",
+      "name": "Sensor management",
+      "section": "Screens",
       "components": [
         {
-          "componentId": "Sensors/Manager row",
+          "componentId": "Sensors/Manager",
           "preview": "PreviewSensorManagerUI",
-          "caption": "Sensor manager row with enabled state."
-        },
-        {
-          "componentId": "Sensors/Sensor row",
-          "preview": "PreviewSensorUI",
-          "caption": "Individual Wear sensor row."
+          "caption": "Large-round sensor manager destination with header and toggle rows."
         }
       ]
     },
@@ -159,12 +154,12 @@
         {
           "componentId": "Settings/Favorites",
           "preview": "PreviewSettingsView",
-          "caption": "Wear favorites and visibility settings."
+          "caption": "Large-round favorites and visibility settings destination."
         },
         {
           "componentId": "Settings/Complication",
           "preview": "PreviewMainConfigView",
-          "caption": "Complication configuration landing screen."
+          "caption": "Large-round complication configuration destination."
         }
       ]
     },
@@ -175,18 +170,51 @@
         {
           "componentId": "Onboarding/Install phone app",
           "preview": "PhoneInstallViewPreview",
-          "caption": "Prompt to install Home Assistant on the paired phone."
+          "caption": "Large-round prompt to install Home Assistant on the paired phone."
         }
       ]
     },
     {
-      "name": "Components",
+      "name": "Conversation",
+      "section": "Components",
+      "components": [
+        {
+          "componentId": "Conversation/Speech bubbles",
+          "preview": "PreviewSpeechBubble",
+          "caption": "Wrap-content Assist request and response bubble components."
+        }
+      ]
+    },
+    {
+      "name": "Entity rows",
+      "section": "Components",
+      "components": [
+        {
+          "componentId": "Entities/Rows",
+          "preview": "PreviewEntityUI",
+          "caption": "Wrap-content entity toggle and action row components."
+        }
+      ]
+    },
+    {
+      "name": "Sensor rows",
+      "section": "Components",
+      "components": [
+        {
+          "componentId": "Sensors/Rows",
+          "preview": "PreviewSensorUI",
+          "caption": "Wrap-content enabled, charging, and default sensor toggle rows."
+        }
+      ]
+    },
+    {
+      "name": "List structure",
       "section": "Components",
       "components": [
         {
           "componentId": "Components/List header",
           "preview": "PreviewListHeader",
-          "caption": "Standard heading for a Wear list.",
+          "caption": "Wrap-content heading for a Wear list.",
           "variants": [
             {
               "preview": "PreviewExpandableListHeader",
@@ -194,11 +222,17 @@
               "state": "expandable"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "name": "Device chrome",
+      "section": "Components",
+      "components": [
         {
           "componentId": "Components/Time text",
           "preview": "PreviewTimeText",
-          "caption": "Time label positioned for a large round device."
+          "caption": "Device-bound time label whose placement is evaluated on a large-round canvas."
         }
       ]
     }

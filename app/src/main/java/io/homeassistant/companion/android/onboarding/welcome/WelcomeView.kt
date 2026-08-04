@@ -100,8 +100,8 @@ fun WelcomeView(
 }
 
 @Composable
-@Preview(showSystemUi = true)
-@Preview(showSystemUi = true, uiMode = UI_MODE_NIGHT_YES)
+@Preview(showSystemUi = true, showBackground = true, backgroundColor = 0xFFFFFFFF)
+@Preview(showSystemUi = true, showBackground = true, backgroundColor = 0xFF121212, uiMode = UI_MODE_NIGHT_YES)
 private fun PreviewWelcome() {
     MdcTheme {
         WelcomeView(onContinue = {})

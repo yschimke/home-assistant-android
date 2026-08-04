@@ -77,7 +77,7 @@ fun <K> ExpandableListHeader(
     )
 }
 
-@Preview
+@Preview(showBackground = true, backgroundColor = 0xFF000000)
 @Composable
 private fun PreviewExpandableListHeader() {
     ExpandableListHeader(

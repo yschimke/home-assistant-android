@@ -65,7 +65,7 @@ fun TemplateTileSettingsView(
     }
 }
 
-@Preview(device = WearDevices.LARGE_ROUND)
+@Preview(device = WearDevices.LARGE_ROUND, showBackground = true, backgroundColor = 0xFF000000)
 @Composable
 private fun PreviewTemplateTileSettingView() {
     CompositionLocalProvider {

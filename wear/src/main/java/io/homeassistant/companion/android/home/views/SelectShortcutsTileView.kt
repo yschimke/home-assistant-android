@@ -84,7 +84,7 @@ fun SelectShortcutsTileView(
     }
 }
 
-@Preview(device = WearDevices.LARGE_ROUND)
+@Preview(device = WearDevices.LARGE_ROUND, showBackground = true, backgroundColor = 0xFF000000)
 @Composable
 private fun PreviewSelectShortcutsTileView() {
     SelectShortcutsTileView(
@@ -99,7 +99,7 @@ private fun PreviewSelectShortcutsTileView() {
     )
 }
 
-@Preview(device = WearDevices.LARGE_ROUND)
+@Preview(device = WearDevices.LARGE_ROUND, showBackground = true, backgroundColor = 0xFF000000)
 @Composable
 private fun PreviewSelectShortcutsTileEmptyView() {
     SelectShortcutsTileView(

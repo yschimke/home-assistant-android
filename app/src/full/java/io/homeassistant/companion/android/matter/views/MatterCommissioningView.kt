@@ -212,7 +212,7 @@ fun MatterCommissioningViewHeader() {
     }
 }
 
-@Preview
+@Preview(showBackground = true, backgroundColor = 0xFFFFFFFF)
 @Composable
 fun PreviewMatterCommissioningView(
     @PreviewParameter(MatterCommissioningViewPreviewStates::class) step: CommissioningFlowStep

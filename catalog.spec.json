@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/yschimke/compose-ai-tools/main/scripts/design-artifacts/catalog.spec.schema.json",
-  "$comment": "Home Assistant Companion phone/tablet catalog rendered from the fullDebug variant of :app. The catalog intentionally uses deterministic, state-hoisted @Preview functions rather than the renderer's synthetic Activity entries: the real activities depend on the Hilt Application and runtime server state, while these previews render without secrets or a Home Assistant instance.",
+  "$comment": "Home Assistant Companion phone/tablet catalog rendered from the fullDebug variant of :app. Full destinations use device-sized previews; state-hoisted settings bodies and dialogs remain wrap-content component previews. Synthetic Hilt Activity entries are intentionally excluded.",
   "system": "home-assistant-android",
   "title": "Home Assistant Companion",
   "library": [
@@ -22,13 +22,15 @@
     }
   ],
   "display": {
-    "surface": "dark",
+    "surface": "light",
     "hero": "Onboarding/Welcome"
   },
   "groupOrder": [
     "Onboarding",
-    "Settings",
-    "Components"
+    "Wear settings",
+    "Commissioning",
+    "Settings content",
+    "Dialogs"
   ],
   "groups": [
     {
@@ -38,28 +40,45 @@
         {
           "componentId": "Onboarding/Welcome",
           "preview": "PreviewWelcome",
-          "caption": "The first-run Home Assistant Companion welcome screen, including its light and night-mode preview annotations and the system chrome used by the real activity."
+          "caption": "Full compact-device welcome destination with system chrome and light/dark annotations."
         },
         {
           "componentId": "Onboarding/Notification permission",
           "preview": "NotificationPermissionViewPreview",
-          "caption": "The notification-permission education screen shown during onboarding."
-        },
-        {
-          "componentId": "Onboarding/Matter commissioning",
-          "preview": "PreviewMatterCommissioningView",
-          "caption": "Matter commissioning across the flow states supplied by MatterCommissioningViewPreviewStates."
+          "caption": "Full compact-device notification-permission education destination."
         }
       ]
     },
     {
-      "name": "Settings",
+      "name": "Wear settings",
       "section": "Screens",
+      "components": [
+        {
+          "componentId": "Settings/Wear companion",
+          "preview": "PreviewSettingWearLandingView",
+          "caption": "Full compact-device destination for configuring a paired Wear OS companion."
+        }
+      ]
+    },
+    {
+      "name": "Commissioning",
+      "section": "Components",
+      "components": [
+        {
+          "componentId": "Onboarding/Matter commissioning",
+          "preview": "PreviewMatterCommissioningView",
+          "caption": "Wrap-content Matter commissioning panel across the states supplied by MatterCommissioningViewPreviewStates."
+        }
+      ]
+    },
+    {
+      "name": "Settings content",
+      "section": "Components",
       "components": [
         {
           "componentId": "Settings/Wi-Fi SSIDs",
           "preview": "PreviewSsidViewItems",
-          "caption": "Wi-Fi SSID management with saved networks and connection state.",
+          "caption": "Wrap-content Wi-Fi settings body with saved networks and connection state.",
           "variants": [
             {
               "preview": "PreviewSsidViewEmpty",
@@ -71,7 +90,7 @@
         {
           "componentId": "Settings/External URL",
           "preview": "PreviewExternalUrlViewCloudOn",
-          "caption": "External connection settings when Home Assistant Cloud is connected.",
+          "caption": "Wrap-content external connection settings body with Home Assistant Cloud connected.",
           "variants": [
             {
               "preview": "PreviewExternalUrlViewCloudOff",
@@ -88,23 +107,18 @@
         {
           "componentId": "Settings/Notification detail",
           "preview": "PreviewNotificationDetails",
-          "caption": "Notification detail controls and explanatory content."
-        },
-        {
-          "componentId": "Settings/Wear companion",
-          "preview": "PreviewSettingWearLandingView",
-          "caption": "Phone-side landing screen for configuring a paired Wear OS companion."
+          "caption": "Wrap-content notification detail controls and explanatory content."
         }
       ]
     },
     {
-      "name": "Components",
+      "name": "Dialogs",
       "section": "Components",
       "components": [
         {
           "componentId": "Components/Icon dialog",
           "preview": "IconDialogPreview",
-          "caption": "The icon picker dialog shell with search and results content.",
+          "caption": "Icon picker dialog shell with search and result content.",
           "variants": [
             {
               "preview": "IconDialogSearchPreview",

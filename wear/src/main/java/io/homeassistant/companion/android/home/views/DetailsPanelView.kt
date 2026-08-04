@@ -379,7 +379,7 @@ private fun onSliderChangedFeedback(
     )
 }
 
-@Preview(device = WearDevices.LARGE_ROUND)
+@Preview(device = WearDevices.LARGE_ROUND, showBackground = true, backgroundColor = 0xFF000000)
 @Composable
 private fun PreviewDetailsPaneViewEntityFanOn() {
     CompositionLocalProvider {
@@ -395,7 +395,7 @@ private fun PreviewDetailsPaneViewEntityFanOn() {
     }
 }
 
-@Preview(device = WearDevices.LARGE_ROUND)
+@Preview(device = WearDevices.LARGE_ROUND, showBackground = true, backgroundColor = 0xFF000000)
 @Composable
 private fun PreviewDetailsPaneViewEntityLightOn() {
     CompositionLocalProvider {
@@ -411,7 +411,7 @@ private fun PreviewDetailsPaneViewEntityLightOn() {
     }
 }
 
-@Preview(device = WearDevices.LARGE_ROUND)
+@Preview(device = WearDevices.LARGE_ROUND, showBackground = true, backgroundColor = 0xFF000000)
 @Composable
 private fun PreviewDetailsPaneViewEntityLightOff() {
     CompositionLocalProvider {

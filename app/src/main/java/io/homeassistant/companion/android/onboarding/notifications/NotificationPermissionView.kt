@@ -99,7 +99,7 @@ fun NotificationPermissionBullet(
     }
 }
 
-@Preview(showSystemUi = true)
+@Preview(showSystemUi = true, showBackground = true, backgroundColor = 0xFFFFFFFF)
 @Composable
 fun NotificationPermissionViewPreview() {
     MdcTheme {
