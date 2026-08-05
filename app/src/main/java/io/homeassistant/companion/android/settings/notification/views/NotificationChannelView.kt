@@ -1,5 +1,6 @@
 package io.homeassistant.companion.android.settings.notification.views
 
+import android.app.NotificationChannel
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.compose.foundation.clickable
@@ -35,6 +36,28 @@ import kotlinx.coroutines.launch
 fun NotificationChannelView(
     notificationViewModel: NotificationViewModel
 ) {
+    NotificationChannelContent(
+        channels = notificationViewModel.channelList,
+        onEdit = notificationViewModel::editChannelDetails,
+        onDelete = {
+            notificationViewModel.deleteChannel(it.id)
+            notificationViewModel.updateChannelList()
+        },
+        onUndoDelete = {
+            notificationViewModel.createChannel(it)
+            notificationViewModel.updateChannelList()
+        }
+    )
+}
+
+@RequiresApi(Build.VERSION_CODES.O)
+@Composable
+fun NotificationChannelContent(
+    channels: List<NotificationChannel>,
+    onEdit: (String) -> Unit,
+    onDelete: (NotificationChannel) -> Unit,
+    onUndoDelete: (NotificationChannel) -> Unit
+) {
     val scaffoldState = rememberScaffoldState()
     val scope = rememberCoroutineScope()
     val context = LocalContext.current
@@ -53,8 +76,8 @@ fun NotificationChannelView(
                 Divider()
             }
 
-            items(notificationViewModel.channelList.size) { index ->
-                val channel = notificationViewModel.channelList[index]
+            items(channels.size) { index ->
+                val channel = channels[index]
                 Row(
                     modifier = Modifier
                         .padding(10.dp)
@@ -72,7 +95,7 @@ fun NotificationChannelView(
                             Icons.Filled.Edit,
                             stringResource(id = R.string.edit_channel),
                             modifier = Modifier
-                                .clickable { notificationViewModel.editChannelDetails(channel.id) }
+                                .clickable { onEdit(channel.id) }
                                 .padding(12.dp)
                         )
                         if (channel.id !in appCreatedChannels) {
@@ -81,8 +104,7 @@ fun NotificationChannelView(
                                 stringResource(id = R.string.delete_channel),
                                 modifier = Modifier
                                     .clickable {
-                                        notificationViewModel.deleteChannel(channel.id)
-                                        notificationViewModel.updateChannelList()
+                                        onDelete(channel)
                                         scope.launch {
                                             scaffoldState.snackbarHostState
                                                 .showSnackbar(
@@ -91,8 +113,7 @@ fun NotificationChannelView(
                                                 )
                                                 .let {
                                                     if (it == SnackbarResult.ActionPerformed) {
-                                                        notificationViewModel.createChannel(channel)
-                                                        notificationViewModel.updateChannelList()
+                                                        onUndoDelete(channel)
                                                     }
                                                 }
                                         }

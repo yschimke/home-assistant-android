@@ -30,6 +30,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.mikepenz.iconics.compose.Image
 import com.mikepenz.iconics.typeface.IIcon
@@ -227,6 +228,20 @@ private fun WidgetRow(
             context.startActivity(intent)
         }) {
             Text(widgetLabel)
+        }
+    }
+}
+
+@Preview(showBackground = true, backgroundColor = 0xFFFFFFFF)
+@Composable
+private fun PreviewWidgetRows() {
+    LazyColumn {
+        items(WidgetType.entries) { widgetType ->
+            PopupWidgetRow(
+                widgetLabel = "${widgetType.name.lowercase().replaceFirstChar { it.uppercase() }} widget",
+                widgetType = widgetType,
+                onClickCallback = {}
+            )
         }
     }
 }

@@ -16,6 +16,7 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.wear.compose.foundation.lazy.items
 import androidx.wear.compose.material3.Button
@@ -29,6 +30,7 @@ import io.homeassistant.companion.android.common.util.capitalize
 import io.homeassistant.companion.android.data.SimplifiedEntity
 import io.homeassistant.companion.android.theme.WearAppTheme
 import io.homeassistant.companion.android.theme.getFilledTonalButtonColors
+import io.homeassistant.companion.android.util.previewEntity1
 import io.homeassistant.companion.android.util.stringForDomain
 import java.util.Locale
 import io.homeassistant.companion.android.common.R as commonR
@@ -149,4 +151,15 @@ private fun ChooseEntityChip(
         },
         colors = getFilledTonalButtonColors()
     )
+}
+
+@Preview(device = "id:wearos_large_round", showSystemUi = true)
+@Composable
+private fun PreviewChooseEntityChip() {
+    WearAppTheme {
+        ChooseEntityChip(
+            entity = previewEntity1,
+            onEntitySelected = {}
+        )
+    }
 }

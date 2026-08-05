@@ -6,6 +6,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.wear.compose.foundation.lazy.items
 import androidx.wear.compose.material3.Text
 import androidx.wear.compose.material3.ToggleButton
@@ -17,6 +18,7 @@ import io.homeassistant.companion.android.theme.WearAppTheme
 import io.homeassistant.companion.android.theme.getToggleButtonColors
 import io.homeassistant.companion.android.theme.wearColorScheme
 import io.homeassistant.companion.android.util.ToggleSwitch
+import io.homeassistant.companion.android.util.previewEntity1
 import io.homeassistant.companion.android.views.ExpandableListHeader
 import io.homeassistant.companion.android.views.ListHeader
 import io.homeassistant.companion.android.views.ThemeLazyColumn
@@ -96,4 +98,16 @@ private fun FavoriteToggleChip(
         selectionControl = { ToggleSwitch(checked) },
         colors = getToggleButtonColors()
     )
+}
+
+@Preview(device = "id:wearos_large_round", showSystemUi = true)
+@Composable
+private fun PreviewFavoriteToggleChip() {
+    WearAppTheme {
+        FavoriteToggleChip(
+            entity = previewEntity1,
+            favoriteEntityIds = listOf(previewEntity1.entityId),
+            onFavoriteSelected = { _, _ -> }
+        )
+    }
 }

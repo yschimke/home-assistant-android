@@ -36,6 +36,19 @@ fun DiscoveryView(
     manualSetupClicked: () -> Unit,
     instanceClicked: (instance: HomeAssistantInstance) -> Unit
 ) {
+    DiscoveryContent(
+        foundInstances = onboardingViewModel.foundInstances,
+        manualSetupClicked = manualSetupClicked,
+        instanceClicked = instanceClicked
+    )
+}
+
+@Composable
+fun DiscoveryContent(
+    foundInstances: List<HomeAssistantInstance>,
+    manualSetupClicked: () -> Unit,
+    instanceClicked: (instance: HomeAssistantInstance) -> Unit
+) {
     Column(
         modifier = Modifier.fillMaxWidth()
             .padding(16.dp)
@@ -55,8 +68,8 @@ fun DiscoveryView(
                 .fillMaxWidth()
                 .weight(1f)
         ) {
-            items(onboardingViewModel.foundInstances.size, { onboardingViewModel.foundInstances[it].url }) { index ->
-                val instance = onboardingViewModel.foundInstances[index]
+            items(foundInstances.size, { foundInstances[it].url }) { index ->
+                val instance = foundInstances[index]
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.SpaceBetween,

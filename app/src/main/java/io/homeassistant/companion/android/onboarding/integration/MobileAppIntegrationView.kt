@@ -40,6 +40,30 @@ fun MobileAppIntegrationView(
     onLocationTrackingChanged: (Boolean) -> Unit,
     onFinishClicked: () -> Unit
 ) {
+    MobileAppIntegrationContent(
+        deviceIsWatch = onboardingViewModel.deviceIsWatch,
+        deviceName = onboardingViewModel.deviceName.value,
+        locationTrackingPossible = onboardingViewModel.locationTrackingPossible.value,
+        locationTrackingEnabled = onboardingViewModel.locationTrackingEnabled,
+        onDeviceNameUpdated = onboardingViewModel::onDeviceNameUpdated,
+        openPrivacyPolicy = openPrivacyPolicy,
+        onLocationTrackingChanged = onLocationTrackingChanged,
+        onFinishClicked = onFinishClicked
+    )
+}
+
+@OptIn(ExperimentalComposeUiApi::class)
+@Composable
+fun MobileAppIntegrationContent(
+    deviceIsWatch: Boolean,
+    deviceName: String,
+    locationTrackingPossible: Boolean,
+    locationTrackingEnabled: Boolean,
+    onDeviceNameUpdated: (String) -> Unit,
+    openPrivacyPolicy: () -> Unit,
+    onLocationTrackingChanged: (Boolean) -> Unit,
+    onFinishClicked: () -> Unit
+) {
     val scrollState = rememberScrollState()
     val keyboardController = LocalSoftwareKeyboardController.current
     Column(
@@ -55,7 +79,7 @@ fun MobileAppIntegrationView(
                 .weight(1f)
         ) {
             OnboardingHeaderView(
-                icon = if (onboardingViewModel.deviceIsWatch) {
+                icon = if (deviceIsWatch) {
                     CommunityMaterial.Icon3.cmd_watch
                 } else if (LocalConfiguration.current.screenWidthDp.dp >= 600.dp) {
                     CommunityMaterial.Icon3.cmd_tablet
@@ -66,8 +90,8 @@ fun MobileAppIntegrationView(
             )
 
             TextField(
-                value = onboardingViewModel.deviceName.value,
-                onValueChange = { onboardingViewModel.onDeviceNameUpdated(it) },
+                value = deviceName,
+                onValueChange = onDeviceNameUpdated,
                 modifier = Modifier.align(Alignment.CenterHorizontally),
                 label = { Text(stringResource(id = commonR.string.device_name)) },
                 singleLine = true,
@@ -78,7 +102,7 @@ fun MobileAppIntegrationView(
                     }
                 )
             )
-            if (onboardingViewModel.locationTrackingPossible.value) {
+            if (locationTrackingPossible) {
                 Row {
                     Text(
                         text = stringResource(commonR.string.enable_location_tracking),
@@ -87,7 +111,7 @@ fun MobileAppIntegrationView(
                             .weight(1f)
                     )
                     Switch(
-                        checked = onboardingViewModel.locationTrackingEnabled,
+                        checked = locationTrackingEnabled,
                         onCheckedChange = onLocationTrackingChanged,
                         colors = SwitchDefaults.colors(uncheckedThumbColor = colorResource(commonR.color.colorSwitchUncheckedThumb))
                     )

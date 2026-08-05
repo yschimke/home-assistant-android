@@ -31,6 +31,22 @@ fun ManualSetupView(
     onboardingViewModel: OnboardingViewModel,
     connectedClicked: () -> Unit
 ) {
+    ManualSetupContent(
+        manualUrl = onboardingViewModel.manualUrl.value,
+        continueEnabled = onboardingViewModel.manualContinueEnabled,
+        onUrlUpdated = onboardingViewModel::onManualUrlUpdated,
+        connectedClicked = connectedClicked
+    )
+}
+
+@OptIn(ExperimentalComposeUiApi::class)
+@Composable
+fun ManualSetupContent(
+    manualUrl: String,
+    continueEnabled: Boolean,
+    onUrlUpdated: (String) -> Unit,
+    connectedClicked: () -> Unit
+) {
     val scrollState = rememberScrollState()
     val keyboardController = LocalSoftwareKeyboardController.current
 
@@ -54,8 +70,8 @@ fun ManualSetupView(
         )
 
         TextField(
-            value = onboardingViewModel.manualUrl.value,
-            onValueChange = { onboardingViewModel.onManualUrlUpdated(it) },
+            value = manualUrl,
+            onValueChange = onUrlUpdated,
             modifier = Modifier.align(Alignment.CenterHorizontally),
             label = { Text(stringResource(id = commonR.string.input_url)) },
             singleLine = true,
@@ -69,7 +85,7 @@ fun ManualSetupView(
         )
 
         Button(
-            enabled = onboardingViewModel.manualContinueEnabled,
+            enabled = continueEnabled,
             onClick = connectedClicked,
             modifier = Modifier
                 .align(Alignment.CenterHorizontally)
