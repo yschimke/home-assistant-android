@@ -36,6 +36,7 @@
     "Onboarding",
     "Conversation",
     "Entity rows",
+    "Controls",
     "Sensor rows",
     "List structure",
     "Device chrome"
@@ -139,6 +140,18 @@
           "componentId": "Tiles/Refresh interval",
           "preview": "PreviewRefreshIntervalPickerView",
           "caption": "Large-round refresh interval picker destination."
+        },
+        {
+          "componentId": "Tiles/Camera settings",
+          "preview": "PreviewSetCameraTile",
+          "caption": "Large-round camera tile settings with a selected entity and refresh interval.",
+          "variants": [
+            {
+              "preview": "PreviewSetCameraTileEmpty",
+              "caption": "Camera tile settings before a camera is selected.",
+              "state": "empty"
+            }
+          ]
         }
       ]
     },
@@ -204,6 +217,22 @@
           "componentId": "Entities/Rows",
           "preview": "PreviewEntityUI",
           "caption": "Wrap-content entity toggle and action row components."
+        },
+        {
+          "componentId": "Entities/Selection chip",
+          "preview": "PreviewChooseEntityChip",
+          "caption": "Large-round entity selection chip with icon and friendly name."
+        }
+      ]
+    },
+    {
+      "name": "Controls",
+      "section": "Components",
+      "components": [
+        {
+          "componentId": "Controls/Toggle states",
+          "preview": "PreviewToggleControls",
+          "caption": "Large-round switch and checkbox controls in checked and unchecked states."
         }
       ]
     },
