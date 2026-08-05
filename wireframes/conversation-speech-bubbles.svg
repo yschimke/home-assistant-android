@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 454 156" width="454" height="156" role="img" aria-label="Conversation/Speech bubbles layout wireframe">
+  <title>Conversation/Speech bubbles — layout wireframe (slots + tokens)</title>
+  <rect width="454" height="156" fill="#ffffff"/>
+  <g>
+    <rect x="0" y="0" width="454" height="156" fill="none" fill-opacity="0" stroke="#5B6470" stroke-width="1" stroke-opacity="0.5"/>
+  </g>
+  <g>
+    <rect x="0" y="0" width="454" height="156" fill="none" fill-opacity="0" stroke="#2E7D6B" stroke-width="1" stroke-opacity="0.5"/>
+  </g>
+  <g>
+    <rect x="0" y="0" width="454" height="156" fill="none" fill-opacity="0" stroke="#8E6BA8" stroke-width="1" stroke-opacity="0.5"/>
+  </g>
+  <g>
+    <rect x="48" y="8" width="406" height="62" fill="none" fill-opacity="0" stroke="#B0813B" stroke-width="1" stroke-opacity="0.5"/>
+  </g>
+  <g>
+    <path d="M351,16 H423 A23,23 0 0 1 446,39 V62 A0,0 0 0 1 446,62 H351 A23,23 0 0 1 328,39 V39 A23,23 0 0 1 351,16 Z" fill="#B3E5FC" fill-opacity="1" stroke="#3B72A8" stroke-width="1.5" stroke-opacity="1"/>
+    <text x="331" y="28" font-family="system-ui, sans-serif" font-size="9" fill="#3B72A8">#FFB3E5FC  pad 4.0dp</text>
+  </g>
+  <g>
+    <rect x="332" y="20" width="110" height="38" fill="none" fill-opacity="0" stroke="#A85B6B" stroke-width="1" stroke-opacity="0.5"/>
+  </g>
+  <g>
+    <rect x="0" y="86" width="406" height="62" fill="none" fill-opacity="0" stroke="#B0813B" stroke-width="1" stroke-opacity="0.5"/>
+  </g>
+  <g>
+    <path d="M31,94 H141 A23,23 0 0 1 164,117 V117 A23,23 0 0 1 141,140 H8 A0,0 0 0 1 8,140 V117 A23,23 0 0 1 31,94 Z" fill="#03A9F4" fill-opacity="1" stroke="#3B72A8" stroke-width="1.5" stroke-opacity="1"/>
+    <text x="11" y="106" font-family="system-ui, sans-serif" font-size="9" fill="#3B72A8">#FF03A9F4  pad 4.0dp</text>
+  </g>
+  <g>
+    <rect x="12" y="98" width="148" height="38" fill="none" fill-opacity="0" stroke="#A85B6B" stroke-width="1" stroke-opacity="0.5"/>
+  </g>
+</svg>
