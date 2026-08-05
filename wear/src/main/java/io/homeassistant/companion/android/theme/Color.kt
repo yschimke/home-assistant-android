@@ -8,6 +8,7 @@ import androidx.wear.compose.material3.ColorScheme
 import androidx.wear.compose.material3.ContentAlpha
 import androidx.wear.compose.material3.ExperimentalWearMaterial3Api
 import androidx.wear.compose.material3.InlineSliderDefaults
+import androidx.wear.compose.material3.MaterialTheme
 import androidx.wear.compose.material3.SwitchDefaults
 import androidx.wear.compose.material3.ToggleButtonDefaults
 
@@ -55,35 +56,35 @@ internal val wearColorScheme: ColorScheme = ColorScheme(
 
 @Composable
 fun getSwitchColors() = SwitchDefaults.colors(
-    checkedThumbColor = wearColorScheme.tertiary,
-    checkedTrackColor = wearColorScheme.onTertiary,
-    checkedTrackBorderColor = wearColorScheme.tertiary,
-    checkedThumbIconColor = wearColorScheme.tertiary
+    checkedThumbColor = MaterialTheme.colorScheme.tertiary,
+    checkedTrackColor = MaterialTheme.colorScheme.onTertiary,
+    checkedTrackBorderColor = MaterialTheme.colorScheme.tertiary,
+    checkedThumbIconColor = MaterialTheme.colorScheme.tertiary
 )
 
 @Composable
 fun getToggleButtonColors() = ToggleButtonDefaults.toggleButtonColors(
-    checkedContainerColor = wearColorScheme.surfaceBright,
-    uncheckedContainerColor = wearColorScheme.surfaceDim
+    checkedContainerColor = MaterialTheme.colorScheme.surfaceBright,
+    uncheckedContainerColor = MaterialTheme.colorScheme.surfaceDim
 )
 
 @Composable
 fun getFilledTonalButtonColors() = ButtonDefaults.filledTonalButtonColors(
-    containerColor = wearColorScheme.surfaceDim,
-    disabledContainerColor = wearColorScheme.surfaceDim.copy(alpha = ContentAlpha.disabled)
+    containerColor = MaterialTheme.colorScheme.surfaceDim,
+    disabledContainerColor = MaterialTheme.colorScheme.surfaceDim.copy(alpha = ContentAlpha.disabled)
 )
 
 @Composable
-fun getPrimaryButtonColors() = ButtonDefaults.buttonColors(containerColor = wearColorScheme.primary)
+fun getPrimaryButtonColors() = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
 
 @Composable
 fun getCheckboxColors() = CheckboxDefaults.colors(
-    checkedBoxColor = wearColorScheme.onTertiary,
-    checkedCheckmarkColor = wearColorScheme.tertiary
+    checkedBoxColor = MaterialTheme.colorScheme.onTertiary,
+    checkedCheckmarkColor = MaterialTheme.colorScheme.tertiary
 )
 
 @OptIn(ExperimentalWearMaterial3Api::class)
 @Composable
 fun getInlineSliderDefaultColors() = InlineSliderDefaults.colors(
-    containerColor = wearColorScheme.surfaceDim
+    containerColor = MaterialTheme.colorScheme.surfaceDim
 )

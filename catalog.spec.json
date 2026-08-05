@@ -29,6 +29,7 @@
     "Onboarding",
     "Wear settings",
     "Commissioning",
+    "Management",
     "Settings content",
     "Dialogs"
   ],
@@ -56,7 +57,14 @@
         {
           "componentId": "Settings/Wear companion",
           "preview": "PreviewSettingWearLandingView",
-          "caption": "Full compact-device destination for configuring a paired Wear OS companion."
+          "caption": "Full compact-device destination for configuring a paired Wear OS companion.",
+          "variants": [
+            {
+              "preview": "PreviewWearFavorites",
+              "caption": "State-hoisted phone-side favorite editor for a paired Wear OS companion in light and dark themes.",
+              "state": "favorites"
+            }
+          ]
         }
       ]
     },
@@ -68,6 +76,37 @@
           "componentId": "Onboarding/Matter commissioning",
           "preview": "PreviewMatterCommissioningView",
           "caption": "Wrap-content Matter commissioning panel across the states supplied by MatterCommissioningViewPreviewStates."
+        }
+      ]
+    },
+    {
+      "name": "Management",
+      "section": "Screens",
+      "components": [
+        {
+          "componentId": "Settings/Quick settings tiles",
+          "preview": "PreviewManageTiles",
+          "caption": "State-hoisted quick settings tile editor with entity, server, icon, vibration, and authentication controls in light and dark themes."
+        },
+        {
+          "componentId": "Settings/App shortcuts",
+          "preview": "PreviewManageShortcuts",
+          "caption": "State-hoisted app shortcut editor populated with a configured dashboard shortcut in light and dark themes."
+        },
+        {
+          "componentId": "Settings/Android Auto favorites",
+          "preview": "PreviewAndroidAutoFavorites",
+          "caption": "State-hoisted vehicle favorite picker and reorderable favorite list in light and dark themes."
+        },
+        {
+          "componentId": "Settings/Sensor list",
+          "preview": "PreviewSensorList",
+          "caption": "State-hoisted sensor manager list with enabled battery sensors in light and dark themes."
+        },
+        {
+          "componentId": "Settings/Widgets",
+          "preview": "PreviewManageWidgets",
+          "caption": "State-hoisted widget management destination with all supported widget types in light and dark themes."
         }
       ]
     },

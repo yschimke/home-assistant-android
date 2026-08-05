@@ -20,11 +20,14 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.mikepenz.iconics.IconicsDrawable
+import io.homeassistant.companion.android.common.sensors.BatterySensorManager
 import io.homeassistant.companion.android.common.sensors.SensorManager
 import io.homeassistant.companion.android.common.sensors.id
 import io.homeassistant.companion.android.database.sensor.Sensor
 import io.homeassistant.companion.android.settings.sensor.SensorSettingsViewModel
 import io.homeassistant.companion.android.settings.views.SettingsRow
+import io.homeassistant.companion.android.util.compose.HomeAssistantPreviewTheme
+import io.homeassistant.companion.android.util.compose.ScreenThemeCatalog
 import io.homeassistant.companion.android.common.R as commonR
 
 @OptIn(ExperimentalFoundationApi::class)
@@ -33,8 +36,22 @@ fun SensorListView(
     viewModel: SensorSettingsViewModel,
     onSensorClicked: (String) -> Unit
 ) {
+    SensorListContent(
+        allSensors = viewModel.allSensors,
+        sensors = viewModel.sensors,
+        onSensorClicked = onSensorClicked
+    )
+}
+
+@OptIn(ExperimentalFoundationApi::class)
+@Composable
+fun SensorListContent(
+    allSensors: Map<SensorManager, List<SensorManager.BasicSensor>>,
+    sensors: Map<String, Sensor>,
+    onSensorClicked: (String) -> Unit
+) {
     LazyColumn {
-        viewModel.allSensors.forEach { (manager, currentSensors) ->
+        allSensors.forEach { (manager, currentSensors) ->
             stickyHeader(
                 key = manager.id()
             ) {
@@ -66,11 +83,11 @@ fun SensorListView(
             ) { basicSensor ->
                 SensorRow(
                     basicSensor = basicSensor,
-                    dbSensor = viewModel.sensors[basicSensor.id],
+                    dbSensor = sensors[basicSensor.id],
                     onSensorClicked = onSensorClicked
                 )
             }
-            if (currentSensors.any() && manager.id() != viewModel.allSensors.keys.last().id()) {
+            if (currentSensors.any() && manager.id() != allSensors.keys.last().id()) {
                 item {
                     Divider()
                 }
@@ -112,4 +129,29 @@ fun SensorRow(
         mdiIcon = mdiIcon,
         enabled = dbSensor?.enabled == true
     ) { onSensorClicked(basicSensor.id) }
+}
+
+@ScreenThemeCatalog
+@Composable
+private fun PreviewSensorList() {
+    val manager = BatterySensorManager()
+    val basicSensors = listOf(
+        BatterySensorManager.isChargingState.copy(id = "battery_level", statelessIcon = "mdi:battery", unitOfMeasurement = "%"),
+        BatterySensorManager.isChargingState
+    )
+    HomeAssistantPreviewTheme {
+        SensorListContent(
+            allSensors = mapOf(manager to basicSensors),
+            sensors = basicSensors.associate { sensor ->
+                sensor.id to Sensor(
+                    id = sensor.id,
+                    serverId = 1,
+                    enabled = true,
+                    state = if (sensor.id == "battery_level") "82" else "Charging",
+                    icon = sensor.statelessIcon
+                )
+            },
+            onSensorClicked = {}
+        )
+    }
 }

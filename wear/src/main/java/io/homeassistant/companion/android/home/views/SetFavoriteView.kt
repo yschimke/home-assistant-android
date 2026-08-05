@@ -6,19 +6,21 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.wear.compose.foundation.lazy.items
+import androidx.wear.compose.material3.MaterialTheme
 import androidx.wear.compose.material3.Text
 import androidx.wear.compose.material3.ToggleButton
 import com.mikepenz.iconics.compose.Image
 import io.homeassistant.companion.android.common.data.integration.Entity
 import io.homeassistant.companion.android.common.data.integration.getIcon
 import io.homeassistant.companion.android.home.MainViewModel
-import io.homeassistant.companion.android.theme.WearAppTheme
+import io.homeassistant.companion.android.theme.WearPreviewTheme
+import io.homeassistant.companion.android.theme.WearThemeCatalog
 import io.homeassistant.companion.android.theme.getToggleButtonColors
-import io.homeassistant.companion.android.theme.wearColorScheme
 import io.homeassistant.companion.android.util.ToggleSwitch
 import io.homeassistant.companion.android.util.previewEntity1
+import io.homeassistant.companion.android.util.previewEntity2
+import io.homeassistant.companion.android.util.previewEntity3
 import io.homeassistant.companion.android.views.ExpandableListHeader
 import io.homeassistant.companion.android.views.ListHeader
 import io.homeassistant.companion.android.views.ThemeLazyColumn
@@ -31,32 +33,47 @@ fun SetFavoritesView(
     favoriteEntityIds: List<String>,
     onFavoriteSelected: (entityId: String, isSelected: Boolean) -> Unit
 ) {
-    // Remember expanded state of each header
-    val expandedStates = rememberExpandedStates(mainViewModel.supportedDomains())
+    SetFavoritesContent(
+        sections = mainViewModel.entitiesByDomainOrder.mapNotNull { domain ->
+            val title = mainViewModel.stringForDomain(domain)
+            title?.let { FavoriteSection(domain, it, mainViewModel.entitiesByDomain[domain].orEmpty()) }
+        },
+        favoriteEntityIds = favoriteEntityIds,
+        onFavoriteSelected = onFavoriteSelected
+    )
+}
 
-    WearAppTheme {
-        ThemeLazyColumn {
-            item {
-                ListHeader(id = commonR.string.set_favorite)
-            }
-            for (domain in mainViewModel.entitiesByDomainOrder) {
-                val entities = mainViewModel.entitiesByDomain[domain].orEmpty()
-                if (entities.isNotEmpty()) {
-                    item {
-                        ExpandableListHeader(
-                            string = mainViewModel.stringForDomain(domain)!!,
-                            key = domain,
-                            expandedStates = expandedStates
+data class FavoriteSection(val id: String, val title: String, val entities: List<Entity<*>>)
+
+@Composable
+fun SetFavoritesContent(
+    sections: List<FavoriteSection>,
+    favoriteEntityIds: List<String>,
+    onFavoriteSelected: (entityId: String, isSelected: Boolean) -> Unit
+) {
+    // Remember expanded state of each header
+    val expandedStates = rememberExpandedStates(sections.map { it.id })
+
+    ThemeLazyColumn {
+        item {
+            ListHeader(id = commonR.string.set_favorite)
+        }
+        for ((domain, title, entities) in sections) {
+            if (entities.isNotEmpty()) {
+                item {
+                    ExpandableListHeader(
+                        string = title,
+                        key = domain,
+                        expandedStates = expandedStates
+                    )
+                }
+                if (expandedStates[domain] == true) {
+                    items(entities, key = { it.entityId }) { entity ->
+                        FavoriteToggleChip(
+                            entity = entity,
+                            favoriteEntityIds = favoriteEntityIds,
+                            onFavoriteSelected = onFavoriteSelected
                         )
-                    }
-                    if (expandedStates[domain] == true) {
-                        items(entities, key = { it.entityId }) { entity ->
-                            FavoriteToggleChip(
-                                entity = entity,
-                                favoriteEntityIds = favoriteEntityIds,
-                                onFavoriteSelected = onFavoriteSelected
-                            )
-                        }
                     }
                 }
             }
@@ -85,7 +102,7 @@ private fun FavoriteToggleChip(
         icon = {
             Image(
                 asset = iconBitmap,
-                colorFilter = ColorFilter.tint(wearColorScheme.onSurface)
+                colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.onSurface)
             )
         },
         label = {
@@ -100,12 +117,15 @@ private fun FavoriteToggleChip(
     )
 }
 
-@Preview(device = "id:wearos_large_round", showSystemUi = true)
+@WearThemeCatalog
 @Composable
-private fun PreviewFavoriteToggleChip() {
-    WearAppTheme {
-        FavoriteToggleChip(
-            entity = previewEntity1,
+private fun PreviewSetFavorites() {
+    WearPreviewTheme {
+        SetFavoritesContent(
+            sections = listOf(
+                FavoriteSection("light", "Lights", listOf(previewEntity1)),
+                FavoriteSection("switch", "Switches", listOf(previewEntity2, previewEntity3))
+            ),
             favoriteEntityIds = listOf(previewEntity1.entityId),
             onFavoriteSelected = { _, _ -> }
         )

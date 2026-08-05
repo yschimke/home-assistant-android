@@ -9,10 +9,6 @@ import androidx.compose.material.Text
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -21,12 +17,14 @@ import io.homeassistant.companion.android.common.data.integration.Entity
 import io.homeassistant.companion.android.common.data.integration.friendlyName
 import io.homeassistant.companion.android.settings.wear.SettingsWearViewModel
 import io.homeassistant.companion.android.util.compose.FavoriteEntityRow
+import io.homeassistant.companion.android.util.compose.HomeAssistantPreviewTheme
+import io.homeassistant.companion.android.util.compose.ScreenThemeCatalog
 import io.homeassistant.companion.android.util.compose.SingleEntityPicker
-import kotlinx.coroutines.Dispatchers
+import io.homeassistant.companion.android.util.previewEntity1
+import io.homeassistant.companion.android.util.previewEntity2
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import kotlinx.coroutines.withContext
 import org.burnoutcrew.reorderable.ReorderableItem
 import org.burnoutcrew.reorderable.rememberReorderableLazyListState
 import org.burnoutcrew.reorderable.reorderable
@@ -38,28 +36,6 @@ fun LoadWearFavoritesSettings(
     onBackClicked: () -> Unit,
     events: SharedFlow<String>
 ) {
-    val reorderState = rememberReorderableLazyListState(
-        onMove = { from, to -> settingsWearViewModel.onMove(from, to) },
-        canDragOver = { draggedOver, _ -> settingsWearViewModel.canDragOver(draggedOver) },
-        onDragEnd = { _, _ ->
-            settingsWearViewModel.sendHomeFavorites(settingsWearViewModel.favoriteEntityIds.toList())
-        }
-    )
-
-    val favoriteEntities = settingsWearViewModel.favoriteEntityIds
-    var validEntities by remember { mutableStateOf<List<Entity<*>>>(emptyList()) }
-    LaunchedEffect(favoriteEntities.size) {
-        validEntities = withContext(Dispatchers.IO) {
-            settingsWearViewModel.entities
-                .filter {
-                    !favoriteEntities.contains(it.key) &&
-                        it.key.split(".")[0] in settingsWearViewModel.supportedDomains
-                }
-                .values
-                .toList()
-        }
-    }
-
     val scaffoldState = rememberScaffoldState()
     LaunchedEffect("snackbar") {
         events.onEach { message ->
@@ -68,6 +44,41 @@ fun LoadWearFavoritesSettings(
         }.launchIn(this)
     }
 
+    WearFavoritesContent(
+        favoriteEntityIds = settingsWearViewModel.favoriteEntityIds,
+        entities = settingsWearViewModel.entities,
+        supportedDomains = settingsWearViewModel.supportedDomains,
+        scaffoldState = scaffoldState,
+        onBackClicked = onBackClicked,
+        onMove = settingsWearViewModel::onMove,
+        canDragOver = settingsWearViewModel::canDragOver,
+        onSaveFavorites = { settingsWearViewModel.sendHomeFavorites(settingsWearViewModel.favoriteEntityIds.toList()) },
+        onEntitySelected = settingsWearViewModel::onEntitySelected,
+        enableReordering = true
+    )
+}
+
+@Composable
+fun WearFavoritesContent(
+    favoriteEntityIds: List<String>,
+    entities: Map<String, Entity<*>>,
+    supportedDomains: List<String>,
+    scaffoldState: androidx.compose.material.ScaffoldState,
+    onBackClicked: () -> Unit,
+    onMove: (org.burnoutcrew.reorderable.ItemPosition, org.burnoutcrew.reorderable.ItemPosition) -> Unit,
+    canDragOver: (org.burnoutcrew.reorderable.ItemPosition) -> Boolean,
+    onSaveFavorites: () -> Unit,
+    onEntitySelected: (Boolean, String) -> Unit,
+    enableReordering: Boolean
+) {
+    val reorderState = rememberReorderableLazyListState(
+        onMove = onMove,
+        canDragOver = { draggedOver, _ -> canDragOver(draggedOver) },
+        onDragEnd = { _, _ -> onSaveFavorites() }
+    )
+    val validEntities = entities.values.filter {
+        it.entityId !in favoriteEntityIds && it.entityId.substringBefore('.') in supportedDomains
+    }
     Scaffold(
         scaffoldState = scaffoldState,
         topBar = {
@@ -99,37 +110,61 @@ fun LoadWearFavoritesSettings(
                     currentEntity = null,
                     onEntityCleared = { /* Nothing */ },
                     onEntitySelected = {
-                        settingsWearViewModel.onEntitySelected(true, it)
+                        onEntitySelected(true, it)
                         return@SingleEntityPicker false // Clear input
                     },
                     modifier = Modifier.padding(all = 16.dp),
                     label = { Text(stringResource(commonR.string.add_favorite)) }
                 )
             }
-            items(favoriteEntities.size, { favoriteEntities[it] }) { index ->
-                val favoriteEntityID = favoriteEntities[index].replace("[", "").replace("]", "")
-                settingsWearViewModel.entities[favoriteEntityID]?.let {
-                    ReorderableItem(
-                        reorderableState = reorderState,
-                        key = favoriteEntities[index]
-                    ) { isDragging ->
+            items(favoriteEntityIds.size, { favoriteEntityIds[it] }) { index ->
+                val favoriteEntityID = favoriteEntityIds[index].replace("[", "").replace("]", "")
+                entities[favoriteEntityID]?.let {
+                    if (enableReordering) {
+                        ReorderableItem(
+                            reorderableState = reorderState,
+                            key = favoriteEntityIds[index]
+                        ) { isDragging ->
+                            FavoriteEntityRow(
+                                entityName = it.friendlyName,
+                                entityId = favoriteEntityID,
+                                onClick = { onEntitySelected(false, favoriteEntityIds[index]) },
+                                checked = true,
+                                draggable = true,
+                                isDragging = isDragging,
+                                reorderableState = reorderState
+                            )
+                        }
+                    } else {
                         FavoriteEntityRow(
                             entityName = it.friendlyName,
                             entityId = favoriteEntityID,
-                            onClick = {
-                                settingsWearViewModel.onEntitySelected(
-                                    false,
-                                    favoriteEntities[index]
-                                )
-                            },
-                            checked = favoriteEntities.contains(favoriteEntities[index]),
-                            draggable = true,
-                            isDragging = isDragging,
-                            reorderableState = reorderState
+                            onClick = { onEntitySelected(false, favoriteEntityIds[index]) },
+                            checked = true,
+                            draggable = false
                         )
                     }
                 }
             }
         }
+    }
+}
+
+@ScreenThemeCatalog
+@Composable
+private fun PreviewWearFavorites() {
+    HomeAssistantPreviewTheme {
+        WearFavoritesContent(
+            favoriteEntityIds = listOf(previewEntity1.entityId),
+            entities = listOf(previewEntity1, previewEntity2).associateBy { it.entityId },
+            supportedDomains = listOf("light", "scene"),
+            scaffoldState = rememberScaffoldState(),
+            onBackClicked = {},
+            onMove = { _, _ -> },
+            canDragOver = { true },
+            onSaveFavorites = {},
+            onEntitySelected = { _, _ -> },
+            enableReordering = false
+        )
     }
 }

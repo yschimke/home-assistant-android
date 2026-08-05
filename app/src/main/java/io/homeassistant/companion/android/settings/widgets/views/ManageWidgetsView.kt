@@ -30,16 +30,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.mikepenz.iconics.compose.Image
 import com.mikepenz.iconics.typeface.IIcon
 import com.mikepenz.iconics.typeface.library.community.material.CommunityMaterial
 import io.homeassistant.companion.android.common.R
-import io.homeassistant.companion.android.database.widget.WidgetEntity
 import io.homeassistant.companion.android.settings.views.EmptyState
 import io.homeassistant.companion.android.settings.widgets.ManageWidgetsViewModel
+import io.homeassistant.companion.android.util.compose.HomeAssistantPreviewTheme
 import io.homeassistant.companion.android.util.compose.MdcAlertDialog
+import io.homeassistant.companion.android.util.compose.ScreenThemeCatalog
 import io.homeassistant.companion.android.widgets.button.ButtonWidgetConfigureActivity
 import io.homeassistant.companion.android.widgets.camera.CameraWidgetConfigureActivity
 import io.homeassistant.companion.android.widgets.entity.EntityWidgetConfigureActivity
@@ -62,13 +62,66 @@ enum class WidgetType(val widgetIcon: IIcon) {
     }
 }
 
+data class ManageWidgetsUiState(
+    val widgets: Map<WidgetType, List<WidgetListItem>>,
+    val supportsAddingWidgets: Boolean
+)
+
+data class WidgetListItem(val id: Int, val label: String)
+
 @Composable
 fun ManageWidgetsView(
     viewModel: ManageWidgetsViewModel
 ) {
+    val context = LocalContext.current
+    ManageWidgetsContent(
+        state = ManageWidgetsUiState(
+            widgets = mapOf(
+                WidgetType.BUTTON to viewModel.buttonWidgetList.value.map {
+                    WidgetListItem(it.id, it.label?.takeIf(String::isNotEmpty) ?: "${it.domain}.${it.service}")
+                },
+                WidgetType.CAMERA to viewModel.cameraWidgetList.value.map { WidgetListItem(it.id, it.entityId) },
+                WidgetType.STATE to viewModel.staticWidgetList.value.map {
+                    WidgetListItem(
+                        it.id,
+                        it.label?.takeIf(String::isNotEmpty)
+                            ?: "${it.entityId} ${it.stateSeparator} ${it.attributeIds.orEmpty()}"
+                    )
+                },
+                WidgetType.MEDIA to viewModel.mediaWidgetList.value.map {
+                    WidgetListItem(it.id, it.label?.takeIf(String::isNotEmpty) ?: it.entityId)
+                },
+                WidgetType.TEMPLATE to viewModel.templateWidgetList.value.map { WidgetListItem(it.id, it.template) }
+            ),
+            supportsAddingWidgets = viewModel.supportsAddingWidgets
+        ),
+        onAddWidget = { widgetType ->
+            context.startActivity(
+                Intent(context, widgetType.configureActivity()).apply {
+                    putExtra(ManageWidgetsViewModel.CONFIGURE_REQUEST_LAUNCHER, true)
+                    addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                }
+            )
+        },
+        onEditWidget = { widgetType, widgetId ->
+            context.startActivity(
+                Intent(context, widgetType.configureActivity()).apply {
+                    putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, widgetId)
+                }
+            )
+        }
+    )
+}
+
+@Composable
+fun ManageWidgetsContent(
+    state: ManageWidgetsUiState,
+    onAddWidget: (WidgetType) -> Unit,
+    onEditWidget: (WidgetType, Int) -> Unit
+) {
     var expandedAddWidget by remember { mutableStateOf(false) }
     Scaffold(floatingActionButton = {
-        if (viewModel.supportsAddingWidgets) {
+        if (state.supportsAddingWidgets) {
             ExtendedFloatingActionButton(
                 backgroundColor = MaterialTheme.colors.primary,
                 contentColor = MaterialTheme.colors.onPrimary,
@@ -95,6 +148,7 @@ fun ManageWidgetsView(
                         items(availableWidgets, key = { (key) -> key }) { (key, widgetType) ->
                             PopupWidgetRow(widgetLabel = key, widgetType = widgetType) {
                                 expandedAddWidget = false
+                                onAddWidget(widgetType)
                             }
                         }
                     }
@@ -109,10 +163,7 @@ fun ManageWidgetsView(
                 .padding(contentPadding)
                 .fillMaxWidth()
         ) {
-            if (viewModel.buttonWidgetList.value.isEmpty() && viewModel.staticWidgetList.value.isEmpty() &&
-                viewModel.mediaWidgetList.value.isEmpty() && viewModel.templateWidgetList.value.isEmpty() &&
-                viewModel.cameraWidgetList.value.isEmpty()
-            ) {
+            if (state.widgets.values.all { it.isEmpty() }) {
                 item {
                     EmptyState(
                         icon = CommunityMaterial.Icon3.cmd_widgets,
@@ -121,61 +172,27 @@ fun ManageWidgetsView(
                     )
                 }
             }
-            widgetItems(
-                viewModel.buttonWidgetList.value,
-                widgetType = WidgetType.BUTTON,
-                title = R.string.button_widgets,
-                widgetLabel = { item ->
-                    val label = item.label
-                    if (!label.isNullOrEmpty()) label else "${item.domain}.${item.service}"
-                }
-            )
-            widgetItems(
-                viewModel.cameraWidgetList.value,
-                widgetType = WidgetType.CAMERA,
-                title = R.string.camera_widgets,
-                widgetLabel = { item -> item.entityId }
-            )
-            widgetItems(
-                viewModel.staticWidgetList.value,
-                widgetType = WidgetType.STATE,
-                title = R.string.entity_state_widgets,
-                widgetLabel = { item ->
-                    val label = item.label
-                    if (!label.isNullOrEmpty()) label else "${item.entityId} ${item.stateSeparator} ${item.attributeIds.orEmpty()}"
-                }
-            )
-            widgetItems(
-                viewModel.mediaWidgetList.value,
-                widgetType = WidgetType.MEDIA,
-                title = R.string.media_player_widgets,
-                widgetLabel = { item ->
-                    val label = item.label
-                    if (!label.isNullOrEmpty()) label else item.entityId
-                }
-            )
-            widgetItems(
-                viewModel.templateWidgetList.value,
-                widgetType = WidgetType.TEMPLATE,
-                title = R.string.template_widgets,
-                widgetLabel = { item -> item.template }
-            )
+            widgetItems(state.widgets[WidgetType.BUTTON].orEmpty(), WidgetType.BUTTON, R.string.button_widgets, onEditWidget)
+            widgetItems(state.widgets[WidgetType.CAMERA].orEmpty(), WidgetType.CAMERA, R.string.camera_widgets, onEditWidget)
+            widgetItems(state.widgets[WidgetType.STATE].orEmpty(), WidgetType.STATE, R.string.entity_state_widgets, onEditWidget)
+            widgetItems(state.widgets[WidgetType.MEDIA].orEmpty(), WidgetType.MEDIA, R.string.media_player_widgets, onEditWidget)
+            widgetItems(state.widgets[WidgetType.TEMPLATE].orEmpty(), WidgetType.TEMPLATE, R.string.template_widgets, onEditWidget)
         }
     }
 }
 
-private fun <T : WidgetEntity> LazyListScope.widgetItems(
-    widgetList: List<T>,
+private fun LazyListScope.widgetItems(
+    widgetList: List<WidgetListItem>,
+    widgetType: WidgetType,
     @StringRes title: Int,
-    widgetLabel: @Composable (T) -> String,
-    widgetType: WidgetType
+    onEditWidget: (WidgetType, Int) -> Unit
 ) {
     if (widgetList.isNotEmpty()) {
         item {
             Text(stringResource(id = title))
         }
         items(widgetList, key = { "$widgetType-${it.id}" }) { item ->
-            WidgetRow(widgetLabel = widgetLabel(item), widgetId = item.id, widgetType = widgetType)
+            WidgetRow(widgetLabel = item.label) { onEditWidget(widgetType, item.id) }
         }
     }
 }
@@ -186,18 +203,10 @@ private fun PopupWidgetRow(
     widgetType: WidgetType,
     onClickCallback: () -> Unit
 ) {
-    val context = LocalContext.current
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .clickable {
-                val intent = Intent(context, widgetType.configureActivity()).apply {
-                    putExtra(ManageWidgetsViewModel.CONFIGURE_REQUEST_LAUNCHER, true)
-                    addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
-                }
-                context.startActivity(intent)
-                onClickCallback()
-            }
+            .clickable(onClick = onClickCallback)
     ) {
         Row(
             modifier = Modifier.padding(horizontal = 24.dp, vertical = 16.dp),
@@ -216,32 +225,28 @@ private fun PopupWidgetRow(
 @Composable
 private fun WidgetRow(
     widgetLabel: String,
-    widgetId: Int,
-    widgetType: WidgetType
+    onClick: () -> Unit
 ) {
-    val context = LocalContext.current
     Row {
-        Button(onClick = {
-            val intent = Intent(context, widgetType.configureActivity()).apply {
-                putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, widgetId)
-            }
-            context.startActivity(intent)
-        }) {
+        Button(onClick = onClick) {
             Text(widgetLabel)
         }
     }
 }
 
-@Preview(showBackground = true, backgroundColor = 0xFFFFFFFF)
+@ScreenThemeCatalog
 @Composable
-private fun PreviewWidgetRows() {
-    LazyColumn {
-        items(WidgetType.entries) { widgetType ->
-            PopupWidgetRow(
-                widgetLabel = "${widgetType.name.lowercase().replaceFirstChar { it.uppercase() }} widget",
-                widgetType = widgetType,
-                onClickCallback = {}
-            )
-        }
+private fun PreviewManageWidgets() {
+    HomeAssistantPreviewTheme {
+        ManageWidgetsContent(
+            state = ManageWidgetsUiState(
+                widgets = WidgetType.entries.associateWith { type ->
+                    listOf(WidgetListItem(type.ordinal + 1, "${type.name.lowercase().replaceFirstChar { it.uppercase() }} widget"))
+                },
+                supportsAddingWidgets = true
+            ),
+            onAddWidget = {},
+            onEditWidget = { _, _ -> }
+        )
     }
 }

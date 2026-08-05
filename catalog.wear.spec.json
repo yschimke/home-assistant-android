@@ -8,6 +8,7 @@
   ],
   "module": ":wear",
   "modes": [
+    "light",
     "dark"
   ],
   "breakpoints": [
@@ -44,6 +45,11 @@
       "name": "Home",
       "section": "Screens",
       "components": [
+        {
+          "componentId": "Home/Landing",
+          "preview": "PreviewMain",
+          "caption": "State-hoisted Wear landing destination with favorites, area navigation, domain navigation, and settings in light and dark themes."
+        },
         {
           "componentId": "Home/Entity list",
           "preview": "PreviewEntityListView",
@@ -151,6 +157,11 @@
       "name": "Settings",
       "section": "Screens",
       "components": [
+        {
+          "componentId": "Settings/Set favorites",
+          "preview": "PreviewSetFavorites",
+          "caption": "State-hoisted expandable favorite selector in light and dark themes."
+        },
         {
           "componentId": "Settings/Favorites",
           "preview": "PreviewSettingsView",

@@ -35,12 +35,38 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.mikepenz.iconics.typeface.IIcon
 import io.homeassistant.companion.android.common.R
+import io.homeassistant.companion.android.common.data.integration.Entity
+import io.homeassistant.companion.android.database.server.Server
 import io.homeassistant.companion.android.settings.qs.ManageTilesViewModel
+import io.homeassistant.companion.android.settings.qs.TileSlot
+import io.homeassistant.companion.android.util.compose.HomeAssistantPreviewTheme
+import io.homeassistant.companion.android.util.compose.ScreenThemeCatalog
 import io.homeassistant.companion.android.util.compose.ServerExposedDropdownMenu
 import io.homeassistant.companion.android.util.compose.SingleEntityPicker
+import io.homeassistant.companion.android.util.previewEntity1
+import io.homeassistant.companion.android.util.previewEntity3
+import io.homeassistant.companion.android.util.previewServer
+import io.homeassistant.companion.android.util.previewServer2
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+
+data class ManageTilesUiState(
+    val slots: List<TileSlot>,
+    val selectedTile: TileSlot,
+    val tileLabel: String,
+    val tileSubtitle: String?,
+    val servers: List<Server>,
+    val selectedServerId: Int,
+    val entities: List<Entity<*>>,
+    val selectedEntityId: String,
+    val selectedIcon: IIcon?,
+    val selectedIconId: String?,
+    val shouldVibrate: Boolean,
+    val authRequired: Boolean,
+    val submitButtonLabel: Int
+)
 
 @Composable
 fun ManageTilesView(
@@ -48,9 +74,6 @@ fun ManageTilesView(
     onShowIconDialog: (tag: String?) -> Unit
 ) {
     val context = LocalContext.current
-    val scrollState = rememberScrollState()
-    var expandedTile by remember { mutableStateOf(false) }
-
     val scaffoldState = rememberScaffoldState()
     LaunchedEffect("snackbar") {
         viewModel.tileInfoSnackbar.onEach {
@@ -60,6 +83,53 @@ fun ManageTilesView(
         }.launchIn(this)
     }
 
+    ManageTilesContent(
+        state = ManageTilesUiState(
+            slots = viewModel.slots,
+            selectedTile = viewModel.selectedTile,
+            tileLabel = viewModel.tileLabel,
+            tileSubtitle = viewModel.tileSubtitle,
+            servers = viewModel.servers,
+            selectedServerId = viewModel.selectedServerId,
+            entities = viewModel.sortedEntities,
+            selectedEntityId = viewModel.selectedEntityId,
+            selectedIcon = viewModel.selectedIcon,
+            selectedIconId = viewModel.selectedIconId,
+            shouldVibrate = viewModel.selectedShouldVibrate,
+            authRequired = viewModel.tileAuthRequired,
+            submitButtonLabel = viewModel.submitButtonLabel
+        ),
+        scaffoldState = scaffoldState,
+        onSelectTile = viewModel::selectTile,
+        onLabelChanged = { viewModel.tileLabel = it },
+        onSubtitleChanged = { viewModel.tileSubtitle = it },
+        onSelectServer = viewModel::selectServerId,
+        onSelectEntity = viewModel::selectEntityId,
+        onShowIconDialog = onShowIconDialog,
+        onClearIcon = { viewModel.selectIcon(null) },
+        onVibrateChanged = { viewModel.selectedShouldVibrate = it },
+        onAuthRequiredChanged = { viewModel.tileAuthRequired = it },
+        onSubmit = viewModel::addTile
+    )
+}
+
+@Composable
+fun ManageTilesContent(
+    state: ManageTilesUiState,
+    scaffoldState: androidx.compose.material.ScaffoldState,
+    onSelectTile: (Int) -> Unit,
+    onLabelChanged: (String) -> Unit,
+    onSubtitleChanged: (String) -> Unit,
+    onSelectServer: (Int) -> Unit,
+    onSelectEntity: (String) -> Unit,
+    onShowIconDialog: (String?) -> Unit,
+    onClearIcon: () -> Unit,
+    onVibrateChanged: (Boolean) -> Unit,
+    onAuthRequiredChanged: (Boolean) -> Unit,
+    onSubmit: () -> Unit
+) {
+    val scrollState = rememberScrollState()
+    var expandedTile by remember { mutableStateOf(false) }
     Scaffold(scaffoldState = scaffoldState) { contentPadding ->
         Box(
             modifier = Modifier
@@ -75,13 +145,13 @@ fun ManageTilesView(
                     )
                     Box {
                         OutlinedButton(onClick = { expandedTile = true }) {
-                            Text(viewModel.selectedTile.name)
+                            Text(state.selectedTile.name)
                         }
 
                         DropdownMenu(expanded = expandedTile, onDismissRequest = { expandedTile = false }) {
-                            for ((index, slot) in viewModel.slots.withIndex()) {
+                            for ((index, slot) in state.slots.withIndex()) {
                                 DropdownMenuItem(onClick = {
-                                    viewModel.selectTile(index)
+                                    onSelectTile(index)
                                     expandedTile = false
                                 }) {
                                     Text(slot.name)
@@ -93,8 +163,8 @@ fun ManageTilesView(
 
                 Divider()
                 TextField(
-                    value = viewModel.tileLabel,
-                    onValueChange = { viewModel.tileLabel = it },
+                    value = state.tileLabel,
+                    onValueChange = onLabelChanged,
                     label = {
                         Text(text = stringResource(id = R.string.tile_label))
                     },
@@ -105,8 +175,8 @@ fun ManageTilesView(
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                     TextField(
-                        value = viewModel.tileSubtitle.orEmpty(),
-                        onValueChange = { viewModel.tileSubtitle = it },
+                        value = state.tileSubtitle.orEmpty(),
+                        onValueChange = onSubtitleChanged,
                         label = {
                             Text(text = stringResource(id = R.string.tile_subtitle))
                         },
@@ -116,22 +186,22 @@ fun ManageTilesView(
                     )
                 }
 
-                if (viewModel.servers.size > 1 || viewModel.servers.none { it.id == viewModel.selectedServerId }) {
+                if (state.servers.size > 1 || state.servers.none { it.id == state.selectedServerId }) {
                     ServerExposedDropdownMenu(
-                        servers = viewModel.servers,
-                        current = viewModel.selectedServerId,
-                        onSelected = viewModel::selectServerId,
+                        servers = state.servers,
+                        current = state.selectedServerId,
+                        onSelected = onSelectServer,
                         title = R.string.tile_server,
                         modifier = Modifier.padding(top = 16.dp)
                     )
                 }
 
                 SingleEntityPicker(
-                    entities = viewModel.sortedEntities,
-                    currentEntity = viewModel.selectedEntityId,
-                    onEntityCleared = { viewModel.selectEntityId("") },
+                    entities = state.entities,
+                    currentEntity = state.selectedEntityId,
+                    onEntityCleared = { onSelectEntity("") },
                     onEntitySelected = {
-                        viewModel.selectEntityId(it)
+                        onSelectEntity(it)
                         return@SingleEntityPicker true
                     },
                     modifier = Modifier
@@ -147,9 +217,9 @@ fun ManageTilesView(
                         modifier = Modifier.padding(end = 8.dp)
                     )
                     OutlinedButton(
-                        onClick = { onShowIconDialog(viewModel.selectedTile.id) }
+                        onClick = { onShowIconDialog(state.selectedTile.id) }
                     ) {
-                        viewModel.selectedIcon?.let { icon ->
+                        state.selectedIcon?.let { icon ->
                             com.mikepenz.iconics.compose.Image(
                                 icon,
                                 contentDescription = stringResource(id = R.string.tile_icon),
@@ -158,10 +228,10 @@ fun ManageTilesView(
                             )
                         }
                     }
-                    if (viewModel.selectedIconId != null && viewModel.selectedEntityId.isNotBlank()) {
+                    if (state.selectedIconId != null && state.selectedEntityId.isNotBlank()) {
                         TextButton(
                             modifier = Modifier.padding(start = 4.dp),
-                            onClick = { viewModel.selectIcon(null) }
+                            onClick = onClearIcon
                         ) {
                             Text(text = stringResource(R.string.tile_icon_original))
                         }
@@ -174,8 +244,8 @@ fun ManageTilesView(
                         fontSize = 15.sp
                     )
                     Switch(
-                        checked = viewModel.selectedShouldVibrate,
-                        onCheckedChange = { viewModel.selectedShouldVibrate = it },
+                        checked = state.shouldVibrate,
+                        onCheckedChange = onVibrateChanged,
                         colors = SwitchDefaults.colors(uncheckedThumbColor = colorResource(R.color.colorSwitchUncheckedThumb))
                     )
                 }
@@ -186,21 +256,57 @@ fun ManageTilesView(
                         fontSize = 15.sp
                     )
                     Switch(
-                        checked = viewModel.tileAuthRequired,
-                        onCheckedChange = { viewModel.tileAuthRequired = it },
+                        checked = state.authRequired,
+                        onCheckedChange = onAuthRequiredChanged,
                         colors = SwitchDefaults.colors(uncheckedThumbColor = colorResource(R.color.colorSwitchUncheckedThumb))
                     )
                 }
 
                 Button(
-                    onClick = { viewModel.addTile() },
-                    enabled = viewModel.tileLabel.isNotBlank() &&
-                        viewModel.selectedServerId in viewModel.servers.map { it.id } &&
-                        viewModel.selectedEntityId in viewModel.sortedEntities.map { it.entityId }
+                    onClick = onSubmit,
+                    enabled = state.tileLabel.isNotBlank() &&
+                        state.selectedServerId in state.servers.map { it.id } &&
+                        state.selectedEntityId in state.entities.map { it.entityId }
                 ) {
-                    Text(stringResource(viewModel.submitButtonLabel))
+                    Text(stringResource(state.submitButtonLabel))
                 }
             }
         }
+    }
+}
+
+@ScreenThemeCatalog
+@Composable
+private fun PreviewManageTiles() {
+    val scaffoldState = rememberScaffoldState()
+    HomeAssistantPreviewTheme {
+        ManageTilesContent(
+            state = ManageTilesUiState(
+                slots = listOf(TileSlot("tile_1", "Tile 1"), TileSlot("tile_2", "Tile 2")),
+                selectedTile = TileSlot("tile_1", "Tile 1"),
+                tileLabel = "Living room light",
+                tileSubtitle = "Tap to toggle",
+                servers = listOf(previewServer, previewServer2),
+                selectedServerId = previewServer.id,
+                entities = listOf(previewEntity1, previewEntity3),
+                selectedEntityId = previewEntity1.entityId,
+                selectedIcon = null,
+                selectedIconId = null,
+                shouldVibrate = true,
+                authRequired = false,
+                submitButtonLabel = R.string.tile_save
+            ),
+            scaffoldState = scaffoldState,
+            onSelectTile = {},
+            onLabelChanged = {},
+            onSubtitleChanged = {},
+            onSelectServer = {},
+            onSelectEntity = {},
+            onShowIconDialog = {},
+            onClearIcon = {},
+            onVibrateChanged = {},
+            onAuthRequiredChanged = {},
+            onSubmit = {}
+        )
     }
 }
