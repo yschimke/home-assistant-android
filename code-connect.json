@@ -1,0 +1,299 @@
+{
+  "system": "home-assistant-android",
+  "title": "Home Assistant Companion",
+  "label": "Compose",
+  "source": {
+    "repo": "yschimke/home-assistant-android",
+    "ref": "previews",
+    "module": ":app"
+  },
+  "generatedAt": "2026-08-05T23:07:10.440Z",
+  "mappings": [
+    {
+      "componentId": "Onboarding/Welcome",
+      "figmaLayerName": "Onboarding/Welcome",
+      "componentName": "PreviewWelcome",
+      "source": "https://github.com/yschimke/home-assistant-android/blob/previews/app/src/main/java/io/homeassistant/companion/android/onboarding/welcome/WelcomeView.kt",
+      "label": "Compose",
+      "confidence": "preview-fallback",
+      "previewName": "PreviewWelcome",
+      "figmaSvg": "figma/onboarding-welcome.svg"
+    },
+    {
+      "componentId": "Onboarding/Notification permission",
+      "figmaLayerName": "Onboarding/Notification permission",
+      "componentName": "NotificationPermissionViewPreview",
+      "source": "https://github.com/yschimke/home-assistant-android/blob/previews/app/src/main/java/io/homeassistant/companion/android/onboarding/notifications/NotificationPermissionView.kt",
+      "label": "Compose",
+      "confidence": "preview-fallback",
+      "previewName": "NotificationPermissionViewPreview",
+      "figmaSvg": "figma/onboarding-notification-permission.svg"
+    },
+    {
+      "componentId": "Settings/Wear companion",
+      "figmaLayerName": "Settings/Wear companion",
+      "componentName": "SettingWearLandingView",
+      "source": "https://github.com/yschimke/home-assistant-android/blob/previews/app/src/full/java/io/homeassistant/companion/android/settings/wear/views/SettingsWearLandingView.kt",
+      "label": "Compose",
+      "confidence": "HIGH",
+      "previewName": "PreviewSettingWearLandingView",
+      "codeSnippet": "SettingWearLandingView(\n    deviceName = TODO(\"String\"),\n    hasData = TODO(\"Boolean\"),\n    isAuthed = TODO(\"Boolean\"),\n    navigateFavorites = { },\n    navigateTemplateTile = { },\n    loginWearOs = { },\n    onBackClicked = { },\n    events = TODO(\"Flow<String>\"),\n)",
+      "imports": [
+        "import io.homeassistant.companion.android.settings.wear.views.SettingWearLandingView"
+      ],
+      "parameters": [
+        {
+          "name": "deviceName",
+          "type": "String",
+          "hasDefault": false,
+          "composableSlot": false
+        },
+        {
+          "name": "hasData",
+          "type": "Boolean",
+          "hasDefault": false,
+          "composableSlot": false
+        },
+        {
+          "name": "isAuthed",
+          "type": "Boolean",
+          "hasDefault": false,
+          "composableSlot": false
+        },
+        {
+          "name": "navigateFavorites",
+          "type": "() -> Unit",
+          "hasDefault": false,
+          "composableSlot": true
+        },
+        {
+          "name": "navigateTemplateTile",
+          "type": "() -> Unit",
+          "hasDefault": false,
+          "composableSlot": true
+        },
+        {
+          "name": "loginWearOs",
+          "type": "() -> Unit",
+          "hasDefault": false,
+          "composableSlot": true
+        },
+        {
+          "name": "onBackClicked",
+          "type": "() -> Unit",
+          "hasDefault": false,
+          "composableSlot": true
+        },
+        {
+          "name": "events",
+          "type": "Flow<String>",
+          "hasDefault": false,
+          "composableSlot": false
+        }
+      ],
+      "figmaSvg": "figma/settings-wear-companion.svg"
+    },
+    {
+      "componentId": "Onboarding/Matter commissioning",
+      "figmaLayerName": "Onboarding/Matter commissioning",
+      "componentName": "PreviewMatterCommissioningView",
+      "source": "https://github.com/yschimke/home-assistant-android/blob/previews/app/src/full/java/io/homeassistant/companion/android/matter/views/MatterCommissioningView.kt",
+      "label": "Compose",
+      "confidence": "preview-fallback",
+      "previewName": "PreviewMatterCommissioningView",
+      "figmaSvg": "figma/onboarding-matter-commissioning.svg"
+    },
+    {
+      "componentId": "Settings/Quick settings tiles",
+      "figmaLayerName": "Settings/Quick settings tiles",
+      "componentName": "PreviewManageTiles",
+      "source": "https://github.com/yschimke/home-assistant-android/blob/previews/app/src/main/java/io/homeassistant/companion/android/settings/qs/views/ManageTilesView.kt",
+      "label": "Compose",
+      "confidence": "preview-fallback",
+      "previewName": "PreviewManageTiles",
+      "figmaSvg": "figma/settings-quick-settings-tiles.svg"
+    },
+    {
+      "componentId": "Settings/App shortcuts",
+      "figmaLayerName": "Settings/App shortcuts",
+      "componentName": "PreviewManageShortcuts",
+      "source": "https://github.com/yschimke/home-assistant-android/blob/previews/app/src/main/java/io/homeassistant/companion/android/settings/shortcuts/views/ManageShortcutsView.kt",
+      "label": "Compose",
+      "confidence": "preview-fallback",
+      "previewName": "PreviewManageShortcuts",
+      "figmaSvg": "figma/settings-app-shortcuts.svg"
+    },
+    {
+      "componentId": "Settings/Android Auto favorites",
+      "figmaLayerName": "Settings/Android Auto favorites",
+      "componentName": "PreviewAndroidAutoFavorites",
+      "source": "https://github.com/yschimke/home-assistant-android/blob/previews/app/src/main/java/io/homeassistant/companion/android/settings/vehicle/views/AndroidAutoFavoritesView.kt",
+      "label": "Compose",
+      "confidence": "preview-fallback",
+      "previewName": "PreviewAndroidAutoFavorites",
+      "figmaSvg": "figma/settings-android-auto-favorites.svg"
+    },
+    {
+      "componentId": "Settings/Sensor list",
+      "figmaLayerName": "Settings/Sensor list",
+      "componentName": "PreviewSensorList",
+      "source": "https://github.com/yschimke/home-assistant-android/blob/previews/app/src/main/java/io/homeassistant/companion/android/settings/sensor/views/SensorListView.kt",
+      "label": "Compose",
+      "confidence": "preview-fallback",
+      "previewName": "PreviewSensorList",
+      "figmaSvg": "figma/settings-sensor-list.svg"
+    },
+    {
+      "componentId": "Settings/Widgets",
+      "figmaLayerName": "Settings/Widgets",
+      "componentName": "PreviewManageWidgets",
+      "source": "https://github.com/yschimke/home-assistant-android/blob/previews/app/src/main/java/io/homeassistant/companion/android/settings/widgets/views/ManageWidgetsView.kt",
+      "label": "Compose",
+      "confidence": "preview-fallback",
+      "previewName": "PreviewManageWidgets",
+      "figmaSvg": "figma/settings-widgets.svg"
+    },
+    {
+      "componentId": "Settings/Wi-Fi SSIDs",
+      "figmaLayerName": "Settings/Wi-Fi SSIDs",
+      "componentName": "SsidView",
+      "source": "https://github.com/yschimke/home-assistant-android/blob/previews/app/src/main/java/io/homeassistant/companion/android/settings/ssid/views/SsidView.kt",
+      "label": "Compose",
+      "confidence": "MEDIUM",
+      "previewName": "PreviewSsidViewItems",
+      "codeSnippet": "SsidView(\n    wifiSsids = TODO(\"List<String>\"),\n    prioritizeInternal = TODO(\"Boolean\"),\n    usingWifi = TODO(\"Boolean\"),\n    activeSsid = TODO(\"String?\"),\n    activeBssid = TODO(\"String?\"),\n    onAddWifiSsid = { },\n    onRemoveWifiSsid = { },\n    onSetPrioritize = { },\n)",
+      "imports": [
+        "import io.homeassistant.companion.android.settings.ssid.views.SsidView"
+      ],
+      "parameters": [
+        {
+          "name": "wifiSsids",
+          "type": "List<String>",
+          "hasDefault": false,
+          "composableSlot": false
+        },
+        {
+          "name": "prioritizeInternal",
+          "type": "Boolean",
+          "hasDefault": false,
+          "composableSlot": false
+        },
+        {
+          "name": "usingWifi",
+          "type": "Boolean",
+          "hasDefault": false,
+          "composableSlot": false
+        },
+        {
+          "name": "activeSsid",
+          "type": "String?",
+          "hasDefault": false,
+          "composableSlot": false
+        },
+        {
+          "name": "activeBssid",
+          "type": "String?",
+          "hasDefault": false,
+          "composableSlot": false
+        },
+        {
+          "name": "onAddWifiSsid",
+          "type": "(String) -> Boolean",
+          "hasDefault": false,
+          "composableSlot": true
+        },
+        {
+          "name": "onRemoveWifiSsid",
+          "type": "(String) -> Unit",
+          "hasDefault": false,
+          "composableSlot": true
+        },
+        {
+          "name": "onSetPrioritize",
+          "type": "(Boolean) -> Unit",
+          "hasDefault": false,
+          "composableSlot": true
+        }
+      ],
+      "figmaSvg": "figma/settings-wi-fi-ssids.svg"
+    },
+    {
+      "componentId": "Settings/External URL",
+      "figmaLayerName": "Settings/External URL",
+      "componentName": "ExternalUrlView",
+      "source": "https://github.com/yschimke/home-assistant-android/blob/previews/app/src/main/java/io/homeassistant/companion/android/settings/url/views/ExternalUrlView.kt",
+      "label": "Compose",
+      "confidence": "MEDIUM",
+      "previewName": "PreviewExternalUrlViewCloudOn",
+      "codeSnippet": "ExternalUrlView(\n    canUseCloud = TODO(\"Boolean\"),\n    useCloud = TODO(\"Boolean\"),\n    externalUrl = TODO(\"String?\"),\n    onUseCloudToggle = { },\n    onExternalUrlSaved = { },\n)",
+      "imports": [
+        "import io.homeassistant.companion.android.settings.url.views.ExternalUrlView"
+      ],
+      "parameters": [
+        {
+          "name": "canUseCloud",
+          "type": "Boolean",
+          "hasDefault": false,
+          "composableSlot": false
+        },
+        {
+          "name": "useCloud",
+          "type": "Boolean",
+          "hasDefault": false,
+          "composableSlot": false
+        },
+        {
+          "name": "externalUrl",
+          "type": "String?",
+          "hasDefault": false,
+          "composableSlot": false
+        },
+        {
+          "name": "onUseCloudToggle",
+          "type": "(Boolean) -> Unit",
+          "hasDefault": false,
+          "composableSlot": true
+        },
+        {
+          "name": "onExternalUrlSaved",
+          "type": "(String) -> Unit",
+          "hasDefault": false,
+          "composableSlot": true
+        }
+      ],
+      "figmaSvg": "figma/settings-external-url.svg"
+    },
+    {
+      "componentId": "Settings/Notification detail",
+      "figmaLayerName": "Settings/Notification detail",
+      "componentName": "LoadNotification",
+      "source": "https://github.com/yschimke/home-assistant-android/blob/previews/app/src/main/java/io/homeassistant/companion/android/settings/notification/views/NotificationDetailView.kt",
+      "label": "Compose",
+      "confidence": "MEDIUM",
+      "previewName": "PreviewNotificationDetails",
+      "codeSnippet": "LoadNotification(\n    notification = TODO(\"NotificationItem\"),\n)",
+      "imports": [
+        "import io.homeassistant.companion.android.settings.notification.views.LoadNotification"
+      ],
+      "parameters": [
+        {
+          "name": "notification",
+          "type": "NotificationItem",
+          "hasDefault": false,
+          "composableSlot": false
+        }
+      ],
+      "figmaSvg": "figma/settings-notification-detail.svg"
+    },
+    {
+      "componentId": "Components/Icon dialog",
+      "figmaLayerName": "Components/Icon dialog",
+      "componentName": "IconDialogPreview",
+      "source": "https://github.com/yschimke/home-assistant-android/blob/previews/app/src/main/java/io/homeassistant/companion/android/util/icondialog/IconDialog.kt",
+      "label": "Compose",
+      "confidence": "preview-fallback",
+      "previewName": "IconDialogPreview",
+      "figmaSvg": "figma/components-icon-dialog.svg"
+    }
+  ]
+}
