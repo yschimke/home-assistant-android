@@ -1,0 +1,19 @@
+{
+  "schema": "compose-preview-activity/v1",
+  "generatedAt": "2026-08-08T18:53:41.314Z",
+  "windowDays": 30,
+  "code": {
+    "repo": "yschimke/home-assistant-android",
+    "ref": "previews",
+    "events": [
+      {
+        "sha": "f04727b4de69ce3ad6fe051ded6e4623033dc007",
+        "subject": "Merge pull request #4 from yschimke/agent/compose-ai-tools-0.19.49",
+        "at": "2026-08-08T18:49:07+01:00",
+        "author": "Yuri Schimke",
+        "previewIds": [],
+        "components": []
+      }
+    ]
+  }
+}
