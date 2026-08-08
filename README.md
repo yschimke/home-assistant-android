@@ -36,32 +36,21 @@ customising the live render are two ends of one workflow.
 
 | | |
 | --- | --- |
-| Components | **22** |
-| Rendered images (PNG) | **32** |
-| Editable wireframes (SVG) | **22** |
-| Editable design vectors (figma-svg) | **22** |
-| Components with a11y greenlines | **17** |
+| Components | **0** |
+| Rendered images (PNG) | **0** |
+| Editable wireframes (SVG) | **0** |
+| Editable design vectors (figma-svg) | **0** |
+| Components with a11y greenlines | **0** |
 | Library | `Wear Compose Material + Home Assistant surfaces` |
-| Renderer | compose-preview 0.19.38 |
+| Renderer | compose-preview 0.19.49 |
 | Schema | `design-parity-catalog/v1` |
-| Generated | 2026-08-05 |
+| Generated | 2026-08-08 |
 
 ## Components by group
 
 | Group | Count |
 | --- | ---: |
-| Tiles | 6 |
-| Home | 3 |
-| Settings | 3 |
-| Entity rows | 2 |
-| Entity details | 1 |
-| Sensor management | 1 |
-| Onboarding | 1 |
-| Conversation | 1 |
-| Controls | 1 |
-| Sensor rows | 1 |
-| List structure | 1 |
-| Device chrome | 1 |
+
 
 ## What's in this branch
 
