@@ -17,7 +17,12 @@ car-versions = "1.3.0-rc01"
 changeLog = "3.4"
 community-material-typeface = "7.0.96.0-kotlin"
 compose-bom = "2025.01.00"
-compose-ai-preview = "0.19.51"
+# Pinned below 0.19.46 until yschimke/compose-ai-tools#3590 is fixed. From 0.19.46 the plugin's
+# "Rule 3" defers the render classpath to this repo's own Compose (compose-bom above) without
+# checking it is new enough to link the renderer's bytecode, so every @Preview dies with
+# NoSuchMethodError ComposeUiNode$Companion.getApplyOnDeactivatedNodeAssertion() and both
+# catalogs publish empty. Raise this again once that lands (or once compose-bom is bumped).
+compose-ai-preview = "0.19.45"
 constraintlayout = "2.1.4"
 converterJackson = "2.9.0"
 coreKtx = "1.12.0"
