@@ -4,6 +4,9 @@ name: Design Artifacts
 # branch and force-pushes generated catalogs to design-artifacts/<system>, ready for
 # preview.coo.ee to serve after the systems are registered there.
 on:
+  # Re-render on demand without needing a commit on `previews` — the renderer is pinned
+  # by version, so a compose-ai-tools release can change the output with nothing to push.
+  workflow_dispatch:
   push:
     branches:
       - previews
