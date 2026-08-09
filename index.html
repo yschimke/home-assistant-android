@@ -90,14 +90,458 @@
 <body>
 <header class="top">
   <h1>Home Assistant Companion for Wear OS</h1>
-  <div class="subtitle">system <code>home-assistant-wear</code> · Wear Compose Material + Home Assistant surfaces · rendered by compose-preview 0.19.51 · 2026-08-09T12:21:20.050Z · 0 components</div>
+  <div class="subtitle">system <code>home-assistant-wear</code> · Wear Compose Material + Home Assistant surfaces · rendered by compose-preview 0.19.53 · 2026-08-09T17:28:43.399Z · 22 components</div>
   <div class="subtitle"><a class="pagelink" href="compare.html">PNG vs SVG compare ↗</a></div>
 </header>
 <div class="layout">
-  <nav class="index"></nav>
-  <main></main>
+  <nav class="index"><section class="nav-group">
+      <a class="nav-head" href="#g-home">Home <span>3</span></a>
+      <ul><li><a href="#c-home-landing">Home/Landing</a></li><li><a href="#c-home-entity-list">Home/Entity list</a></li><li><a href="#c-home-sensors">Home/Sensors</a></li></ul>
+    </section><section class="nav-group">
+      <a class="nav-head" href="#g-entity-details">Entity details <span>1</span></a>
+      <ul><li><a href="#c-entities-detail-panel">Entities/Detail panel</a></li></ul>
+    </section><section class="nav-group">
+      <a class="nav-head" href="#g-tiles">Tiles <span>6</span></a>
+      <ul><li><a href="#c-tiles-shortcut-selection">Tiles/Shortcut selection</a></li><li><a href="#c-tiles-shortcut-order">Tiles/Shortcut order</a></li><li><a href="#c-tiles-camera-selection">Tiles/Camera selection</a></li><li><a href="#c-tiles-template-settings">Tiles/Template settings</a></li><li><a href="#c-tiles-refresh-interval">Tiles/Refresh interval</a></li><li><a href="#c-tiles-camera-settings">Tiles/Camera settings</a></li></ul>
+    </section><section class="nav-group">
+      <a class="nav-head" href="#g-sensor-management">Sensor management <span>1</span></a>
+      <ul><li><a href="#c-sensors-manager">Sensors/Manager</a></li></ul>
+    </section><section class="nav-group">
+      <a class="nav-head" href="#g-settings">Settings <span>3</span></a>
+      <ul><li><a href="#c-settings-set-favorites">Settings/Set favorites</a></li><li><a href="#c-settings-favorites">Settings/Favorites</a></li><li><a href="#c-settings-complication">Settings/Complication</a></li></ul>
+    </section><section class="nav-group">
+      <a class="nav-head" href="#g-onboarding">Onboarding <span>1</span></a>
+      <ul><li><a href="#c-onboarding-install-phone-app">Onboarding/Install phone app</a></li></ul>
+    </section><section class="nav-group">
+      <a class="nav-head" href="#g-conversation">Conversation <span>1</span></a>
+      <ul><li><a href="#c-conversation-speech-bubbles">Conversation/Speech bubbles</a></li></ul>
+    </section><section class="nav-group">
+      <a class="nav-head" href="#g-entity-rows">Entity rows <span>2</span></a>
+      <ul><li><a href="#c-entities-rows">Entities/Rows</a></li><li><a href="#c-entities-selection-chip">Entities/Selection chip</a></li></ul>
+    </section><section class="nav-group">
+      <a class="nav-head" href="#g-controls">Controls <span>1</span></a>
+      <ul><li><a href="#c-controls-toggle-states">Controls/Toggle states</a></li></ul>
+    </section><section class="nav-group">
+      <a class="nav-head" href="#g-sensor-rows">Sensor rows <span>1</span></a>
+      <ul><li><a href="#c-sensors-rows">Sensors/Rows</a></li></ul>
+    </section><section class="nav-group">
+      <a class="nav-head" href="#g-list-structure">List structure <span>1</span></a>
+      <ul><li><a href="#c-components-list-header">Components/List header</a></li></ul>
+    </section><section class="nav-group">
+      <a class="nav-head" href="#g-device-chrome">Device chrome <span>1</span></a>
+      <ul><li><a href="#c-components-time-text">Components/Time text</a></li></ul>
+    </section></nav>
+  <main><section class="group" id="g-home">
+      <h2>Home</h2>
+      <div class="grid"><article class="card" id="c-home-landing">
+  <a class="shot" href="#d-home-landing" aria-label="Zoom Home/Landing"><img loading="lazy" src="images/home-landing/ideal__default__dark__largeround.png" alt="Home/Landing" /></a>
+  <div class="meta">
+    <h3><a class="ctitle" href="#d-home-landing">Home/Landing</a></h3>
+    <div class="sub">454×454<a class="wf" href="wireframes/home-landing.svg" target="_blank" rel="noopener">wireframe ↗</a><a class="wf" href="figma/home-landing.svg" target="_blank" rel="noopener">figma svg ↗</a></div>
+    <div class="greenlines" title="accessibility greenlines"><span class="chip chip--info">checkbox</span><span class="chip chip--info">button</span></div>
+  </div>
+</article>
+<article class="card" id="c-home-entity-list">
+  <a class="shot" href="#d-home-entity-list" aria-label="Zoom Home/Entity list"><img loading="lazy" src="images/home-entity-list/ideal__default__largeround.png" alt="Home/Entity list" /></a>
+  <div class="meta">
+    <h3><a class="ctitle" href="#d-home-entity-list">Home/Entity list</a></h3>
+    <div class="sub">454×454<a class="statechip" href="#d-home-entity-list">+2 states</a><a class="wf" href="wireframes/home-entity-list.svg" target="_blank" rel="noopener">wireframe ↗</a><a class="wf" href="figma/home-entity-list.svg" target="_blank" rel="noopener">figma svg ↗</a></div>
+    <div class="greenlines" title="accessibility greenlines"><span class="chip chip--info">checkbox</span><span class="chip chip--info">checkbox</span></div>
+  </div>
+</article>
+<article class="card" id="c-home-sensors">
+  <a class="shot" href="#d-home-sensors" aria-label="Zoom Home/Sensors"><img loading="lazy" src="images/home-sensors/ideal__default__largeround.png" alt="Home/Sensors" /></a>
+  <div class="meta">
+    <h3><a class="ctitle" href="#d-home-sensors">Home/Sensors</a></h3>
+    <div class="sub">454×454<a class="wf" href="wireframes/home-sensors.svg" target="_blank" rel="noopener">wireframe ↗</a><a class="wf" href="figma/home-sensors.svg" target="_blank" rel="noopener">figma svg ↗</a></div>
+    <div class="greenlines" title="accessibility greenlines"><span class="chip chip--info">button</span><span class="chip chip--info">button</span><span class="chip chip--info">button</span></div>
+  </div>
+</article></div>
+    </section>
+<section class="group" id="g-entity-details">
+      <h2>Entity details</h2>
+      <div class="grid"><article class="card" id="c-entities-detail-panel">
+  <a class="shot" href="#d-entities-detail-panel" aria-label="Zoom Entities/Detail panel"><img loading="lazy" src="images/entities-detail-panel/ideal__default__largeround.png" alt="Entities/Detail panel" /></a>
+  <div class="meta">
+    <h3><a class="ctitle" href="#d-entities-detail-panel">Entities/Detail panel</a></h3>
+    <div class="sub">454×454<a class="statechip" href="#d-entities-detail-panel">+2 states</a><a class="wf" href="wireframes/entities-detail-panel.svg" target="_blank" rel="noopener">wireframe ↗</a><a class="wf" href="figma/entities-detail-panel.svg" target="_blank" rel="noopener">figma svg ↗</a></div>
+    <div class="greenlines" title="accessibility greenlines"><span class="chip chip--info">checkbox</span></div>
+  </div>
+</article></div>
+    </section>
+<section class="group" id="g-tiles">
+      <h2>Tiles</h2>
+      <div class="grid"><article class="card" id="c-tiles-shortcut-selection">
+  <a class="shot" href="#d-tiles-shortcut-selection" aria-label="Zoom Tiles/Shortcut selection"><img loading="lazy" src="images/tiles-shortcut-selection/ideal__default__largeround.png" alt="Tiles/Shortcut selection" /></a>
+  <div class="meta">
+    <h3><a class="ctitle" href="#d-tiles-shortcut-selection">Tiles/Shortcut selection</a></h3>
+    <div class="sub">454×454<a class="statechip" href="#d-tiles-shortcut-selection">+1 state</a><a class="wf" href="wireframes/tiles-shortcut-selection.svg" target="_blank" rel="noopener">wireframe ↗</a><a class="wf" href="figma/tiles-shortcut-selection.svg" target="_blank" rel="noopener">figma svg ↗</a></div>
+    <div class="greenlines" title="accessibility greenlines"><span class="chip chip--info">checkbox</span><span class="chip chip--info">button</span></div>
+  </div>
+</article>
+<article class="card" id="c-tiles-shortcut-order">
+  <a class="shot" href="#d-tiles-shortcut-order" aria-label="Zoom Tiles/Shortcut order"><img loading="lazy" src="images/tiles-shortcut-order/ideal__default__largeround.png" alt="Tiles/Shortcut order" /></a>
+  <div class="meta">
+    <h3><a class="ctitle" href="#d-tiles-shortcut-order">Tiles/Shortcut order</a></h3>
+    <div class="sub">454×454<a class="wf" href="wireframes/tiles-shortcut-order.svg" target="_blank" rel="noopener">wireframe ↗</a><a class="wf" href="figma/tiles-shortcut-order.svg" target="_blank" rel="noopener">figma svg ↗</a></div>
+    <div class="greenlines" title="accessibility greenlines"><span class="chip chip--info">button</span><span class="chip chip--info">button</span></div>
+  </div>
+</article>
+<article class="card" id="c-tiles-camera-selection">
+  <a class="shot" href="#d-tiles-camera-selection" aria-label="Zoom Tiles/Camera selection"><img loading="lazy" src="images/tiles-camera-selection/ideal__default__largeround.png" alt="Tiles/Camera selection" /></a>
+  <div class="meta">
+    <h3><a class="ctitle" href="#d-tiles-camera-selection">Tiles/Camera selection</a></h3>
+    <div class="sub">454×454<a class="statechip" href="#d-tiles-camera-selection">+1 state</a><a class="wf" href="wireframes/tiles-camera-selection.svg" target="_blank" rel="noopener">wireframe ↗</a><a class="wf" href="figma/tiles-camera-selection.svg" target="_blank" rel="noopener">figma svg ↗</a></div>
+    <div class="greenlines" title="accessibility greenlines"><span class="chip chip--info">button</span></div>
+  </div>
+</article>
+<article class="card" id="c-tiles-template-settings">
+  <a class="shot" href="#d-tiles-template-settings" aria-label="Zoom Tiles/Template settings"><img loading="lazy" src="images/tiles-template-settings/ideal__default__largeround.png" alt="Tiles/Template settings" /></a>
+  <div class="meta">
+    <h3><a class="ctitle" href="#d-tiles-template-settings">Tiles/Template settings</a></h3>
+    <div class="sub">454×454<a class="wf" href="wireframes/tiles-template-settings.svg" target="_blank" rel="noopener">wireframe ↗</a><a class="wf" href="figma/tiles-template-settings.svg" target="_blank" rel="noopener">figma svg ↗</a></div>
+    <div class="greenlines" title="accessibility greenlines"><span class="chip chip--info">button</span></div>
+  </div>
+</article>
+<article class="card" id="c-tiles-refresh-interval">
+  <a class="shot" href="#d-tiles-refresh-interval" aria-label="Zoom Tiles/Refresh interval"><img loading="lazy" src="images/tiles-refresh-interval/ideal__default__largeround.png" alt="Tiles/Refresh interval" /></a>
+  <div class="meta">
+    <h3><a class="ctitle" href="#d-tiles-refresh-interval">Tiles/Refresh interval</a></h3>
+    <div class="sub">454×454<a class="wf" href="wireframes/tiles-refresh-interval.svg" target="_blank" rel="noopener">wireframe ↗</a><a class="wf" href="figma/tiles-refresh-interval.svg" target="_blank" rel="noopener">figma svg ↗</a></div>
+    <div class="greenlines" title="accessibility greenlines"><span class="chip chip--info">button</span></div>
+  </div>
+</article>
+<article class="card" id="c-tiles-camera-settings">
+  <a class="shot" href="#d-tiles-camera-settings" aria-label="Zoom Tiles/Camera settings"><img loading="lazy" src="images/tiles-camera-settings/ideal__default__largeround.png" alt="Tiles/Camera settings" /></a>
+  <div class="meta">
+    <h3><a class="ctitle" href="#d-tiles-camera-settings">Tiles/Camera settings</a></h3>
+    <div class="sub">454×454<a class="statechip" href="#d-tiles-camera-settings">+1 state</a><a class="wf" href="wireframes/tiles-camera-settings.svg" target="_blank" rel="noopener">wireframe ↗</a><a class="wf" href="figma/tiles-camera-settings.svg" target="_blank" rel="noopener">figma svg ↗</a></div>
+    <div class="greenlines" title="accessibility greenlines"><span class="chip chip--info">button</span><span class="chip chip--info">button</span></div>
+  </div>
+</article></div>
+    </section>
+<section class="group" id="g-sensor-management">
+      <h2>Sensor management</h2>
+      <div class="grid"><article class="card" id="c-sensors-manager">
+  <a class="shot" href="#d-sensors-manager" aria-label="Zoom Sensors/Manager"><img loading="lazy" src="images/sensors-manager/ideal__default__largeround.png" alt="Sensors/Manager" /></a>
+  <div class="meta">
+    <h3><a class="ctitle" href="#d-sensors-manager">Sensors/Manager</a></h3>
+    <div class="sub">454×454<a class="wf" href="wireframes/sensors-manager.svg" target="_blank" rel="noopener">wireframe ↗</a><a class="wf" href="figma/sensors-manager.svg" target="_blank" rel="noopener">figma svg ↗</a></div>
+    <div class="greenlines" title="accessibility greenlines"><span class="chip chip--info">checkbox</span></div>
+  </div>
+</article></div>
+    </section>
+<section class="group" id="g-settings">
+      <h2>Settings</h2>
+      <div class="grid"><article class="card" id="c-settings-set-favorites">
+  <a class="shot" href="#d-settings-set-favorites" aria-label="Zoom Settings/Set favorites"><img loading="lazy" src="images/settings-set-favorites/ideal__default__dark__largeround.png" alt="Settings/Set favorites" /></a>
+  <div class="meta">
+    <h3><a class="ctitle" href="#d-settings-set-favorites">Settings/Set favorites</a></h3>
+    <div class="sub">454×454<a class="wf" href="wireframes/settings-set-favorites.svg" target="_blank" rel="noopener">wireframe ↗</a><a class="wf" href="figma/settings-set-favorites.svg" target="_blank" rel="noopener">figma svg ↗</a></div>
+    
+  </div>
+</article>
+<article class="card" id="c-settings-favorites">
+  <a class="shot" href="#d-settings-favorites" aria-label="Zoom Settings/Favorites"><img loading="lazy" src="images/settings-favorites/ideal__default__largeround.png" alt="Settings/Favorites" /></a>
+  <div class="meta">
+    <h3><a class="ctitle" href="#d-settings-favorites">Settings/Favorites</a></h3>
+    <div class="sub">454×454<a class="wf" href="wireframes/settings-favorites.svg" target="_blank" rel="noopener">wireframe ↗</a><a class="wf" href="figma/settings-favorites.svg" target="_blank" rel="noopener">figma svg ↗</a></div>
+    <div class="greenlines" title="accessibility greenlines"><span class="chip chip--info">button</span><span class="chip chip--info">button</span><span class="chip chip--info">checkbox</span></div>
+  </div>
+</article>
+<article class="card" id="c-settings-complication">
+  <a class="shot" href="#d-settings-complication" aria-label="Zoom Settings/Complication"><img loading="lazy" src="images/settings-complication/ideal__default__largeround.png" alt="Settings/Complication" /></a>
+  <div class="meta">
+    <h3><a class="ctitle" href="#d-settings-complication">Settings/Complication</a></h3>
+    <div class="sub">454×454<a class="wf" href="wireframes/settings-complication.svg" target="_blank" rel="noopener">wireframe ↗</a><a class="wf" href="figma/settings-complication.svg" target="_blank" rel="noopener">figma svg ↗</a></div>
+    <div class="greenlines" title="accessibility greenlines"><span class="chip chip--info">button</span><span class="chip chip--info">checkbox</span><span class="chip chip--info">checkbox</span></div>
+  </div>
+</article></div>
+    </section>
+<section class="group" id="g-onboarding">
+      <h2>Onboarding</h2>
+      <div class="grid"><article class="card" id="c-onboarding-install-phone-app">
+  <a class="shot" href="#d-onboarding-install-phone-app" aria-label="Zoom Onboarding/Install phone app"><img loading="lazy" src="images/onboarding-install-phone-app/ideal__default__largeround.png" alt="Onboarding/Install phone app" /></a>
+  <div class="meta">
+    <h3><a class="ctitle" href="#d-onboarding-install-phone-app">Onboarding/Install phone app</a></h3>
+    <div class="sub">454×454<a class="wf" href="wireframes/onboarding-install-phone-app.svg" target="_blank" rel="noopener">wireframe ↗</a><a class="wf" href="figma/onboarding-install-phone-app.svg" target="_blank" rel="noopener">figma svg ↗</a></div>
+    <div class="greenlines" title="accessibility greenlines"><span class="chip chip--info">button</span><span class="chip chip--info">button</span></div>
+  </div>
+</article></div>
+    </section>
+<section class="group" id="g-conversation">
+      <h2>Conversation</h2>
+      <div class="grid"><article class="card" id="c-conversation-speech-bubbles">
+  <a class="shot" href="#d-conversation-speech-bubbles" aria-label="Zoom Conversation/Speech bubbles"><img loading="lazy" src="images/conversation-speech-bubbles/ideal__default.png" alt="Conversation/Speech bubbles" /></a>
+  <div class="meta">
+    <h3><a class="ctitle" href="#d-conversation-speech-bubbles">Conversation/Speech bubbles</a></h3>
+    <div class="sub">454×156<a class="wf" href="wireframes/conversation-speech-bubbles.svg" target="_blank" rel="noopener">wireframe ↗</a><a class="wf" href="figma/conversation-speech-bubbles.svg" target="_blank" rel="noopener">figma svg ↗</a></div>
+    
+  </div>
+</article></div>
+    </section>
+<section class="group" id="g-entity-rows">
+      <h2>Entity rows</h2>
+      <div class="grid"><article class="card" id="c-entities-rows">
+  <a class="shot" href="#d-entities-rows" aria-label="Zoom Entities/Rows"><img loading="lazy" src="images/entities-rows/ideal__default.png" alt="Entities/Rows" /></a>
+  <div class="meta">
+    <h3><a class="ctitle" href="#d-entities-rows">Entities/Rows</a></h3>
+    <div class="sub">454×312<a class="wf" href="wireframes/entities-rows.svg" target="_blank" rel="noopener">wireframe ↗</a><a class="wf" href="figma/entities-rows.svg" target="_blank" rel="noopener">figma svg ↗</a></div>
+    <div class="greenlines" title="accessibility greenlines"><span class="chip chip--info">checkbox</span><span class="chip chip--info">button</span><span class="chip chip--info">checkbox</span></div>
+  </div>
+</article>
+<article class="card" id="c-entities-selection-chip">
+  <a class="shot" href="#d-entities-selection-chip" aria-label="Zoom Entities/Selection chip"><img loading="lazy" src="images/entities-selection-chip/ideal__default__largeround.png" alt="Entities/Selection chip" /></a>
+  <div class="meta">
+    <h3><a class="ctitle" href="#d-entities-selection-chip">Entities/Selection chip</a></h3>
+    <div class="sub">454×454<a class="wf" href="wireframes/entities-selection-chip.svg" target="_blank" rel="noopener">wireframe ↗</a><a class="wf" href="figma/entities-selection-chip.svg" target="_blank" rel="noopener">figma svg ↗</a></div>
+    <div class="greenlines" title="accessibility greenlines"><span class="chip chip--info">button</span></div>
+  </div>
+</article></div>
+    </section>
+<section class="group" id="g-controls">
+      <h2>Controls</h2>
+      <div class="grid"><article class="card" id="c-controls-toggle-states">
+  <a class="shot" href="#d-controls-toggle-states" aria-label="Zoom Controls/Toggle states"><img loading="lazy" src="images/controls-toggle-states/ideal__default__largeround.png" alt="Controls/Toggle states" /></a>
+  <div class="meta">
+    <h3><a class="ctitle" href="#d-controls-toggle-states">Controls/Toggle states</a></h3>
+    <div class="sub">454×454<a class="wf" href="wireframes/controls-toggle-states.svg" target="_blank" rel="noopener">wireframe ↗</a><a class="wf" href="figma/controls-toggle-states.svg" target="_blank" rel="noopener">figma svg ↗</a></div>
+    
+  </div>
+</article></div>
+    </section>
+<section class="group" id="g-sensor-rows">
+      <h2>Sensor rows</h2>
+      <div class="grid"><article class="card" id="c-sensors-rows">
+  <a class="shot" href="#d-sensors-rows" aria-label="Zoom Sensors/Rows"><img loading="lazy" src="images/sensors-rows/ideal__default.png" alt="Sensors/Rows" /></a>
+  <div class="meta">
+    <h3><a class="ctitle" href="#d-sensors-rows">Sensors/Rows</a></h3>
+    <div class="sub">454×360<a class="wf" href="wireframes/sensors-rows.svg" target="_blank" rel="noopener">wireframe ↗</a><a class="wf" href="figma/sensors-rows.svg" target="_blank" rel="noopener">figma svg ↗</a></div>
+    <div class="greenlines" title="accessibility greenlines"><span class="chip chip--info">checkbox</span><span class="chip chip--info">checkbox</span><span class="chip chip--info">checkbox</span></div>
+  </div>
+</article></div>
+    </section>
+<section class="group" id="g-list-structure">
+      <h2>List structure</h2>
+      <div class="grid"><article class="card" id="c-components-list-header">
+  <a class="shot" href="#d-components-list-header" aria-label="Zoom Components/List header"><img loading="lazy" src="images/components-list-header/ideal__default.png" alt="Components/List header" /></a>
+  <div class="meta">
+    <h3><a class="ctitle" href="#d-components-list-header">Components/List header</a></h3>
+    <div class="sub">139×96<a class="statechip" href="#d-components-list-header">+1 state</a><a class="wf" href="wireframes/components-list-header.svg" target="_blank" rel="noopener">wireframe ↗</a><a class="wf" href="figma/components-list-header.svg" target="_blank" rel="noopener">figma svg ↗</a></div>
+    
+  </div>
+</article></div>
+    </section>
+<section class="group" id="g-device-chrome">
+      <h2>Device chrome</h2>
+      <div class="grid"><article class="card" id="c-components-time-text">
+  <a class="shot" href="#d-components-time-text" aria-label="Zoom Components/Time text"><img loading="lazy" src="images/components-time-text/ideal__default__largeround.png" alt="Components/Time text" /></a>
+  <div class="meta">
+    <h3><a class="ctitle" href="#d-components-time-text">Components/Time text</a></h3>
+    <div class="sub">454×454<a class="wf" href="wireframes/components-time-text.svg" target="_blank" rel="noopener">wireframe ↗</a><a class="wf" href="figma/components-time-text.svg" target="_blank" rel="noopener">figma svg ↗</a></div>
+    
+  </div>
+</article></div>
+    </section></main>
 </div>
-
+<div class="detail" id="d-home-landing" role="dialog" aria-label="Home/Landing">
+  <a class="detail-scrim" href="#c-home-landing" aria-label="Close"></a>
+  <div class="detail-panel">
+    <a class="detail-x" href="#c-home-landing" aria-label="Close">×</a>
+    <h3>Home/Landing</h3>
+    <div class="detail-caption">State-hoisted Wear landing destination with favorites, area navigation, domain navigation, and settings in light and dark themes.</div>
+    <div class="detail-states"><figure class="state"><figcaption>default</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/home-landing/ideal__default__dark__largeround.png" alt="Home/Landing default" /><span>dark</span></div><div class="state-shot" data-bg="light"><img loading="lazy" src="images/home-landing/ideal__default__light__largeround.png" alt="Home/Landing default" /><span>light</span></div></div></figure></div>
+  </div>
+</div>
+<div class="detail" id="d-home-entity-list" role="dialog" aria-label="Home/Entity list">
+  <a class="detail-scrim" href="#c-home-entity-list" aria-label="Close"></a>
+  <div class="detail-panel">
+    <a class="detail-x" href="#c-home-entity-list" aria-label="Close">×</a>
+    <h3>Home/Entity list</h3>
+    <div class="detail-caption">Large-round Wear destination with mixed on/off entities.</div>
+    <div class="detail-states"><figure class="state"><figcaption>default</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/home-entity-list/ideal__default__largeround.png" alt="Home/Entity list default" /><span>largeRound</span></div></div></figure><figure class="state"><figcaption>scenes</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/home-entity-list/ideal__scenes__largeround.png" alt="Home/Entity list scenes" /><span>largeRound</span></div></div></figure><figure class="state"><figcaption>empty</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/home-entity-list/ideal__empty__largeround.png" alt="Home/Entity list empty" /><span>largeRound</span></div></div></figure></div>
+  </div>
+</div>
+<div class="detail" id="d-home-sensors" role="dialog" aria-label="Home/Sensors">
+  <a class="detail-scrim" href="#c-home-sensors" aria-label="Close"></a>
+  <div class="detail-panel">
+    <a class="detail-x" href="#c-home-sensors" aria-label="Close">×</a>
+    <h3>Home/Sensors</h3>
+    <div class="detail-caption">Large-round Wear sensor overview destination.</div>
+    <div class="detail-states"><figure class="state"><figcaption>default</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/home-sensors/ideal__default__largeround.png" alt="Home/Sensors default" /><span>largeRound</span></div></div></figure></div>
+  </div>
+</div>
+<div class="detail" id="d-entities-detail-panel" role="dialog" aria-label="Entities/Detail panel">
+  <a class="detail-scrim" href="#c-entities-detail-panel" aria-label="Close"></a>
+  <div class="detail-panel">
+    <a class="detail-x" href="#c-entities-detail-panel" aria-label="Close">×</a>
+    <h3>Entities/Detail panel</h3>
+    <div class="detail-caption">Large-round light detail destination with brightness state.</div>
+    <div class="detail-states"><figure class="state"><figcaption>default</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/entities-detail-panel/ideal__default__largeround.png" alt="Entities/Detail panel default" /><span>largeRound</span></div></div></figure><figure class="state"><figcaption>off</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/entities-detail-panel/ideal__off__largeround.png" alt="Entities/Detail panel off" /><span>largeRound</span></div></div></figure><figure class="state"><figcaption>fan-on</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/entities-detail-panel/ideal__fan-on__largeround.png" alt="Entities/Detail panel fan-on" /><span>largeRound</span></div></div></figure></div>
+  </div>
+</div>
+<div class="detail" id="d-tiles-shortcut-selection" role="dialog" aria-label="Tiles/Shortcut selection">
+  <a class="detail-scrim" href="#c-tiles-shortcut-selection" aria-label="Close"></a>
+  <div class="detail-panel">
+    <a class="detail-x" href="#c-tiles-shortcut-selection" aria-label="Close">×</a>
+    <h3>Tiles/Shortcut selection</h3>
+    <div class="detail-caption">Large-round shortcut tile selection destination.</div>
+    <div class="detail-states"><figure class="state"><figcaption>default</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/tiles-shortcut-selection/ideal__default__largeround.png" alt="Tiles/Shortcut selection default" /><span>largeRound</span></div></div></figure><figure class="state"><figcaption>empty</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/tiles-shortcut-selection/ideal__empty__largeround.png" alt="Tiles/Shortcut selection empty" /><span>largeRound</span></div></div></figure></div>
+  </div>
+</div>
+<div class="detail" id="d-tiles-shortcut-order" role="dialog" aria-label="Tiles/Shortcut order">
+  <a class="detail-scrim" href="#c-tiles-shortcut-order" aria-label="Close"></a>
+  <div class="detail-panel">
+    <a class="detail-x" href="#c-tiles-shortcut-order" aria-label="Close">×</a>
+    <h3>Tiles/Shortcut order</h3>
+    <div class="detail-caption">Large-round selected shortcut ordering destination.</div>
+    <div class="detail-states"><figure class="state"><figcaption>default</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/tiles-shortcut-order/ideal__default__largeround.png" alt="Tiles/Shortcut order default" /><span>largeRound</span></div></div></figure></div>
+  </div>
+</div>
+<div class="detail" id="d-tiles-camera-selection" role="dialog" aria-label="Tiles/Camera selection">
+  <a class="detail-scrim" href="#c-tiles-camera-selection" aria-label="Close"></a>
+  <div class="detail-panel">
+    <a class="detail-x" href="#c-tiles-camera-selection" aria-label="Close">×</a>
+    <h3>Tiles/Camera selection</h3>
+    <div class="detail-caption">Large-round camera tile selection destination.</div>
+    <div class="detail-states"><figure class="state"><figcaption>default</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/tiles-camera-selection/ideal__default__largeround.png" alt="Tiles/Camera selection default" /><span>largeRound</span></div></div></figure><figure class="state"><figcaption>empty</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/tiles-camera-selection/ideal__empty__largeround.png" alt="Tiles/Camera selection empty" /><span>largeRound</span></div></div></figure></div>
+  </div>
+</div>
+<div class="detail" id="d-tiles-template-settings" role="dialog" aria-label="Tiles/Template settings">
+  <a class="detail-scrim" href="#c-tiles-template-settings" aria-label="Close"></a>
+  <div class="detail-panel">
+    <a class="detail-x" href="#c-tiles-template-settings" aria-label="Close">×</a>
+    <h3>Tiles/Template settings</h3>
+    <div class="detail-caption">Large-round template tile configuration destination.</div>
+    <div class="detail-states"><figure class="state"><figcaption>default</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/tiles-template-settings/ideal__default__largeround.png" alt="Tiles/Template settings default" /><span>largeRound</span></div></div></figure></div>
+  </div>
+</div>
+<div class="detail" id="d-tiles-refresh-interval" role="dialog" aria-label="Tiles/Refresh interval">
+  <a class="detail-scrim" href="#c-tiles-refresh-interval" aria-label="Close"></a>
+  <div class="detail-panel">
+    <a class="detail-x" href="#c-tiles-refresh-interval" aria-label="Close">×</a>
+    <h3>Tiles/Refresh interval</h3>
+    <div class="detail-caption">Large-round refresh interval picker destination.</div>
+    <div class="detail-states"><figure class="state"><figcaption>default</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/tiles-refresh-interval/ideal__default__largeround.png" alt="Tiles/Refresh interval default" /><span>largeRound</span></div></div></figure></div>
+  </div>
+</div>
+<div class="detail" id="d-tiles-camera-settings" role="dialog" aria-label="Tiles/Camera settings">
+  <a class="detail-scrim" href="#c-tiles-camera-settings" aria-label="Close"></a>
+  <div class="detail-panel">
+    <a class="detail-x" href="#c-tiles-camera-settings" aria-label="Close">×</a>
+    <h3>Tiles/Camera settings</h3>
+    <div class="detail-caption">Large-round camera tile settings with a selected entity and refresh interval.</div>
+    <div class="detail-states"><figure class="state"><figcaption>default</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/tiles-camera-settings/ideal__default__largeround.png" alt="Tiles/Camera settings default" /><span>largeRound</span></div></div></figure><figure class="state"><figcaption>empty</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/tiles-camera-settings/ideal__empty__largeround.png" alt="Tiles/Camera settings empty" /><span>largeRound</span></div></div></figure></div>
+  </div>
+</div>
+<div class="detail" id="d-sensors-manager" role="dialog" aria-label="Sensors/Manager">
+  <a class="detail-scrim" href="#c-sensors-manager" aria-label="Close"></a>
+  <div class="detail-panel">
+    <a class="detail-x" href="#c-sensors-manager" aria-label="Close">×</a>
+    <h3>Sensors/Manager</h3>
+    <div class="detail-caption">Large-round sensor manager destination with header and toggle rows.</div>
+    <div class="detail-states"><figure class="state"><figcaption>default</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/sensors-manager/ideal__default__largeround.png" alt="Sensors/Manager default" /><span>largeRound</span></div></div></figure></div>
+  </div>
+</div>
+<div class="detail" id="d-settings-set-favorites" role="dialog" aria-label="Settings/Set favorites">
+  <a class="detail-scrim" href="#c-settings-set-favorites" aria-label="Close"></a>
+  <div class="detail-panel">
+    <a class="detail-x" href="#c-settings-set-favorites" aria-label="Close">×</a>
+    <h3>Settings/Set favorites</h3>
+    <div class="detail-caption">State-hoisted expandable favorite selector in light and dark themes.</div>
+    <div class="detail-states"><figure class="state"><figcaption>default</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/settings-set-favorites/ideal__default__dark__largeround.png" alt="Settings/Set favorites default" /><span>dark</span></div><div class="state-shot" data-bg="light"><img loading="lazy" src="images/settings-set-favorites/ideal__default__light__largeround.png" alt="Settings/Set favorites default" /><span>light</span></div></div></figure></div>
+  </div>
+</div>
+<div class="detail" id="d-settings-favorites" role="dialog" aria-label="Settings/Favorites">
+  <a class="detail-scrim" href="#c-settings-favorites" aria-label="Close"></a>
+  <div class="detail-panel">
+    <a class="detail-x" href="#c-settings-favorites" aria-label="Close">×</a>
+    <h3>Settings/Favorites</h3>
+    <div class="detail-caption">Large-round favorites and visibility settings destination.</div>
+    <div class="detail-states"><figure class="state"><figcaption>default</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/settings-favorites/ideal__default__largeround.png" alt="Settings/Favorites default" /><span>largeRound</span></div></div></figure></div>
+  </div>
+</div>
+<div class="detail" id="d-settings-complication" role="dialog" aria-label="Settings/Complication">
+  <a class="detail-scrim" href="#c-settings-complication" aria-label="Close"></a>
+  <div class="detail-panel">
+    <a class="detail-x" href="#c-settings-complication" aria-label="Close">×</a>
+    <h3>Settings/Complication</h3>
+    <div class="detail-caption">Large-round complication configuration destination.</div>
+    <div class="detail-states"><figure class="state"><figcaption>default</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/settings-complication/ideal__default__largeround.png" alt="Settings/Complication default" /><span>largeRound</span></div></div></figure></div>
+  </div>
+</div>
+<div class="detail" id="d-onboarding-install-phone-app" role="dialog" aria-label="Onboarding/Install phone app">
+  <a class="detail-scrim" href="#c-onboarding-install-phone-app" aria-label="Close"></a>
+  <div class="detail-panel">
+    <a class="detail-x" href="#c-onboarding-install-phone-app" aria-label="Close">×</a>
+    <h3>Onboarding/Install phone app</h3>
+    <div class="detail-caption">Large-round prompt to install Home Assistant on the paired phone.</div>
+    <div class="detail-states"><figure class="state"><figcaption>default</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/onboarding-install-phone-app/ideal__default__largeround.png" alt="Onboarding/Install phone app default" /><span>largeRound</span></div></div></figure></div>
+  </div>
+</div>
+<div class="detail" id="d-conversation-speech-bubbles" role="dialog" aria-label="Conversation/Speech bubbles">
+  <a class="detail-scrim" href="#c-conversation-speech-bubbles" aria-label="Close"></a>
+  <div class="detail-panel">
+    <a class="detail-x" href="#c-conversation-speech-bubbles" aria-label="Close">×</a>
+    <h3>Conversation/Speech bubbles</h3>
+    <div class="detail-caption">Wrap-content Assist request and response bubble components.</div>
+    <div class="detail-states"><figure class="state"><figcaption>default</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/conversation-speech-bubbles/ideal__default.png" alt="Conversation/Speech bubbles default" /><span>default</span></div></div></figure></div>
+  </div>
+</div>
+<div class="detail" id="d-entities-rows" role="dialog" aria-label="Entities/Rows">
+  <a class="detail-scrim" href="#c-entities-rows" aria-label="Close"></a>
+  <div class="detail-panel">
+    <a class="detail-x" href="#c-entities-rows" aria-label="Close">×</a>
+    <h3>Entities/Rows</h3>
+    <div class="detail-caption">Wrap-content entity toggle and action row components.</div>
+    <div class="detail-states"><figure class="state"><figcaption>default</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/entities-rows/ideal__default.png" alt="Entities/Rows default" /><span>default</span></div></div></figure></div>
+  </div>
+</div>
+<div class="detail" id="d-entities-selection-chip" role="dialog" aria-label="Entities/Selection chip">
+  <a class="detail-scrim" href="#c-entities-selection-chip" aria-label="Close"></a>
+  <div class="detail-panel">
+    <a class="detail-x" href="#c-entities-selection-chip" aria-label="Close">×</a>
+    <h3>Entities/Selection chip</h3>
+    <div class="detail-caption">Large-round entity selection chip with icon and friendly name.</div>
+    <div class="detail-states"><figure class="state"><figcaption>default</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/entities-selection-chip/ideal__default__largeround.png" alt="Entities/Selection chip default" /><span>largeRound</span></div></div></figure></div>
+  </div>
+</div>
+<div class="detail" id="d-controls-toggle-states" role="dialog" aria-label="Controls/Toggle states">
+  <a class="detail-scrim" href="#c-controls-toggle-states" aria-label="Close"></a>
+  <div class="detail-panel">
+    <a class="detail-x" href="#c-controls-toggle-states" aria-label="Close">×</a>
+    <h3>Controls/Toggle states</h3>
+    <div class="detail-caption">Large-round switch and checkbox controls in checked and unchecked states.</div>
+    <div class="detail-states"><figure class="state"><figcaption>default</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/controls-toggle-states/ideal__default__largeround.png" alt="Controls/Toggle states default" /><span>largeRound</span></div></div></figure></div>
+  </div>
+</div>
+<div class="detail" id="d-sensors-rows" role="dialog" aria-label="Sensors/Rows">
+  <a class="detail-scrim" href="#c-sensors-rows" aria-label="Close"></a>
+  <div class="detail-panel">
+    <a class="detail-x" href="#c-sensors-rows" aria-label="Close">×</a>
+    <h3>Sensors/Rows</h3>
+    <div class="detail-caption">Wrap-content enabled, charging, and default sensor toggle rows.</div>
+    <div class="detail-states"><figure class="state"><figcaption>default</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/sensors-rows/ideal__default.png" alt="Sensors/Rows default" /><span>default</span></div></div></figure></div>
+  </div>
+</div>
+<div class="detail" id="d-components-list-header" role="dialog" aria-label="Components/List header">
+  <a class="detail-scrim" href="#c-components-list-header" aria-label="Close"></a>
+  <div class="detail-panel">
+    <a class="detail-x" href="#c-components-list-header" aria-label="Close">×</a>
+    <h3>Components/List header</h3>
+    <div class="detail-caption">Wrap-content heading for a Wear list.</div>
+    <div class="detail-states"><figure class="state"><figcaption>default</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/components-list-header/ideal__default.png" alt="Components/List header default" /><span>default</span></div></div></figure><figure class="state"><figcaption>expandable</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/components-list-header/ideal__expandable.png" alt="Components/List header expandable" /><span>expandable</span></div></div></figure></div>
+  </div>
+</div>
+<div class="detail" id="d-components-time-text" role="dialog" aria-label="Components/Time text">
+  <a class="detail-scrim" href="#c-components-time-text" aria-label="Close"></a>
+  <div class="detail-panel">
+    <a class="detail-x" href="#c-components-time-text" aria-label="Close">×</a>
+    <h3>Components/Time text</h3>
+    <div class="detail-caption">Device-bound time label whose placement is evaluated on a large-round canvas.</div>
+    <div class="detail-states"><figure class="state"><figcaption>default</figcaption><div class="state-shots"><div class="state-shot"><img loading="lazy" src="images/components-time-text/ideal__default__largeround.png" alt="Components/Time text default" /><span>largeRound</span></div></div></figure></div>
+  </div>
+</div>
 <script>
 // Crop each component's hero (and its zoom-view default capture) to the component's content bbox,
 // read from its figma-svg's root translate + viewBox. A wear sticker rendered on a 454² device

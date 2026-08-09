@@ -2,12 +2,2361 @@
   "schema": "design-parity-catalog/v1",
   "system": "home-assistant-wear",
   "title": "Home Assistant Companion for Wear OS",
-  "components": [],
+  "components": [
+    {
+      "componentId": "Home/Landing",
+      "images": [
+        {
+          "variant": "ideal",
+          "path": "images/home-landing/ideal__default__dark__largeround.png",
+          "state": "default",
+          "width": 454,
+          "height": 454,
+          "theme": "dark",
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/home-landing__ideal__default__dark__largeround",
+          "previewId": "io.homeassistant.companion.android.home.views.MainViewKt.PreviewMain_Dark"
+        },
+        {
+          "variant": "ideal",
+          "path": "images/home-landing/ideal__default__light__largeround.png",
+          "state": "default",
+          "width": 454,
+          "height": 454,
+          "theme": "light",
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/home-landing__ideal__default__light__largeround",
+          "previewId": "io.homeassistant.companion.android.home.views.MainViewKt.PreviewMain_Light"
+        }
+      ],
+      "greenlines": [
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "checkbox",
+          "detail": {
+            "role": "checkbox",
+            "bounds": {
+              "x": 16,
+              "y": 175,
+              "width": 422,
+              "height": 104
+            }
+          },
+          "bounds": {
+            "x": 16,
+            "y": 175,
+            "width": 422,
+            "height": 104
+          }
+        },
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "button",
+          "detail": {
+            "role": "button",
+            "bounds": {
+              "x": 58,
+              "y": 390,
+              "width": 337,
+              "height": 64
+            }
+          },
+          "bounds": {
+            "x": 58,
+            "y": 390,
+            "width": 337,
+            "height": 64
+          }
+        }
+      ],
+      "redlines": [
+        {
+          "bounds": {
+            "x": 102,
+            "y": 63,
+            "width": 250,
+            "height": 104
+          },
+          "padding": {
+            "start": 14,
+            "top": 16,
+            "end": 14,
+            "bottom": 12
+          }
+        },
+        {
+          "bounds": {
+            "x": 16,
+            "y": 175,
+            "width": 422,
+            "height": 104
+          },
+          "role": "Checkbox",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        },
+        {
+          "bounds": {
+            "x": 184,
+            "y": 320,
+            "width": 87,
+            "height": 38
+          },
+          "padding": {
+            "start": 14,
+            "top": 16,
+            "end": 14,
+            "bottom": 12
+          }
+        },
+        {
+          "bounds": {
+            "x": 58,
+            "y": 390,
+            "width": 337,
+            "height": 64
+          },
+          "role": "Button",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        }
+      ],
+      "section": "Screens",
+      "group": "Home",
+      "caption": "State-hoisted Wear landing destination with favorites, area navigation, domain navigation, and settings in light and dark themes.",
+      "wireframe": "wireframes/home-landing.svg",
+      "sourceFile": "src/main/java/io/homeassistant/companion/android/home/views/MainView.kt",
+      "bodyLine": 368
+    },
+    {
+      "componentId": "Home/Entity list",
+      "images": [
+        {
+          "variant": "ideal",
+          "path": "images/home-entity-list/ideal__default__largeround.png",
+          "state": "default",
+          "width": 454,
+          "height": 454,
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/home-entity-list__ideal__default__largeround",
+          "previewId": "io.homeassistant.companion.android.home.views.EntityListViewKt.PreviewEntityListView_wearos_large_round"
+        },
+        {
+          "variant": "ideal",
+          "path": "images/home-entity-list/ideal__scenes__largeround.png",
+          "state": "scenes",
+          "width": 454,
+          "height": 454,
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/home-entity-list__ideal__scenes__largeround",
+          "previewId": "io.homeassistant.companion.android.home.views.EntityListViewKt.PreviewEntityListScenes_wearos_large_round"
+        },
+        {
+          "variant": "ideal",
+          "path": "images/home-entity-list/ideal__empty__largeround.png",
+          "state": "empty",
+          "width": 454,
+          "height": 454,
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/home-entity-list__ideal__empty__largeround",
+          "previewId": "io.homeassistant.companion.android.home.views.EntityListViewKt.PreviewEntityListEmpty_wearos_large_round"
+        }
+      ],
+      "greenlines": [
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "checkbox",
+          "detail": {
+            "role": "checkbox",
+            "bounds": {
+              "x": 16,
+              "y": 175,
+              "width": 422,
+              "height": 104
+            }
+          },
+          "bounds": {
+            "x": 16,
+            "y": 175,
+            "width": 422,
+            "height": 104
+          }
+        },
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "checkbox",
+          "detail": {
+            "role": "checkbox",
+            "bounds": {
+              "x": 16,
+              "y": 287,
+              "width": 422,
+              "height": 104
+            }
+          },
+          "bounds": {
+            "x": 16,
+            "y": 287,
+            "width": 422,
+            "height": 104
+          }
+        }
+      ],
+      "redlines": [
+        {
+          "bounds": {
+            "x": 181,
+            "y": 104,
+            "width": 93,
+            "height": 38
+          },
+          "padding": {
+            "start": 14,
+            "top": 16,
+            "end": 14,
+            "bottom": 12
+          }
+        },
+        {
+          "bounds": {
+            "x": 16,
+            "y": 175,
+            "width": 422,
+            "height": 104
+          },
+          "role": "Checkbox",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        },
+        {
+          "bounds": {
+            "x": 16,
+            "y": 287,
+            "width": 422,
+            "height": 104
+          },
+          "role": "Checkbox",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        }
+      ],
+      "section": "Screens",
+      "group": "Home",
+      "caption": "Large-round Wear destination with mixed on/off entities.",
+      "wireframe": "wireframes/home-entity-list.svg",
+      "sourceFile": "src/main/java/io/homeassistant/companion/android/home/views/EntityListView.kt",
+      "bodyLine": 91
+    },
+    {
+      "componentId": "Home/Sensors",
+      "images": [
+        {
+          "variant": "ideal",
+          "path": "images/home-sensors/ideal__default__largeround.png",
+          "state": "default",
+          "width": 454,
+          "height": 454,
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/home-sensors__ideal__default__largeround",
+          "previewId": "io.homeassistant.companion.android.home.views.SensorsViewKt.PreviewSensorsView_wearos_large_round"
+        }
+      ],
+      "greenlines": [
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "button",
+          "detail": {
+            "role": "button",
+            "bounds": {
+              "x": 16,
+              "y": 175,
+              "width": 422,
+              "height": 104
+            }
+          },
+          "bounds": {
+            "x": 16,
+            "y": 175,
+            "width": 422,
+            "height": 104
+          }
+        },
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "button",
+          "detail": {
+            "role": "button",
+            "bounds": {
+              "x": 16,
+              "y": 287,
+              "width": 422,
+              "height": 104
+            }
+          },
+          "bounds": {
+            "x": 16,
+            "y": 287,
+            "width": 422,
+            "height": 104
+          }
+        },
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "button",
+          "detail": {
+            "role": "button",
+            "bounds": {
+              "x": 62,
+              "y": 398,
+              "width": 329,
+              "height": 56
+            }
+          },
+          "bounds": {
+            "x": 62,
+            "y": 398,
+            "width": 329,
+            "height": 56
+          }
+        }
+      ],
+      "redlines": [
+        {
+          "bounds": {
+            "x": 166,
+            "y": 104,
+            "width": 122,
+            "height": 38
+          },
+          "padding": {
+            "start": 14,
+            "top": 16,
+            "end": 14,
+            "bottom": 12
+          }
+        },
+        {
+          "bounds": {
+            "x": 16,
+            "y": 175,
+            "width": 422,
+            "height": 104
+          },
+          "role": "Button",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        },
+        {
+          "bounds": {
+            "x": 16,
+            "y": 287,
+            "width": 422,
+            "height": 104
+          },
+          "role": "Button",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        },
+        {
+          "bounds": {
+            "x": 62,
+            "y": 398,
+            "width": 329,
+            "height": 56
+          },
+          "role": "Button",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        }
+      ],
+      "section": "Screens",
+      "group": "Home",
+      "caption": "Large-round Wear sensor overview destination.",
+      "wireframe": "wireframes/home-sensors.svg",
+      "sourceFile": "src/main/java/io/homeassistant/companion/android/home/views/SensorsView.kt",
+      "bodyLine": 56
+    },
+    {
+      "componentId": "Entities/Detail panel",
+      "images": [
+        {
+          "variant": "ideal",
+          "path": "images/entities-detail-panel/ideal__default__largeround.png",
+          "state": "default",
+          "width": 454,
+          "height": 454,
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/entities-detail-panel__ideal__default__largeround",
+          "previewId": "io.homeassistant.companion.android.home.views.DetailsPanelViewKt.PreviewDetailsPaneViewEntityLightOn_wearos_large_round"
+        },
+        {
+          "variant": "ideal",
+          "path": "images/entities-detail-panel/ideal__off__largeround.png",
+          "state": "off",
+          "width": 454,
+          "height": 454,
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/entities-detail-panel__ideal__off__largeround",
+          "previewId": "io.homeassistant.companion.android.home.views.DetailsPanelViewKt.PreviewDetailsPaneViewEntityLightOff_wearos_large_round"
+        },
+        {
+          "variant": "ideal",
+          "path": "images/entities-detail-panel/ideal__fan-on__largeround.png",
+          "state": "fan-on",
+          "width": 454,
+          "height": 454,
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/entities-detail-panel__ideal__fan-on__largeround",
+          "previewId": "io.homeassistant.companion.android.home.views.DetailsPanelViewKt.PreviewDetailsPaneViewEntityFanOn_wearos_large_round"
+        }
+      ],
+      "greenlines": [
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "checkbox",
+          "detail": {
+            "role": "checkbox",
+            "bounds": {
+              "x": 179,
+              "y": 75,
+              "width": 96,
+              "height": 96
+            }
+          },
+          "bounds": {
+            "x": 179,
+            "y": 75,
+            "width": 96,
+            "height": 96
+          }
+        }
+      ],
+      "redlines": [
+        {
+          "bounds": {
+            "x": 179,
+            "y": 75,
+            "width": 96,
+            "height": 96
+          },
+          "role": "Checkbox",
+          "padding": {
+            "start": 0,
+            "top": 0,
+            "end": 0,
+            "bottom": 0
+          },
+          "cornerRadius": 24
+        },
+        {
+          "bounds": {
+            "x": 189,
+            "y": 212,
+            "width": 76,
+            "height": 38
+          },
+          "padding": {
+            "start": 14,
+            "top": 16,
+            "end": 14,
+            "bottom": 12
+          }
+        },
+        {
+          "bounds": {
+            "x": 34,
+            "y": 283,
+            "width": 385,
+            "height": 37
+          },
+          "label": "Brightness: 62%",
+          "padding": {
+            "start": 8,
+            "top": 0,
+            "end": 8,
+            "bottom": 0
+          }
+        },
+        {
+          "bounds": {
+            "x": 18,
+            "y": 324,
+            "width": 417,
+            "height": 102
+          },
+          "padding": {
+            "start": 0,
+            "top": 2,
+            "end": 0,
+            "bottom": 8
+          },
+          "cornerRadius": 26
+        },
+        {
+          "bounds": {
+            "x": 18,
+            "y": 324,
+            "width": 71,
+            "height": 102
+          },
+          "padding": {
+            "start": 6,
+            "top": 0,
+            "end": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "bounds": {
+            "x": 89,
+            "y": 365,
+            "width": 275,
+            "height": 20
+          },
+          "cornerRadius": 5
+        },
+        {
+          "bounds": {
+            "x": 364,
+            "y": 324,
+            "width": 71,
+            "height": 102
+          },
+          "padding": {
+            "start": 0,
+            "top": 0,
+            "end": 6,
+            "bottom": 0
+          }
+        },
+        {
+          "bounds": {
+            "x": 90,
+            "y": 450,
+            "width": 273,
+            "height": 4
+          },
+          "label": "Color temperature: 300",
+          "padding": {
+            "start": 8,
+            "top": 0,
+            "end": 8,
+            "bottom": 0
+          }
+        },
+        {
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "padding": {
+            "start": 0,
+            "top": 0,
+            "end": 0,
+            "bottom": 8
+          },
+          "cornerRadius": 26
+        },
+        {
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "padding": {
+            "start": 6,
+            "top": 0,
+            "end": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "cornerRadius": 5
+        },
+        {
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "padding": {
+            "start": 0,
+            "top": 0,
+            "end": 6,
+            "bottom": 0
+          }
+        }
+      ],
+      "section": "Screens",
+      "group": "Entity details",
+      "caption": "Large-round light detail destination with brightness state.",
+      "wireframe": "wireframes/entities-detail-panel.svg",
+      "sourceFile": "src/main/java/io/homeassistant/companion/android/home/views/DetailsPanelView.kt",
+      "bodyLine": 400
+    },
+    {
+      "componentId": "Tiles/Shortcut selection",
+      "images": [
+        {
+          "variant": "ideal",
+          "path": "images/tiles-shortcut-selection/ideal__default__largeround.png",
+          "state": "default",
+          "width": 454,
+          "height": 454,
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/tiles-shortcut-selection__ideal__default__largeround",
+          "previewId": "io.homeassistant.companion.android.home.views.SelectShortcutsTileViewKt.PreviewSelectShortcutsTileView_wearos_large_round"
+        },
+        {
+          "variant": "ideal",
+          "path": "images/tiles-shortcut-selection/ideal__empty__largeround.png",
+          "state": "empty",
+          "width": 454,
+          "height": 454,
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/tiles-shortcut-selection__ideal__empty__largeround",
+          "previewId": "io.homeassistant.companion.android.home.views.SelectShortcutsTileViewKt.PreviewSelectShortcutsTileEmptyView_wearos_large_round"
+        }
+      ],
+      "greenlines": [
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "checkbox",
+          "detail": {
+            "role": "checkbox",
+            "bounds": {
+              "x": 16,
+              "y": 175,
+              "width": 422,
+              "height": 104
+            }
+          },
+          "bounds": {
+            "x": 16,
+            "y": 175,
+            "width": 422,
+            "height": 104
+          }
+        },
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "button",
+          "detail": {
+            "role": "button",
+            "bounds": {
+              "x": 73,
+              "y": 424,
+              "width": 307,
+              "height": 30
+            }
+          },
+          "bounds": {
+            "x": 73,
+            "y": 424,
+            "width": 307,
+            "height": 30
+          }
+        }
+      ],
+      "redlines": [
+        {
+          "bounds": {
+            "x": 117,
+            "y": 104,
+            "width": 220,
+            "height": 38
+          },
+          "padding": {
+            "start": 14,
+            "top": 16,
+            "end": 14,
+            "bottom": 12
+          }
+        },
+        {
+          "bounds": {
+            "x": 16,
+            "y": 175,
+            "width": 422,
+            "height": 104
+          },
+          "role": "Checkbox",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        },
+        {
+          "bounds": {
+            "x": 44,
+            "y": 318,
+            "width": 365,
+            "height": 74
+          },
+          "padding": {
+            "start": 14,
+            "top": 16,
+            "end": 14,
+            "bottom": 12
+          }
+        },
+        {
+          "bounds": {
+            "x": 73,
+            "y": 424,
+            "width": 307,
+            "height": 30
+          },
+          "role": "Button",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        }
+      ],
+      "section": "Screens",
+      "group": "Tiles",
+      "caption": "Large-round shortcut tile selection destination.",
+      "wireframe": "wireframes/tiles-shortcut-selection.svg",
+      "sourceFile": "src/main/java/io/homeassistant/companion/android/home/views/SelectShortcutsTileView.kt",
+      "bodyLine": 89
+    },
+    {
+      "componentId": "Tiles/Shortcut order",
+      "images": [
+        {
+          "variant": "ideal",
+          "path": "images/tiles-shortcut-order/ideal__default__largeround.png",
+          "state": "default",
+          "width": 454,
+          "height": 454,
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/tiles-shortcut-order__ideal__default__largeround",
+          "previewId": "io.homeassistant.companion.android.home.views.SetShortcutsTileViewKt.PreviewSetTileShortcutsView_wearos_large_round"
+        }
+      ],
+      "greenlines": [
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "button",
+          "detail": {
+            "role": "button",
+            "bounds": {
+              "x": 16,
+              "y": 175,
+              "width": 422,
+              "height": 104
+            }
+          },
+          "bounds": {
+            "x": 16,
+            "y": 175,
+            "width": 422,
+            "height": 104
+          }
+        },
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "button",
+          "detail": {
+            "role": "button",
+            "bounds": {
+              "x": 179,
+              "y": 318,
+              "width": 95,
+              "height": 96
+            }
+          },
+          "bounds": {
+            "x": 179,
+            "y": 318,
+            "width": 95,
+            "height": 96
+          }
+        }
+      ],
+      "redlines": [
+        {
+          "bounds": {
+            "x": 94,
+            "y": 104,
+            "width": 266,
+            "height": 38
+          },
+          "padding": {
+            "start": 14,
+            "top": 16,
+            "end": 14,
+            "bottom": 12
+          }
+        },
+        {
+          "bounds": {
+            "x": 16,
+            "y": 175,
+            "width": 422,
+            "height": 104
+          },
+          "role": "Button",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        },
+        {
+          "bounds": {
+            "x": 179,
+            "y": 318,
+            "width": 95,
+            "height": 96
+          },
+          "role": "Button",
+          "padding": {
+            "start": 0,
+            "top": 16,
+            "end": 0,
+            "bottom": 0
+          },
+          "cornerRadius": 24
+        }
+      ],
+      "section": "Screens",
+      "group": "Tiles",
+      "caption": "Large-round selected shortcut ordering destination.",
+      "wireframe": "wireframes/tiles-shortcut-order.svg",
+      "sourceFile": "src/main/java/io/homeassistant/companion/android/home/views/SetShortcutsTileView.kt",
+      "bodyLine": 97
+    },
+    {
+      "componentId": "Tiles/Camera selection",
+      "images": [
+        {
+          "variant": "ideal",
+          "path": "images/tiles-camera-selection/ideal__default__largeround.png",
+          "state": "default",
+          "width": 454,
+          "height": 454,
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/tiles-camera-selection__ideal__default__largeround",
+          "previewId": "io.homeassistant.companion.android.home.views.SelectCameraTileViewKt.PreviewSelectCameraTileViewOne_wearos_large_round"
+        },
+        {
+          "variant": "ideal",
+          "path": "images/tiles-camera-selection/ideal__empty__largeround.png",
+          "state": "empty",
+          "width": 454,
+          "height": 454,
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/tiles-camera-selection__ideal__empty__largeround",
+          "previewId": "io.homeassistant.companion.android.home.views.SelectCameraTileViewKt.PreviewSelectCameraTileViewEmpty_wearos_large_round"
+        }
+      ],
+      "greenlines": [
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "button",
+          "detail": {
+            "role": "button",
+            "bounds": {
+              "x": 16,
+              "y": 175,
+              "width": 422,
+              "height": 104
+            }
+          },
+          "bounds": {
+            "x": 16,
+            "y": 175,
+            "width": 422,
+            "height": 104
+          }
+        }
+      ],
+      "redlines": [
+        {
+          "bounds": {
+            "x": 133,
+            "y": 104,
+            "width": 188,
+            "height": 38
+          },
+          "padding": {
+            "start": 14,
+            "top": 16,
+            "end": 14,
+            "bottom": 12
+          }
+        },
+        {
+          "bounds": {
+            "x": 16,
+            "y": 175,
+            "width": 422,
+            "height": 104
+          },
+          "role": "Button",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        }
+      ],
+      "section": "Screens",
+      "group": "Tiles",
+      "caption": "Large-round camera tile selection destination.",
+      "wireframe": "wireframes/tiles-camera-selection.svg",
+      "sourceFile": "src/main/java/io/homeassistant/companion/android/home/views/SelectCameraTileView.kt",
+      "bodyLine": 58
+    },
+    {
+      "componentId": "Tiles/Template settings",
+      "images": [
+        {
+          "variant": "ideal",
+          "path": "images/tiles-template-settings/ideal__default__largeround.png",
+          "state": "default",
+          "width": 454,
+          "height": 454,
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/tiles-template-settings__ideal__default__largeround",
+          "previewId": "io.homeassistant.companion.android.home.views.TemplateTileSettingsViewKt.PreviewTemplateTileSettingView_wearos_large_round"
+        }
+      ],
+      "greenlines": [
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "button",
+          "detail": {
+            "role": "button",
+            "bounds": {
+              "x": 16,
+              "y": 175,
+              "width": 422,
+              "height": 104
+            }
+          },
+          "bounds": {
+            "x": 16,
+            "y": 175,
+            "width": 422,
+            "height": 104
+          }
+        }
+      ],
+      "redlines": [
+        {
+          "bounds": {
+            "x": 130,
+            "y": 104,
+            "width": 194,
+            "height": 38
+          },
+          "padding": {
+            "start": 14,
+            "top": 16,
+            "end": 14,
+            "bottom": 12
+          }
+        },
+        {
+          "bounds": {
+            "x": 16,
+            "y": 175,
+            "width": 422,
+            "height": 104
+          },
+          "role": "Button",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        },
+        {
+          "bounds": {
+            "x": 69,
+            "y": 320,
+            "width": 317,
+            "height": 38
+          },
+          "padding": {
+            "start": 14,
+            "top": 16,
+            "end": 14,
+            "bottom": 12
+          }
+        }
+      ],
+      "section": "Screens",
+      "group": "Tiles",
+      "caption": "Large-round template tile configuration destination.",
+      "wireframe": "wireframes/tiles-template-settings.svg",
+      "sourceFile": "src/main/java/io/homeassistant/companion/android/home/views/TemplateTileSettingsView.kt",
+      "bodyLine": 70
+    },
+    {
+      "componentId": "Tiles/Refresh interval",
+      "images": [
+        {
+          "variant": "ideal",
+          "path": "images/tiles-refresh-interval/ideal__default__largeround.png",
+          "state": "default",
+          "width": 454,
+          "height": 454,
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/tiles-refresh-interval__ideal__default__largeround",
+          "previewId": "io.homeassistant.companion.android.home.views.RefreshIntervalPickerViewKt.PreviewRefreshIntervalPickerView_wearos_large_round"
+        }
+      ],
+      "greenlines": [
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "button",
+          "detail": {
+            "role": "button",
+            "bounds": {
+              "x": 179,
+              "y": 358,
+              "width": 96,
+              "height": 96
+            }
+          },
+          "bounds": {
+            "x": 179,
+            "y": 358,
+            "width": 96,
+            "height": 96
+          }
+        }
+      ],
+      "redlines": [
+        {
+          "bounds": {
+            "x": 110,
+            "y": 33,
+            "width": 235,
+            "height": 38
+          },
+          "padding": {
+            "start": 14,
+            "top": 16,
+            "end": 14,
+            "bottom": 12
+          }
+        },
+        {
+          "bounds": {
+            "x": 95,
+            "y": 96,
+            "width": 265,
+            "height": 262
+          },
+          "label": "Refresh interval",
+          "padding": {
+            "start": 0,
+            "top": 1,
+            "end": 0,
+            "bottom": 1
+          }
+        },
+        {
+          "bounds": {
+            "x": 179,
+            "y": 358,
+            "width": 96,
+            "height": 96
+          },
+          "role": "Button",
+          "padding": {
+            "start": 0,
+            "top": 0,
+            "end": 0,
+            "bottom": 0
+          },
+          "cornerRadius": 24
+        }
+      ],
+      "section": "Screens",
+      "group": "Tiles",
+      "caption": "Large-round refresh interval picker destination.",
+      "wireframe": "wireframes/tiles-refresh-interval.svg",
+      "sourceFile": "src/main/java/io/homeassistant/companion/android/home/views/RefreshIntervalPickerView.kt",
+      "bodyLine": 86
+    },
+    {
+      "componentId": "Tiles/Camera settings",
+      "images": [
+        {
+          "variant": "ideal",
+          "path": "images/tiles-camera-settings/ideal__default__largeround.png",
+          "state": "default",
+          "width": 454,
+          "height": 454,
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/tiles-camera-settings__ideal__default__largeround",
+          "previewId": "io.homeassistant.companion.android.home.views.CameraTilePreviewsKt.PreviewSetCameraTile_wearos_large_round"
+        },
+        {
+          "variant": "ideal",
+          "path": "images/tiles-camera-settings/ideal__empty__largeround.png",
+          "state": "empty",
+          "width": 454,
+          "height": 454,
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/tiles-camera-settings__ideal__empty__largeround",
+          "previewId": "io.homeassistant.companion.android.home.views.CameraTilePreviewsKt.PreviewSetCameraTileEmpty_wearos_large_round"
+        }
+      ],
+      "greenlines": [
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "button",
+          "detail": {
+            "role": "button",
+            "bounds": {
+              "x": 16,
+              "y": 175,
+              "width": 422,
+              "height": 104
+            }
+          },
+          "bounds": {
+            "x": 16,
+            "y": 175,
+            "width": 422,
+            "height": 104
+          }
+        },
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "button",
+          "detail": {
+            "role": "button",
+            "bounds": {
+              "x": 16,
+              "y": 287,
+              "width": 422,
+              "height": 104
+            }
+          },
+          "bounds": {
+            "x": 16,
+            "y": 287,
+            "width": 422,
+            "height": 104
+          }
+        }
+      ],
+      "redlines": [
+        {
+          "bounds": {
+            "x": 142,
+            "y": 104,
+            "width": 170,
+            "height": 38
+          },
+          "padding": {
+            "start": 14,
+            "top": 16,
+            "end": 14,
+            "bottom": 12
+          }
+        },
+        {
+          "bounds": {
+            "x": 16,
+            "y": 175,
+            "width": 422,
+            "height": 104
+          },
+          "role": "Button",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        },
+        {
+          "bounds": {
+            "x": 16,
+            "y": 287,
+            "width": 422,
+            "height": 104
+          },
+          "role": "Button",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        }
+      ],
+      "section": "Screens",
+      "group": "Tiles",
+      "caption": "Large-round camera tile settings with a selected entity and refresh interval.",
+      "wireframe": "wireframes/tiles-camera-settings.svg",
+      "sourceFile": "src/main/java/io/homeassistant/companion/android/home/views/CameraTilePreviews.kt",
+      "bodyLine": 10
+    },
+    {
+      "componentId": "Sensors/Manager",
+      "images": [
+        {
+          "variant": "ideal",
+          "path": "images/sensors-manager/ideal__default__largeround.png",
+          "state": "default",
+          "width": 454,
+          "height": 454,
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/sensors-manager__ideal__default__largeround",
+          "previewId": "io.homeassistant.companion.android.home.views.SensorManagerUiKt.PreviewSensorManagerUI_wearos_large_round"
+        }
+      ],
+      "greenlines": [
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "checkbox",
+          "detail": {
+            "role": "checkbox",
+            "bounds": {
+              "x": 16,
+              "y": 175,
+              "width": 422,
+              "height": 104
+            }
+          },
+          "bounds": {
+            "x": 16,
+            "y": 175,
+            "width": 422,
+            "height": 104
+          }
+        }
+      ],
+      "redlines": [
+        {
+          "bounds": {
+            "x": 109,
+            "y": 104,
+            "width": 236,
+            "height": 38
+          },
+          "padding": {
+            "start": 14,
+            "top": 16,
+            "end": 14,
+            "bottom": 12
+          }
+        },
+        {
+          "bounds": {
+            "x": 16,
+            "y": 175,
+            "width": 422,
+            "height": 104
+          },
+          "role": "Checkbox",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        }
+      ],
+      "section": "Screens",
+      "group": "Sensor management",
+      "caption": "Large-round sensor manager destination with header and toggle rows.",
+      "wireframe": "wireframes/sensors-manager.svg",
+      "sourceFile": "src/main/java/io/homeassistant/companion/android/home/views/SensorManagerUi.kt",
+      "bodyLine": 76
+    },
+    {
+      "componentId": "Settings/Set favorites",
+      "images": [
+        {
+          "variant": "ideal",
+          "path": "images/settings-set-favorites/ideal__default__dark__largeround.png",
+          "state": "default",
+          "width": 454,
+          "height": 454,
+          "theme": "dark",
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/settings-set-favorites__ideal__default__dark__largeround",
+          "previewId": "io.homeassistant.companion.android.home.views.SetFavoriteViewKt.PreviewSetFavorites_Dark"
+        },
+        {
+          "variant": "ideal",
+          "path": "images/settings-set-favorites/ideal__default__light__largeround.png",
+          "state": "default",
+          "width": 454,
+          "height": 454,
+          "theme": "light",
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/settings-set-favorites__ideal__default__light__largeround",
+          "previewId": "io.homeassistant.companion.android.home.views.SetFavoriteViewKt.PreviewSetFavorites_Light"
+        }
+      ],
+      "greenlines": [],
+      "redlines": [
+        {
+          "bounds": {
+            "x": 133,
+            "y": 104,
+            "width": 189,
+            "height": 38
+          },
+          "padding": {
+            "start": 14,
+            "top": 16,
+            "end": 14,
+            "bottom": 12
+          }
+        },
+        {
+          "bounds": {
+            "x": 125,
+            "y": 175,
+            "width": 205,
+            "height": 104
+          },
+          "padding": {
+            "start": 14,
+            "top": 16,
+            "end": 14,
+            "bottom": 12
+          }
+        },
+        {
+          "bounds": {
+            "x": 103,
+            "y": 287,
+            "width": 249,
+            "height": 104
+          },
+          "padding": {
+            "start": 14,
+            "top": 16,
+            "end": 14,
+            "bottom": 12
+          }
+        }
+      ],
+      "section": "Screens",
+      "group": "Settings",
+      "caption": "State-hoisted expandable favorite selector in light and dark themes.",
+      "wireframe": "wireframes/settings-set-favorites.svg",
+      "sourceFile": "src/main/java/io/homeassistant/companion/android/home/views/SetFavoriteView.kt",
+      "bodyLine": 122
+    },
+    {
+      "componentId": "Settings/Favorites",
+      "images": [
+        {
+          "variant": "ideal",
+          "path": "images/settings-favorites/ideal__default__largeround.png",
+          "state": "default",
+          "width": 454,
+          "height": 454,
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/settings-favorites__ideal__default__largeround",
+          "previewId": "io.homeassistant.companion.android.home.views.SettingsViewKt.PreviewSettingsView_wearos_large_round"
+        }
+      ],
+      "greenlines": [
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "button",
+          "detail": {
+            "role": "button",
+            "bounds": {
+              "x": 16,
+              "y": 175,
+              "width": 422,
+              "height": 104
+            }
+          },
+          "bounds": {
+            "x": 16,
+            "y": 175,
+            "width": 422,
+            "height": 104
+          }
+        },
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "button",
+          "detail": {
+            "role": "button",
+            "bounds": {
+              "x": 16,
+              "y": 287,
+              "width": 422,
+              "height": 104
+            }
+          },
+          "bounds": {
+            "x": 16,
+            "y": 287,
+            "width": 422,
+            "height": 104
+          }
+        },
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "checkbox",
+          "detail": {
+            "role": "checkbox",
+            "bounds": {
+              "x": 62,
+              "y": 398,
+              "width": 329,
+              "height": 56
+            }
+          },
+          "bounds": {
+            "x": 62,
+            "y": 398,
+            "width": 329,
+            "height": 56
+          }
+        }
+      ],
+      "redlines": [
+        {
+          "bounds": {
+            "x": 158,
+            "y": 104,
+            "width": 138,
+            "height": 38
+          },
+          "padding": {
+            "start": 14,
+            "top": 16,
+            "end": 14,
+            "bottom": 12
+          }
+        },
+        {
+          "bounds": {
+            "x": 16,
+            "y": 175,
+            "width": 422,
+            "height": 104
+          },
+          "role": "Button",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        },
+        {
+          "bounds": {
+            "x": 16,
+            "y": 287,
+            "width": 422,
+            "height": 104
+          },
+          "role": "Button",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        },
+        {
+          "bounds": {
+            "x": 62,
+            "y": 398,
+            "width": 329,
+            "height": 56
+          },
+          "role": "Checkbox",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        }
+      ],
+      "section": "Screens",
+      "group": "Settings",
+      "caption": "Large-round favorites and visibility settings destination.",
+      "wireframe": "wireframes/settings-favorites.svg",
+      "sourceFile": "src/main/java/io/homeassistant/companion/android/home/views/SettingsView.kt",
+      "bodyLine": 258
+    },
+    {
+      "componentId": "Settings/Complication",
+      "images": [
+        {
+          "variant": "ideal",
+          "path": "images/settings-complication/ideal__default__largeround.png",
+          "state": "default",
+          "width": 454,
+          "height": 454,
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/settings-complication__ideal__default__largeround",
+          "previewId": "io.homeassistant.companion.android.complications.views.ComplicationConfigMainViewKt.PreviewMainConfigView_wearos_large_round"
+        }
+      ],
+      "greenlines": [
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "button",
+          "detail": {
+            "role": "button",
+            "bounds": {
+              "x": 16,
+              "y": 175,
+              "width": 422,
+              "height": 104
+            }
+          },
+          "bounds": {
+            "x": 16,
+            "y": 175,
+            "width": 422,
+            "height": 104
+          }
+        },
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "checkbox",
+          "detail": {
+            "role": "checkbox",
+            "bounds": {
+              "x": 16,
+              "y": 287,
+              "width": 422,
+              "height": 104
+            }
+          },
+          "bounds": {
+            "x": 16,
+            "y": 287,
+            "width": 422,
+            "height": 104
+          }
+        },
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "checkbox",
+          "detail": {
+            "role": "checkbox",
+            "bounds": {
+              "x": 62,
+              "y": 398,
+              "width": 329,
+              "height": 56
+            }
+          },
+          "bounds": {
+            "x": 62,
+            "y": 398,
+            "width": 329,
+            "height": 56
+          }
+        }
+      ],
+      "redlines": [
+        {
+          "bounds": {
+            "x": 142,
+            "y": 104,
+            "width": 171,
+            "height": 38
+          },
+          "padding": {
+            "start": 14,
+            "top": 16,
+            "end": 14,
+            "bottom": 12
+          }
+        },
+        {
+          "bounds": {
+            "x": 16,
+            "y": 175,
+            "width": 422,
+            "height": 104
+          },
+          "role": "Button",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        },
+        {
+          "bounds": {
+            "x": 16,
+            "y": 287,
+            "width": 422,
+            "height": 104
+          },
+          "role": "Checkbox",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        },
+        {
+          "bounds": {
+            "x": 62,
+            "y": 398,
+            "width": 329,
+            "height": 56
+          },
+          "role": "Checkbox",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        }
+      ],
+      "section": "Screens",
+      "group": "Settings",
+      "caption": "Large-round complication configuration destination.",
+      "wireframe": "wireframes/settings-complication.svg",
+      "sourceFile": "src/main/java/io/homeassistant/companion/android/complications/views/ComplicationConfigMainView.kt",
+      "bodyLine": 180
+    },
+    {
+      "componentId": "Onboarding/Install phone app",
+      "images": [
+        {
+          "variant": "ideal",
+          "path": "images/onboarding-install-phone-app/ideal__default__largeround.png",
+          "state": "default",
+          "width": 454,
+          "height": 454,
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/onboarding-install-phone-app__ideal__default__largeround",
+          "previewId": "io.homeassistant.companion.android.onboarding.phoneinstall.PhoneInstallViewKt.PhoneInstallViewPreview_wearos_large_round"
+        }
+      ],
+      "greenlines": [
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "button",
+          "detail": {
+            "role": "button",
+            "bounds": {
+              "x": 17,
+              "y": 303,
+              "width": 419,
+              "height": 103
+            }
+          },
+          "bounds": {
+            "x": 17,
+            "y": 303,
+            "width": 419,
+            "height": 103
+          }
+        },
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "button",
+          "detail": {
+            "role": "button",
+            "bounds": {
+              "x": 69,
+              "y": 415,
+              "width": 315,
+              "height": 39
+            }
+          },
+          "bounds": {
+            "x": 69,
+            "y": 415,
+            "width": 315,
+            "height": 39
+          }
+        }
+      ],
+      "redlines": [
+        {
+          "bounds": {
+            "x": 180,
+            "y": 56,
+            "width": 93,
+            "height": 93
+          },
+          "padding": {
+            "start": 0,
+            "top": 24,
+            "end": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "bounds": {
+            "x": 16,
+            "y": 190,
+            "width": 422,
+            "height": 74
+          },
+          "label": "Install Home Assistant on your phone to continue",
+          "padding": {
+            "start": 0,
+            "top": 16,
+            "end": 0,
+            "bottom": 16
+          }
+        },
+        {
+          "bounds": {
+            "x": 17,
+            "y": 303,
+            "width": 419,
+            "height": 103
+          },
+          "role": "Button",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        },
+        {
+          "bounds": {
+            "x": 69,
+            "y": 415,
+            "width": 315,
+            "height": 39
+          },
+          "role": "Button",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        }
+      ],
+      "section": "Screens",
+      "group": "Onboarding",
+      "caption": "Large-round prompt to install Home Assistant on the paired phone.",
+      "wireframe": "wireframes/onboarding-install-phone-app.svg",
+      "sourceFile": "src/main/java/io/homeassistant/companion/android/onboarding/phoneinstall/PhoneInstallView.kt",
+      "bodyLine": 95
+    },
+    {
+      "componentId": "Conversation/Speech bubbles",
+      "images": [
+        {
+          "variant": "ideal",
+          "path": "images/conversation-speech-bubbles/ideal__default.png",
+          "state": "default",
+          "width": 454,
+          "height": 156,
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/conversation-speech-bubbles__ideal__default",
+          "previewId": "io.homeassistant.companion.android.conversation.views.ConversationViewKt.PreviewSpeechBubble"
+        }
+      ],
+      "greenlines": [],
+      "redlines": [
+        {
+          "bounds": {
+            "x": 328,
+            "y": 16,
+            "width": 118,
+            "height": 46
+          },
+          "padding": {
+            "start": 4,
+            "top": 4,
+            "end": 4,
+            "bottom": 4
+          },
+          "cornerRadius": 12
+        },
+        {
+          "bounds": {
+            "x": 332,
+            "y": 20,
+            "width": 110,
+            "height": 38
+          },
+          "label": "Speech",
+          "padding": {
+            "start": 2,
+            "top": 2,
+            "end": 2,
+            "bottom": 2
+          }
+        },
+        {
+          "bounds": {
+            "x": 8,
+            "y": 94,
+            "width": 156,
+            "height": 46
+          },
+          "padding": {
+            "start": 4,
+            "top": 4,
+            "end": 4,
+            "bottom": 4
+          },
+          "cornerRadius": 12
+        },
+        {
+          "bounds": {
+            "x": 12,
+            "y": 98,
+            "width": 148,
+            "height": 38
+          },
+          "label": "Response",
+          "padding": {
+            "start": 2,
+            "top": 2,
+            "end": 2,
+            "bottom": 2
+          }
+        }
+      ],
+      "section": "Components",
+      "group": "Conversation",
+      "caption": "Wrap-content Assist request and response bubble components.",
+      "wireframe": "wireframes/conversation-speech-bubbles.svg",
+      "sourceFile": "src/main/java/io/homeassistant/companion/android/conversation/views/ConversationView.kt",
+      "bodyLine": 289
+    },
+    {
+      "componentId": "Entities/Rows",
+      "images": [
+        {
+          "variant": "ideal",
+          "path": "images/entities-rows/ideal__default.png",
+          "state": "default",
+          "width": 454,
+          "height": 312,
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/entities-rows__ideal__default",
+          "previewId": "io.homeassistant.companion.android.home.views.EntityUiKt.PreviewEntityUI"
+        }
+      ],
+      "greenlines": [
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "checkbox",
+          "detail": {
+            "role": "checkbox",
+            "bounds": {
+              "x": 0,
+              "y": 0,
+              "width": 454,
+              "height": 104
+            }
+          },
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 454,
+            "height": 104
+          }
+        },
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "button",
+          "detail": {
+            "role": "button",
+            "bounds": {
+              "x": 0,
+              "y": 104,
+              "width": 454,
+              "height": 104
+            }
+          },
+          "bounds": {
+            "x": 0,
+            "y": 104,
+            "width": 454,
+            "height": 104
+          }
+        },
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "checkbox",
+          "detail": {
+            "role": "checkbox",
+            "bounds": {
+              "x": 0,
+              "y": 208,
+              "width": 454,
+              "height": 104
+            }
+          },
+          "bounds": {
+            "x": 0,
+            "y": 208,
+            "width": 454,
+            "height": 104
+          }
+        }
+      ],
+      "redlines": [
+        {
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 454,
+            "height": 104
+          },
+          "role": "Checkbox",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        },
+        {
+          "bounds": {
+            "x": 0,
+            "y": 104,
+            "width": 454,
+            "height": 104
+          },
+          "role": "Button",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        },
+        {
+          "bounds": {
+            "x": 0,
+            "y": 208,
+            "width": 454,
+            "height": 104
+          },
+          "role": "Checkbox",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        }
+      ],
+      "section": "Components",
+      "group": "Entity rows",
+      "caption": "Wrap-content entity toggle and action row components.",
+      "wireframe": "wireframes/entities-rows.svg",
+      "sourceFile": "src/main/java/io/homeassistant/companion/android/home/views/EntityUi.kt",
+      "bodyLine": 134
+    },
+    {
+      "componentId": "Entities/Selection chip",
+      "images": [
+        {
+          "variant": "ideal",
+          "path": "images/entities-selection-chip/ideal__default__largeround.png",
+          "state": "default",
+          "width": 454,
+          "height": 454,
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/entities-selection-chip__ideal__default__largeround",
+          "previewId": "io.homeassistant.companion.android.views.ChooseEntityViewKt.PreviewChooseEntityChip_wearos_large_round"
+        }
+      ],
+      "greenlines": [
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "button",
+          "detail": {
+            "role": "button",
+            "bounds": {
+              "x": 0,
+              "y": 0,
+              "width": 454,
+              "height": 454
+            }
+          },
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 454,
+            "height": 454
+          }
+        }
+      ],
+      "redlines": [
+        {
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 454,
+            "height": 454
+          },
+          "role": "Button",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        }
+      ],
+      "section": "Components",
+      "group": "Entity rows",
+      "caption": "Large-round entity selection chip with icon and friendly name.",
+      "wireframe": "wireframes/entities-selection-chip.svg",
+      "sourceFile": "src/main/java/io/homeassistant/companion/android/views/ChooseEntityView.kt",
+      "bodyLine": 158
+    },
+    {
+      "componentId": "Controls/Toggle states",
+      "images": [
+        {
+          "variant": "ideal",
+          "path": "images/controls-toggle-states/ideal__default__largeround.png",
+          "state": "default",
+          "width": 454,
+          "height": 454,
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/controls-toggle-states__ideal__default__largeround",
+          "previewId": "io.homeassistant.companion.android.util.ControlPreviewsKt.PreviewToggleControls_wearos_large_round"
+        }
+      ],
+      "greenlines": [],
+      "redlines": [],
+      "section": "Components",
+      "group": "Controls",
+      "caption": "Large-round switch and checkbox controls in checked and unchecked states.",
+      "wireframe": "wireframes/controls-toggle-states.svg",
+      "sourceFile": "src/main/java/io/homeassistant/companion/android/util/ControlPreviews.kt",
+      "bodyLine": 16
+    },
+    {
+      "componentId": "Sensors/Rows",
+      "images": [
+        {
+          "variant": "ideal",
+          "path": "images/sensors-rows/ideal__default.png",
+          "state": "default",
+          "width": 454,
+          "height": 360,
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/sensors-rows__ideal__default",
+          "previewId": "io.homeassistant.companion.android.home.views.SensorUiKt.PreviewSensorUI"
+        }
+      ],
+      "greenlines": [
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "checkbox",
+          "detail": {
+            "role": "checkbox",
+            "bounds": {
+              "x": 16,
+              "y": 16,
+              "width": 422,
+              "height": 104
+            }
+          },
+          "bounds": {
+            "x": 16,
+            "y": 16,
+            "width": 422,
+            "height": 104
+          }
+        },
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "checkbox",
+          "detail": {
+            "role": "checkbox",
+            "bounds": {
+              "x": 16,
+              "y": 128,
+              "width": 422,
+              "height": 104
+            }
+          },
+          "bounds": {
+            "x": 16,
+            "y": 128,
+            "width": 422,
+            "height": 104
+          }
+        },
+        {
+          "kind": "a11y",
+          "severity": "info",
+          "message": "checkbox",
+          "detail": {
+            "role": "checkbox",
+            "bounds": {
+              "x": 16,
+              "y": 240,
+              "width": 422,
+              "height": 104
+            }
+          },
+          "bounds": {
+            "x": 16,
+            "y": 240,
+            "width": 422,
+            "height": 104
+          }
+        }
+      ],
+      "redlines": [
+        {
+          "bounds": {
+            "x": 16,
+            "y": 16,
+            "width": 422,
+            "height": 104
+          },
+          "role": "Checkbox",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        },
+        {
+          "bounds": {
+            "x": 16,
+            "y": 128,
+            "width": 422,
+            "height": 104
+          },
+          "role": "Checkbox",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        },
+        {
+          "bounds": {
+            "x": 16,
+            "y": 240,
+            "width": 422,
+            "height": 104
+          },
+          "role": "Checkbox",
+          "padding": {
+            "start": 14,
+            "top": 6,
+            "end": 14,
+            "bottom": 6
+          },
+          "cornerRadius": 26
+        }
+      ],
+      "section": "Components",
+      "group": "Sensor rows",
+      "caption": "Wrap-content enabled, charging, and default sensor toggle rows.",
+      "wireframe": "wireframes/sensors-rows.svg",
+      "sourceFile": "src/main/java/io/homeassistant/companion/android/home/views/SensorUi.kt",
+      "bodyLine": 105
+    },
+    {
+      "componentId": "Components/List header",
+      "images": [
+        {
+          "variant": "ideal",
+          "path": "images/components-list-header/ideal__default.png",
+          "state": "default",
+          "width": 139,
+          "height": 96,
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/components-list-header__ideal__default",
+          "previewId": "io.homeassistant.companion.android.views.ListHeaderKt.PreviewListHeader"
+        },
+        {
+          "variant": "ideal",
+          "path": "images/components-list-header/ideal__expandable.png",
+          "state": "expandable",
+          "width": 195,
+          "height": 104,
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/components-list-header__ideal__expandable",
+          "previewId": "io.homeassistant.companion.android.views.ExpandableListHeaderKt.PreviewExpandableListHeader"
+        }
+      ],
+      "greenlines": [],
+      "redlines": [
+        {
+          "bounds": {
+            "x": 28,
+            "y": 33,
+            "width": 83,
+            "height": 38
+          },
+          "padding": {
+            "start": 14,
+            "top": 16,
+            "end": 14,
+            "bottom": 12
+          }
+        }
+      ],
+      "section": "Components",
+      "group": "List structure",
+      "caption": "Wrap-content heading for a Wear list.",
+      "wireframe": "wireframes/components-list-header.svg",
+      "sourceFile": "src/main/java/io/homeassistant/companion/android/views/ListHeader.kt",
+      "bodyLine": 44
+    },
+    {
+      "componentId": "Components/Time text",
+      "images": [
+        {
+          "variant": "ideal",
+          "path": "images/components-time-text/ideal__default__largeround.png",
+          "state": "default",
+          "width": 454,
+          "height": 454,
+          "size": "largeRound",
+          "livePreview": "https://preview.coo.ee/home-assistant-wear/p/components-time-text__ideal__default__largeround",
+          "previewId": "io.homeassistant.companion.android.home.views.TimeTextKt.PreviewTimeText_wearos_large_round"
+        }
+      ],
+      "greenlines": [],
+      "redlines": [],
+      "section": "Components",
+      "group": "Device chrome",
+      "caption": "Device-bound time label whose placement is evaluated on a large-round canvas.",
+      "wireframe": "wireframes/components-time-text.svg",
+      "sourceFile": "src/main/java/io/homeassistant/companion/android/home/views/TimeText.kt",
+      "bodyLine": 28
+    }
+  ],
   "library": [
     "Wear Compose Material + Home Assistant surfaces"
   ],
-  "renderer": "compose-preview 0.19.51",
-  "generatedAt": "2026-08-09T12:21:20.050Z",
+  "renderer": "compose-preview 0.19.53",
+  "generatedAt": "2026-08-09T17:28:43.399Z",
   "display": {
     "surface": "dark",
     "hero": "Home/Entity list"
