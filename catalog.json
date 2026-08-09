@@ -6,8 +6,8 @@
   "library": [
     "Jetpack Compose Material + Home Assistant theme"
   ],
-  "renderer": "compose-preview 0.19.51",
-  "generatedAt": "2026-08-09T11:07:45.907Z",
+  "renderer": "compose-preview 0.19.45",
+  "generatedAt": "2026-08-09T11:19:32.995Z",
   "display": {
     "surface": "light",
     "hero": "Onboarding/Welcome"

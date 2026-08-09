@@ -1,15 +1,15 @@
 {
   "schema": "compose-preview-activity/v1",
-  "generatedAt": "2026-08-09T11:07:51.370Z",
+  "generatedAt": "2026-08-09T11:19:38.210Z",
   "windowDays": 30,
   "code": {
     "repo": "yschimke/home-assistant-android",
     "ref": "previews",
     "events": [
       {
-        "sha": "5361f25fdbf48d661b71f2394721863e2bf7b626",
-        "subject": "Merge pull request #5 from yschimke/agent/bump-compose-ai-tools-0.19.51",
-        "at": "2026-08-09T12:00:49+01:00",
+        "sha": "f25b2d0599ecef0285b25168da2b372188930be7",
+        "subject": "Merge pull request #6 from yschimke/agent/pin-compose-ai-tools-0.19.45",
+        "at": "2026-08-09T12:12:44+01:00",
         "author": "Yuri Schimke",
         "previewIds": [],
         "components": []
