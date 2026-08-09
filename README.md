@@ -36,13 +36,13 @@ customising the live render are two ends of one workflow.
 
 | | |
 | --- | --- |
-| Components | **0** |
-| Rendered images (PNG) | **0** |
-| Editable wireframes (SVG) | **0** |
-| Editable design vectors (figma-svg) | **0** |
-| Components with a11y greenlines | **0** |
+| Components | **13** |
+| Rendered images (PNG) | **26** |
+| Editable wireframes (SVG) | **13** |
+| Editable design vectors (figma-svg) | **13** |
+| Components with a11y greenlines | **9** |
 | Library | `Jetpack Compose Material + Home Assistant theme` |
-| Renderer | compose-preview 0.19.51 |
+| Renderer | compose-preview 0.19.53 |
 | Schema | `design-parity-catalog/v1` |
 | Generated | 2026-08-09 |
 
@@ -50,7 +50,12 @@ customising the live render are two ends of one workflow.
 
 | Group | Count |
 | --- | ---: |
-
+| Management | 5 |
+| Settings content | 3 |
+| Onboarding | 2 |
+| Wear settings | 1 |
+| Commissioning | 1 |
+| Dialogs | 1 |
 
 ## What's in this branch
 

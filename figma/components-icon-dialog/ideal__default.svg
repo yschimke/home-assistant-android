@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="1313" viewBox="0 0 1050 1313" text-rendering="geometricPrecision" font-family="sans-serif">
+<g transform="translate(0, 0)">
+  <g id="Root">
+    <clipPath id="clip-0"><rect x="0" y="0" width="1050" height="1313" rx="10.5" ry="10.5"/></clipPath>
+    <g id="ReusableComposeNode">
+        <rect x="0" y="0" width="1050" height="1313" rx="10.5" ry="10.5" fill="#FFFFFF"/>
+      <g clip-path="url(#clip-0)">
+        <g id="ReusableComposeNode">
+          <g id="ReusableComposeNode">
+            <image href="ideal__default.figma-raster/1720.png" x="0" y="0" width="1050" height="148"/>
+          </g>
+          <g id="ReusableComposeNode">
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</g>
+</svg>
