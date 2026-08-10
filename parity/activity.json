@@ -1,15 +1,15 @@
 {
   "schema": "compose-preview-activity/v1",
-  "generatedAt": "2026-08-09T17:39:22.014Z",
+  "generatedAt": "2026-08-10T19:58:59.383Z",
   "windowDays": 30,
   "code": {
     "repo": "yschimke/home-assistant-android",
     "ref": "previews",
     "events": [
       {
-        "sha": "72919fbc45e17f1fa0ee6ccde22b410eca667092",
-        "subject": "Merge pull request #9 from yschimke/agent/minsdk-23-for-render",
-        "at": "2026-08-09T18:31:08+01:00",
+        "sha": "a79f2e02f06c9270ddaa276fd810158a4a094c40",
+        "subject": "Update Compose to 1.11.4",
+        "at": "2026-08-10T20:49:25+01:00",
         "author": "Yuri Schimke",
         "previewIds": [],
         "components": []

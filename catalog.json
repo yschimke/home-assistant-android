@@ -575,20 +575,6 @@
       "redlines": [
         {
           "bounds": {
-            "x": 0,
-            "y": 0,
-            "width": 1050,
-            "height": 1519
-          },
-          "padding": {
-            "start": 0,
-            "top": 0,
-            "end": 0,
-            "bottom": 0
-          }
-        },
-        {
-          "bounds": {
             "x": 42,
             "y": 74,
             "width": 345,
@@ -1499,20 +1485,6 @@
       "redlines": [
         {
           "bounds": {
-            "x": 0,
-            "y": 0,
-            "width": 1050,
-            "height": 1029
-          },
-          "padding": {
-            "start": 0,
-            "top": 0,
-            "end": 0,
-            "bottom": 0
-          }
-        },
-        {
-          "bounds": {
             "x": 42,
             "y": 121,
             "width": 348,
@@ -2060,7 +2032,7 @@
     "Jetpack Compose Material + Home Assistant theme"
   ],
   "renderer": "compose-preview 0.19.53",
-  "generatedAt": "2026-08-09T17:39:11.393Z",
+  "generatedAt": "2026-08-10T19:58:49.016Z",
   "display": {
     "surface": "light",
     "hero": "Onboarding/Welcome"

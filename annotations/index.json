@@ -1003,23 +1003,6 @@
       {
         "kind": "layout",
         "bounds": {
-          "x": 0,
-          "y": 0,
-          "width": 1050,
-          "height": 1519
-        },
-        "label": "pad 0dp",
-        "detail": {
-          "padding.start": "0",
-          "padding.top": "0",
-          "padding.end": "0",
-          "padding.bottom": "0",
-          "unit": "dp"
-        }
-      },
-      {
-        "kind": "layout",
-        "bounds": {
           "x": 42,
           "y": 74,
           "width": 345,
@@ -1496,23 +1479,6 @@
       }
     ],
     "settings-quick-settings-tiles__ideal__default__light__compact": [
-      {
-        "kind": "layout",
-        "bounds": {
-          "x": 0,
-          "y": 0,
-          "width": 1050,
-          "height": 1519
-        },
-        "label": "pad 0dp",
-        "detail": {
-          "padding.start": "0",
-          "padding.top": "0",
-          "padding.end": "0",
-          "padding.bottom": "0",
-          "unit": "dp"
-        }
-      },
       {
         "kind": "layout",
         "bounds": {
@@ -4251,23 +4217,6 @@
       {
         "kind": "layout",
         "bounds": {
-          "x": 0,
-          "y": 0,
-          "width": 1050,
-          "height": 1029
-        },
-        "label": "pad 0dp",
-        "detail": {
-          "padding.start": "0",
-          "padding.top": "0",
-          "padding.end": "0",
-          "padding.bottom": "0",
-          "unit": "dp"
-        }
-      },
-      {
-        "kind": "layout",
-        "bounds": {
           "x": 42,
           "y": 121,
           "width": 348,
@@ -4566,23 +4515,6 @@
       }
     ],
     "settings-widgets__ideal__default__light__compact": [
-      {
-        "kind": "layout",
-        "bounds": {
-          "x": 0,
-          "y": 0,
-          "width": 1050,
-          "height": 1029
-        },
-        "label": "pad 0dp",
-        "detail": {
-          "padding.start": "0",
-          "padding.top": "0",
-          "padding.end": "0",
-          "padding.bottom": "0",
-          "unit": "dp"
-        }
-      },
       {
         "kind": "layout",
         "bounds": {

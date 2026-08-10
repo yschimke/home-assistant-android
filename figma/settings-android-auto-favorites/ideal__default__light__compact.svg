@@ -12,7 +12,7 @@
         <text font-size="42" font-family="Roboto" font-weight="700" letter-spacing="1.31" fill="#000000" fill-opacity="0.87"><tspan x="42" y="88" textLength="885" lengthAdjust="spacing">Select your favorite entities to appear in the</tspan><tspan x="42" y="151" textLength="824" lengthAdjust="spacing">favorites category in the Home Assistant</tspan><tspan x="42" y="214" textLength="956" lengthAdjust="spacing">driving interface. You can also drag and drop to</tspan><tspan x="42" y="277" textLength="941" lengthAdjust="spacing">change the order in which they appear. Keep in</tspan><tspan x="42" y="340" textLength="871" lengthAdjust="spacing">mind that the amount of entities shown will</tspan><tspan x="42" y="403" textLength="565" lengthAdjust="spacing">vary from vehicle to vehicle.</tspan></text>
       </g>
       <g id="TextField">
-        <image href="ideal__default__light__compact.figma-raster/1007.png" x="42" y="462" width="966" height="148"/>
+        <image href="ideal__default__light__compact.figma-raster/760.png" x="42" y="462" width="966" height="148"/>
       </g>
       <g id="Box">
         <rect x="0" y="652" width="1050" height="189" fill="#FFFFFF"/>
