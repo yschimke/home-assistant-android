@@ -12,7 +12,7 @@
           <g id="Box">
               <rect x="179" y="75" width="96" height="96" rx="48" ry="48" fill="#F6C344" fill-opacity="0.2"/>
             <g id="ImageKt">
-              <image href="entities-detail-panel.figma-raster/249.png" x="203" y="99" width="48" height="48"/>
+              <image href="entities-detail-panel.figma-raster/428.png" x="203" y="99" width="48" height="48"/>
             </g>
           </g>
           <g id="Empty">
@@ -28,13 +28,13 @@
                   <rect x="19" y="324" width="416" height="103" fill="#252626"/>
                 </g>
                 <g id="ImageKt">
-                  <image href="entities-detail-panel.figma-raster/262.png" x="31" y="352" width="47" height="47"/>
+                  <image href="entities-detail-panel.figma-raster/441.png" x="31" y="352" width="47" height="47"/>
                 </g>
                 <g id="BoxKt">
-                  <image href="entities-detail-panel.figma-raster/263.png" x="90" y="366" width="274" height="20"/>
+                  <image href="entities-detail-panel.figma-raster/442.png" x="90" y="366" width="274" height="20"/>
                 </g>
                 <g id="ImageKt">
-                  <image href="entities-detail-panel.figma-raster/265.png" x="376" y="352" width="47" height="47"/>
+                  <image href="entities-detail-panel.figma-raster/444.png" x="376" y="352" width="47" height="47"/>
                 </g>
               </g>
             </g>
@@ -58,7 +58,7 @@
         </g>
       </g>
       <g id="Layout">
-        <image href="entities-detail-panel.figma-raster/240.png" x="0" y="0" width="454" height="454"/>
+        <image href="entities-detail-panel.figma-raster/419.png" x="0" y="0" width="454" height="454"/>
         <g id="ReusableComposeNode">
         </g>
       </g>

@@ -1,15 +1,15 @@
 {
   "schema": "compose-preview-activity/v1",
-  "generatedAt": "2026-08-10T19:57:38.959Z",
+  "generatedAt": "2026-08-10T20:06:22.069Z",
   "windowDays": 30,
   "code": {
     "repo": "yschimke/home-assistant-android",
     "ref": "previews",
     "events": [
       {
-        "sha": "a79f2e02f06c9270ddaa276fd810158a4a094c40",
-        "subject": "Update Compose to 1.11.4",
-        "at": "2026-08-10T20:49:25+01:00",
+        "sha": "2ab6a096cdf6312e34a99a825a8254a32621d9ee",
+        "subject": "Update compose-ai-tools to 0.19.54",
+        "at": "2026-08-10T20:56:47+01:00",
         "author": "Yuri Schimke",
         "previewIds": [],
         "components": []

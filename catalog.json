@@ -2355,8 +2355,8 @@
   "library": [
     "Wear Compose Material + Home Assistant surfaces"
   ],
-  "renderer": "compose-preview 0.19.53",
-  "generatedAt": "2026-08-10T19:57:33.109Z",
+  "renderer": "compose-preview 0.19.54",
+  "generatedAt": "2026-08-10T20:06:16.271Z",
   "display": {
     "surface": "dark",
     "hero": "Home/Entity list"
