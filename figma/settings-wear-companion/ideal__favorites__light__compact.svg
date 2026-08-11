@@ -20,7 +20,7 @@
             <text font-size="42" font-family="Roboto" font-weight="700" letter-spacing="1.31" fill="#000000" fill-opacity="0.87"><tspan x="42" y="235" textLength="963" lengthAdjust="spacing">Select your favorite entities to appear at the top</tspan><tspan x="42" y="298" textLength="886" lengthAdjust="spacing">of the Wear home screen. You can also drag</tspan><tspan x="42" y="361" textLength="859" lengthAdjust="spacing">and drop to change the order in which they</tspan><tspan x="42" y="424" textLength="148" lengthAdjust="spacing">appear.</tspan></text>
           </g>
           <g id="TextField">
-            <image href="ideal__favorites__light__compact.figma-raster/1154.png" x="42" y="483" width="966" height="148"/>
+            <image href="ideal__favorites__light__compact.figma-raster/1119.png" x="42" y="483" width="966" height="148"/>
           </g>
           <g id="Box">
             <rect x="0" y="673" width="1050" height="189" fill="#FFFFFF"/>
@@ -45,13 +45,13 @@
             <rect x="0" y="0" width="1050" height="147" fill="#FFFFFF"/>
           <g id="Row">
             <g id="ImageKt">
-              <image href="ideal__favorites__light__compact.figma-raster/1136.png" x="43" y="43" width="63" height="63"/>
+              <image href="ideal__favorites__light__compact.figma-raster/1101.png" x="43" y="43" width="63" height="63"/>
             </g>
             <g id="Empty">
               <text x="190" y="91.61" font-size="52.5" font-family="Roboto" font-weight="500" letter-spacing="0.66" fill="#212121" fill-opacity="0.87">Favorite entities</text>
             </g>
             <g id="ImageKt">
-              <image href="ideal__favorites__light__compact.figma-raster/1141.png" x="945" y="43" width="63" height="63"/>
+              <image href="ideal__favorites__light__compact.figma-raster/1106.png" x="945" y="43" width="63" height="63"/>
             </g>
           </g>
         </g>
