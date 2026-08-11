@@ -15,7 +15,8 @@
           "theme": "dark",
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/home-landing__ideal__default__dark__largeround",
-          "previewId": "io.homeassistant.companion.android.home.views.MainViewKt.PreviewMain_Dark"
+          "previewId": "io.homeassistant.companion.android.home.views.MainViewKt.PreviewMain_Dark",
+          "density": 2
         },
         {
           "variant": "ideal",
@@ -26,7 +27,8 @@
           "theme": "light",
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/home-landing__ideal__default__light__largeround",
-          "previewId": "io.homeassistant.companion.android.home.views.MainViewKt.PreviewMain_Light"
+          "previewId": "io.homeassistant.companion.android.home.views.MainViewKt.PreviewMain_Light",
+          "density": 2
         }
       ],
       "greenlines": [
@@ -151,7 +153,8 @@
           "height": 454,
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/home-entity-list__ideal__default__largeround",
-          "previewId": "io.homeassistant.companion.android.home.views.EntityListViewKt.PreviewEntityListView_wearos_large_round"
+          "previewId": "io.homeassistant.companion.android.home.views.EntityListViewKt.PreviewEntityListView_wearos_large_round",
+          "density": 2
         },
         {
           "variant": "ideal",
@@ -161,7 +164,8 @@
           "height": 454,
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/home-entity-list__ideal__scenes__largeround",
-          "previewId": "io.homeassistant.companion.android.home.views.EntityListViewKt.PreviewEntityListScenes_wearos_large_round"
+          "previewId": "io.homeassistant.companion.android.home.views.EntityListViewKt.PreviewEntityListScenes_wearos_large_round",
+          "density": 2
         },
         {
           "variant": "ideal",
@@ -171,7 +175,8 @@
           "height": 454,
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/home-entity-list__ideal__empty__largeround",
-          "previewId": "io.homeassistant.companion.android.home.views.EntityListViewKt.PreviewEntityListEmpty_wearos_large_round"
+          "previewId": "io.homeassistant.companion.android.home.views.EntityListViewKt.PreviewEntityListEmpty_wearos_large_round",
+          "density": 2
         }
       ],
       "greenlines": [
@@ -282,7 +287,8 @@
           "height": 454,
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/home-sensors__ideal__default__largeround",
-          "previewId": "io.homeassistant.companion.android.home.views.SensorsViewKt.PreviewSensorsView_wearos_large_round"
+          "previewId": "io.homeassistant.companion.android.home.views.SensorsViewKt.PreviewSensorsView_wearos_large_round",
+          "density": 2
         }
       ],
       "greenlines": [
@@ -429,7 +435,8 @@
           "height": 454,
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/entities-detail-panel__ideal__default__largeround",
-          "previewId": "io.homeassistant.companion.android.home.views.DetailsPanelViewKt.PreviewDetailsPaneViewEntityLightOn_wearos_large_round"
+          "previewId": "io.homeassistant.companion.android.home.views.DetailsPanelViewKt.PreviewDetailsPaneViewEntityLightOn_wearos_large_round",
+          "density": 2
         },
         {
           "variant": "ideal",
@@ -439,7 +446,8 @@
           "height": 454,
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/entities-detail-panel__ideal__off__largeround",
-          "previewId": "io.homeassistant.companion.android.home.views.DetailsPanelViewKt.PreviewDetailsPaneViewEntityLightOff_wearos_large_round"
+          "previewId": "io.homeassistant.companion.android.home.views.DetailsPanelViewKt.PreviewDetailsPaneViewEntityLightOff_wearos_large_round",
+          "density": 2
         },
         {
           "variant": "ideal",
@@ -449,7 +457,8 @@
           "height": 454,
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/entities-detail-panel__ideal__fan-on__largeround",
-          "previewId": "io.homeassistant.companion.android.home.views.DetailsPanelViewKt.PreviewDetailsPaneViewEntityFanOn_wearos_large_round"
+          "previewId": "io.homeassistant.companion.android.home.views.DetailsPanelViewKt.PreviewDetailsPaneViewEntityFanOn_wearos_large_round",
+          "density": 2
         }
       ],
       "greenlines": [
@@ -658,7 +667,8 @@
           "height": 454,
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/tiles-shortcut-selection__ideal__default__largeround",
-          "previewId": "io.homeassistant.companion.android.home.views.SelectShortcutsTileViewKt.PreviewSelectShortcutsTileView_wearos_large_round"
+          "previewId": "io.homeassistant.companion.android.home.views.SelectShortcutsTileViewKt.PreviewSelectShortcutsTileView_wearos_large_round",
+          "density": 2
         },
         {
           "variant": "ideal",
@@ -668,7 +678,8 @@
           "height": 454,
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/tiles-shortcut-selection__ideal__empty__largeround",
-          "previewId": "io.homeassistant.companion.android.home.views.SelectShortcutsTileViewKt.PreviewSelectShortcutsTileEmptyView_wearos_large_round"
+          "previewId": "io.homeassistant.companion.android.home.views.SelectShortcutsTileViewKt.PreviewSelectShortcutsTileEmptyView_wearos_large_round",
+          "density": 2
         }
       ],
       "greenlines": [
@@ -793,7 +804,8 @@
           "height": 454,
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/tiles-shortcut-order__ideal__default__largeround",
-          "previewId": "io.homeassistant.companion.android.home.views.SetShortcutsTileViewKt.PreviewSetTileShortcutsView_wearos_large_round"
+          "previewId": "io.homeassistant.companion.android.home.views.SetShortcutsTileViewKt.PreviewSetTileShortcutsView_wearos_large_round",
+          "density": 2
         }
       ],
       "greenlines": [
@@ -904,7 +916,8 @@
           "height": 454,
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/tiles-camera-selection__ideal__default__largeround",
-          "previewId": "io.homeassistant.companion.android.home.views.SelectCameraTileViewKt.PreviewSelectCameraTileViewOne_wearos_large_round"
+          "previewId": "io.homeassistant.companion.android.home.views.SelectCameraTileViewKt.PreviewSelectCameraTileViewOne_wearos_large_round",
+          "density": 2
         },
         {
           "variant": "ideal",
@@ -914,7 +927,8 @@
           "height": 454,
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/tiles-camera-selection__ideal__empty__largeround",
-          "previewId": "io.homeassistant.companion.android.home.views.SelectCameraTileViewKt.PreviewSelectCameraTileViewEmpty_wearos_large_round"
+          "previewId": "io.homeassistant.companion.android.home.views.SelectCameraTileViewKt.PreviewSelectCameraTileViewEmpty_wearos_large_round",
+          "density": 2
         }
       ],
       "greenlines": [
@@ -989,7 +1003,8 @@
           "height": 454,
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/tiles-template-settings__ideal__default__largeround",
-          "previewId": "io.homeassistant.companion.android.home.views.TemplateTileSettingsViewKt.PreviewTemplateTileSettingView_wearos_large_round"
+          "previewId": "io.homeassistant.companion.android.home.views.TemplateTileSettingsViewKt.PreviewTemplateTileSettingView_wearos_large_round",
+          "density": 2
         }
       ],
       "greenlines": [
@@ -1078,7 +1093,8 @@
           "height": 454,
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/tiles-refresh-interval__ideal__default__largeround",
-          "previewId": "io.homeassistant.companion.android.home.views.RefreshIntervalPickerViewKt.PreviewRefreshIntervalPickerView_wearos_large_round"
+          "previewId": "io.homeassistant.companion.android.home.views.RefreshIntervalPickerViewKt.PreviewRefreshIntervalPickerView_wearos_large_round",
+          "density": 2
         }
       ],
       "greenlines": [
@@ -1168,7 +1184,8 @@
           "height": 454,
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/tiles-camera-settings__ideal__default__largeround",
-          "previewId": "io.homeassistant.companion.android.home.views.CameraTilePreviewsKt.PreviewSetCameraTile_wearos_large_round"
+          "previewId": "io.homeassistant.companion.android.home.views.CameraTilePreviewsKt.PreviewSetCameraTile_wearos_large_round",
+          "density": 2
         },
         {
           "variant": "ideal",
@@ -1178,7 +1195,8 @@
           "height": 454,
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/tiles-camera-settings__ideal__empty__largeround",
-          "previewId": "io.homeassistant.companion.android.home.views.CameraTilePreviewsKt.PreviewSetCameraTileEmpty_wearos_large_round"
+          "previewId": "io.homeassistant.companion.android.home.views.CameraTilePreviewsKt.PreviewSetCameraTileEmpty_wearos_large_round",
+          "density": 2
         }
       ],
       "greenlines": [
@@ -1289,7 +1307,8 @@
           "height": 454,
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/sensors-manager__ideal__default__largeround",
-          "previewId": "io.homeassistant.companion.android.home.views.SensorManagerUiKt.PreviewSensorManagerUI_wearos_large_round"
+          "previewId": "io.homeassistant.companion.android.home.views.SensorManagerUiKt.PreviewSensorManagerUI_wearos_large_round",
+          "density": 2
         }
       ],
       "greenlines": [
@@ -1365,7 +1384,8 @@
           "theme": "dark",
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/settings-set-favorites__ideal__default__dark__largeround",
-          "previewId": "io.homeassistant.companion.android.home.views.SetFavoriteViewKt.PreviewSetFavorites_Dark"
+          "previewId": "io.homeassistant.companion.android.home.views.SetFavoriteViewKt.PreviewSetFavorites_Dark",
+          "density": 2
         },
         {
           "variant": "ideal",
@@ -1376,7 +1396,8 @@
           "theme": "light",
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/settings-set-favorites__ideal__default__light__largeround",
-          "previewId": "io.homeassistant.companion.android.home.views.SetFavoriteViewKt.PreviewSetFavorites_Light"
+          "previewId": "io.homeassistant.companion.android.home.views.SetFavoriteViewKt.PreviewSetFavorites_Light",
+          "density": 2
         }
       ],
       "greenlines": [],
@@ -1442,7 +1463,8 @@
           "height": 454,
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/settings-favorites__ideal__default__largeround",
-          "previewId": "io.homeassistant.companion.android.home.views.SettingsViewKt.PreviewSettingsView_wearos_large_round"
+          "previewId": "io.homeassistant.companion.android.home.views.SettingsViewKt.PreviewSettingsView_wearos_large_round",
+          "density": 2
         }
       ],
       "greenlines": [
@@ -1589,7 +1611,8 @@
           "height": 454,
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/settings-complication__ideal__default__largeround",
-          "previewId": "io.homeassistant.companion.android.complications.views.ComplicationConfigMainViewKt.PreviewMainConfigView_wearos_large_round"
+          "previewId": "io.homeassistant.companion.android.complications.views.ComplicationConfigMainViewKt.PreviewMainConfigView_wearos_large_round",
+          "density": 2
         }
       ],
       "greenlines": [
@@ -1736,7 +1759,8 @@
           "height": 454,
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/onboarding-install-phone-app__ideal__default__largeround",
-          "previewId": "io.homeassistant.companion.android.onboarding.phoneinstall.PhoneInstallViewKt.PhoneInstallViewPreview_wearos_large_round"
+          "previewId": "io.homeassistant.companion.android.onboarding.phoneinstall.PhoneInstallViewKt.PhoneInstallViewPreview_wearos_large_round",
+          "density": 2
         }
       ],
       "greenlines": [
@@ -1861,7 +1885,8 @@
           "width": 454,
           "height": 156,
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/conversation-speech-bubbles__ideal__default",
-          "previewId": "io.homeassistant.companion.android.conversation.views.ConversationViewKt.PreviewSpeechBubble"
+          "previewId": "io.homeassistant.companion.android.conversation.views.ConversationViewKt.PreviewSpeechBubble",
+          "density": 2
         }
       ],
       "greenlines": [],
@@ -1944,7 +1969,8 @@
           "width": 454,
           "height": 312,
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/entities-rows__ideal__default",
-          "previewId": "io.homeassistant.companion.android.home.views.EntityUiKt.PreviewEntityUI"
+          "previewId": "io.homeassistant.companion.android.home.views.EntityUiKt.PreviewEntityUI",
+          "density": 2
         }
       ],
       "greenlines": [
@@ -2077,7 +2103,8 @@
           "height": 454,
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/entities-selection-chip__ideal__default__largeround",
-          "previewId": "io.homeassistant.companion.android.views.ChooseEntityViewKt.PreviewChooseEntityChip_wearos_large_round"
+          "previewId": "io.homeassistant.companion.android.views.ChooseEntityViewKt.PreviewChooseEntityChip_wearos_large_round",
+          "density": 2
         }
       ],
       "greenlines": [
@@ -2138,7 +2165,8 @@
           "height": 454,
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/controls-toggle-states__ideal__default__largeround",
-          "previewId": "io.homeassistant.companion.android.util.ControlPreviewsKt.PreviewToggleControls_wearos_large_round"
+          "previewId": "io.homeassistant.companion.android.util.ControlPreviewsKt.PreviewToggleControls_wearos_large_round",
+          "density": 2
         }
       ],
       "greenlines": [],
@@ -2160,7 +2188,8 @@
           "width": 454,
           "height": 360,
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/sensors-rows__ideal__default",
-          "previewId": "io.homeassistant.companion.android.home.views.SensorUiKt.PreviewSensorUI"
+          "previewId": "io.homeassistant.companion.android.home.views.SensorUiKt.PreviewSensorUI",
+          "density": 2
         }
       ],
       "greenlines": [
@@ -2292,7 +2321,8 @@
           "width": 139,
           "height": 96,
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/components-list-header__ideal__default",
-          "previewId": "io.homeassistant.companion.android.views.ListHeaderKt.PreviewListHeader"
+          "previewId": "io.homeassistant.companion.android.views.ListHeaderKt.PreviewListHeader",
+          "density": 2
         },
         {
           "variant": "ideal",
@@ -2301,7 +2331,8 @@
           "width": 195,
           "height": 104,
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/components-list-header__ideal__expandable",
-          "previewId": "io.homeassistant.companion.android.views.ExpandableListHeaderKt.PreviewExpandableListHeader"
+          "previewId": "io.homeassistant.companion.android.views.ExpandableListHeaderKt.PreviewExpandableListHeader",
+          "density": 2
         }
       ],
       "greenlines": [],
@@ -2339,7 +2370,8 @@
           "height": 454,
           "size": "largeRound",
           "livePreview": "https://preview.coo.ee/home-assistant-wear/p/components-time-text__ideal__default__largeround",
-          "previewId": "io.homeassistant.companion.android.home.views.TimeTextKt.PreviewTimeText_wearos_large_round"
+          "previewId": "io.homeassistant.companion.android.home.views.TimeTextKt.PreviewTimeText_wearos_large_round",
+          "density": 2
         }
       ],
       "greenlines": [],
@@ -2355,12 +2387,126 @@
   "library": [
     "Wear Compose Material + Home Assistant surfaces"
   ],
-  "renderer": "compose-preview 0.19.54",
-  "generatedAt": "2026-08-10T20:06:16.271Z",
+  "renderer": "compose-preview 0.19.60",
+  "generatedAt": "2026-08-11T23:02:28.355Z",
   "display": {
     "surface": "dark",
     "hero": "Home/Entity list"
   },
+  "failures": [
+    {
+      "id": "render-failed--homeactivity--activity-homeactivity",
+      "componentId": "HomeActivity",
+      "preview": "activity__HomeActivity",
+      "phase": "render",
+      "errorClass": "java.lang.IllegalStateException",
+      "message": "Hilt Activity must be attached to an @HiltAndroidApp Application. Did you forget to specify your Application's class name in your manifest's <application />'s android:name attribute?",
+      "stackTrace": "java.lang.IllegalStateException: Hilt Activity must be attached to an @HiltAndroidApp Application. Did you forget to specify your Application's class name in your manifest's <application />'s android:name attribute?\n\tat dagger.hilt.android.internal.managers.ActivityComponentManager.createComponent(ActivityComponentManager.java:86)\n\tat dagger.hilt.android.internal.managers.ActivityComponentManager.generatedComponent(ActivityComponentManager.java:66)\n\tat io.homeassistant.companion.android.home.Hilt_HomeActivity.generatedComponent(Hilt_HomeActivity.java:78)\n\tat io.homeassistant.companion.android.home.Hilt_HomeActivity.inject(Hilt_HomeActivity.java:100)\n\tat io.homeassistant.companion.android.home.Hilt_HomeActivity$1.onContextAvailable(Hilt_HomeActivity.java:47)\n\tat androidx.activity.contextaware.ContextAwareHelper.dispatchOnContextAvailable(ContextAwareHelper.kt:78)\n\tat androidx.activity.ComponentActivity.onCreate(ComponentActivity.kt:327)\n\tat io.homeassistant.companion.android.home.Hilt_HomeActivity.onCreate(Hilt_HomeActivity.java:64)\n\tat io.homeassistant.companion.android.home.HomeActivity.onCreate(HomeActivity.kt:63)\n\tat android.app.Activity.performCreate(Activity.java:9002)\n\tat android.app.Activity.performCreate(Activity.java:8980)\n\tat android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1526)\n\tat org.robolectric.android.internal.RoboMonitoringInstrumentation.callActivityOnCreate(RoboMonitoringInstrumentation.java:382)\n\tat org.robolectric.android.controller.ActivityController.lambda$create$0(ActivityController.java:136)\n\tat org.robolectric.shadows.ShadowPausedLooper.runPaused(ShadowPausedLooper.java:257)\n\tat org.robolectric.android.controller.ActivityController.create(ActivityController.java:134)\n\tat org.robolectric.android.controller.ActivityController.create(ActivityController.java:144)\n\tat org.robolectric.android.controller.ActivityController.setup(ActivityController.java:340)\n\tat ee.schimke.composeai.renderer.AppTourRenderer$TourSession.launchIntent(AppTourRenderer.kt:196)\n\tat ee.schimke.composeai.renderer.AppTourRenderer$TourSession.launch(AppTourRenderer.kt:122)\n\tat ee.schimke.composeai.renderer.AppTourRenderer$render$statement$1.evaluate(AppTourRenderer.kt:75)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$testWithDisposal$1.evaluate(AndroidComposeTestRule.android.kt:418)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invokeSuspend(AndroidComposeTestRule.android.kt:438)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invokeSuspend(ComposeUiTest.android.kt:682)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invoke(ComposeUiTest.android.kt)\n\tat androidx.compose.ui.test.IdlingStrategy.withStrategy$suspendImpl(IdlingStrategy.android.kt:55)\n\tat androidx.compose.ui.test.IdlingStrategy.withStrategy(IdlingStrategy.android.kt)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invokeSuspend(ComposeUiTest.android.kt:679)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invoke(ComposeUiTest.android.kt)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt$runTest$2$1$1.invokeSuspend(TestBuilders.kt:318)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)\n\tat kotlinx.coroutines.test.TestDispatcher.processEvent$kotlinx_coroutines_test(TestDispatcher.kt:24)\n\tat kotlinx.coroutines.test.TestCoroutineScheduler.tryRunNextTaskUnless$kotlinx_coroutines_test(TestCoroutineScheduler.kt:99)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt$runTest$2$1$workRunner$1.invokeSuspend(TestBuilders.kt:327)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)\n\tat kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)\n\tat kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:95)\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:69)\n\tat kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:47)\n\tat kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)\n\tat kotlinx.coroutines.test.TestBuildersJvmKt.createTestResult(TestBuildersJvm.kt:10)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt.runTest-8Mi8wO0(TestBuilders.kt:310)\n\tat kotlinx.coroutines.test.TestBuildersKt.runTest-8Mi8wO0(Unknown Source)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt.runTest-8Mi8wO0(TestBuilders.kt:168)\n\tat kotlinx.coroutines.test.TestBuildersKt.runTest-8Mi8wO0(Unknown Source)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment.runTest(ComposeUiTest.android.kt:658)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1.evaluate(AndroidComposeTestRule.android.kt:438)\n\tat ee.schimke.composeai.renderer.AppTourRenderer.render(AppTourRenderer.kt:99)\n\tat ee.schimke.composeai.renderer.RobolectricRenderTestBase.renderPreview(RobolectricRenderTest.kt:650)\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:542)\n\tat org.robolectric.internal.SandboxTestRunner.lambda$executeInSandbox$4(SandboxTestRunner.java:429)\n\tat org.robolectric.internal.SandboxTestRunner.runInSandbox(SandboxTestRunner.java:455)\n\tat org.robolectric.internal.SandboxTestRunner.executeInSandbox(SandboxTestRunner.java:420)\n\tat org.robolectric.internal.SandboxTestRunner$5.evaluate(SandboxTestRunner.java:405)\n\tat org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)\n\tat org.robolectric.internal.SandboxTestRunner.access$000(SandboxTestRunner.java:64)\n\tat org.robolectric.internal.SandboxTestRunner$4.evaluate(SandboxTestRunner.java:294)\n\tat org.robolectric.internal.SandboxTestRunner$2.evaluate(SandboxTestRunner.java:260)\n\tat org.robolectric.internal.SandboxTestRunner$3.lambda$evaluate$0(SandboxTestRunner.java:280)\n\tat org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThreadWithClassLoader$1(Sandbox.java:112)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)\n\tat java.base/java.lang.Thread.run(Thread.java:1583)\n",
+      "topAppFrame": {
+        "file": "ActivityComponentManager.java",
+        "line": 86,
+        "function": "createComponent"
+      }
+    },
+    {
+      "id": "render-failed--splashactivity--activity-splashactivity",
+      "componentId": "SplashActivity",
+      "preview": "activity__SplashActivity",
+      "phase": "render",
+      "errorClass": "java.lang.IllegalStateException",
+      "message": "Hilt Activity must be attached to an @HiltAndroidApp Application. Did you forget to specify your Application's class name in your manifest's <application />'s android:name attribute?",
+      "stackTrace": "java.lang.IllegalStateException: Hilt Activity must be attached to an @HiltAndroidApp Application. Did you forget to specify your Application's class name in your manifest's <application />'s android:name attribute?\n\tat dagger.hilt.android.internal.managers.ActivityComponentManager.createComponent(ActivityComponentManager.java:86)\n\tat dagger.hilt.android.internal.managers.ActivityComponentManager.generatedComponent(ActivityComponentManager.java:66)\n\tat io.homeassistant.companion.android.home.Hilt_HomeActivity.generatedComponent(Hilt_HomeActivity.java:78)\n\tat io.homeassistant.companion.android.home.Hilt_HomeActivity.inject(Hilt_HomeActivity.java:100)\n\tat io.homeassistant.companion.android.home.Hilt_HomeActivity$1.onContextAvailable(Hilt_HomeActivity.java:47)\n\tat androidx.activity.contextaware.ContextAwareHelper.dispatchOnContextAvailable(ContextAwareHelper.kt:78)\n\tat androidx.activity.ComponentActivity.onCreate(ComponentActivity.kt:327)\n\tat io.homeassistant.companion.android.home.Hilt_HomeActivity.onCreate(Hilt_HomeActivity.java:64)\n\tat io.homeassistant.companion.android.home.HomeActivity.onCreate(HomeActivity.kt:63)\n\tat android.app.Activity.performCreate(Activity.java:9002)\n\tat android.app.Activity.performCreate(Activity.java:8980)\n\tat android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1526)\n\tat org.robolectric.android.internal.RoboMonitoringInstrumentation.callActivityOnCreate(RoboMonitoringInstrumentation.java:382)\n\tat org.robolectric.android.controller.ActivityController.lambda$create$0(ActivityController.java:136)\n\tat org.robolectric.shadows.ShadowPausedLooper.runPaused(ShadowPausedLooper.java:257)\n\tat org.robolectric.android.controller.ActivityController.create(ActivityController.java:134)\n\tat org.robolectric.android.controller.ActivityController.create(ActivityController.java:144)\n\tat org.robolectric.android.controller.ActivityController.setup(ActivityController.java:340)\n\tat ee.schimke.composeai.renderer.AppTourRenderer$TourSession.launchIntent(AppTourRenderer.kt:196)\n\tat ee.schimke.composeai.renderer.AppTourRenderer$TourSession.followStartedActivities(AppTourRenderer.kt:214)\n\tat ee.schimke.composeai.renderer.AppTourRenderer$TourSession.launch(AppTourRenderer.kt:123)\n\tat ee.schimke.composeai.renderer.AppTourRenderer$render$statement$1.evaluate(AppTourRenderer.kt:75)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$testWithDisposal$1.evaluate(AndroidComposeTestRule.android.kt:418)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invokeSuspend(AndroidComposeTestRule.android.kt:438)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invokeSuspend(ComposeUiTest.android.kt:682)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invoke(ComposeUiTest.android.kt)\n\tat androidx.compose.ui.test.IdlingStrategy.withStrategy$suspendImpl(IdlingStrategy.android.kt:55)\n\tat androidx.compose.ui.test.IdlingStrategy.withStrategy(IdlingStrategy.android.kt)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invokeSuspend(ComposeUiTest.android.kt:679)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invoke(ComposeUiTest.android.kt)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt$runTest$2$1$1.invokeSuspend(TestBuilders.kt:318)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)\n\tat kotlinx.coroutines.test.TestDispatcher.processEvent$kotlinx_coroutines_test(TestDispatcher.kt:24)\n\tat kotlinx.coroutines.test.TestCoroutineScheduler.tryRunNextTaskUnless$kotlinx_coroutines_test(TestCoroutineScheduler.kt:99)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt$runTest$2$1$workRunner$1.invokeSuspend(TestBuilders.kt:327)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)\n\tat kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)\n\tat kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:95)\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:69)\n\tat kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:47)\n\tat kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)\n\tat kotlinx.coroutines.test.TestBuildersJvmKt.createTestResult(TestBuildersJvm.kt:10)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt.runTest-8Mi8wO0(TestBuilders.kt:310)\n\tat kotlinx.coroutines.test.TestBuildersKt.runTest-8Mi8wO0(Unknown Source)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt.runTest-8Mi8wO0(TestBuilders.kt:168)\n\tat kotlinx.coroutines.test.TestBuildersKt.runTest-8Mi8wO0(Unknown Source)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment.runTest(ComposeUiTest.android.kt:658)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1.evaluate(AndroidComposeTestRule.android.kt:438)\n\tat ee.schimke.composeai.renderer.AppTourRenderer.render(AppTourRenderer.kt:99)\n\tat ee.schimke.composeai.renderer.RobolectricRenderTestBase.renderPreview(RobolectricRenderTest.kt:650)\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:542)\n\tat org.robolectric.internal.SandboxTestRunner.lambda$executeInSandbox$4(SandboxTestRunner.java:429)\n\tat org.robolectric.internal.SandboxTestRunner.runInSandbox(SandboxTestRunner.java:455)\n\tat org.robolectric.internal.SandboxTestRunner.executeInSandbox(SandboxTestRunner.java:420)\n\tat org.robolectric.internal.SandboxTestRunner$5.evaluate(SandboxTestRunner.java:405)\n\tat org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)\n\tat org.robolectric.internal.SandboxTestRunner.access$000(SandboxTestRunner.java:64)\n\tat org.robolectric.internal.SandboxTestRunner$4.evaluate(SandboxTestRunner.java:294)\n\tat org.robolectric.internal.SandboxTestRunner$2.evaluate(SandboxTestRunner.java:260)\n\tat org.robolectric.internal.SandboxTestRunner$3.lambda$evaluate$0(SandboxTestRunner.java:280)\n\tat org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThreadWithClassLoader$1(Sandbox.java:112)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)\n\tat java.base/java.lang.Thread.run(Thread.java:1583)\n",
+      "topAppFrame": {
+        "file": "ActivityComponentManager.java",
+        "line": 86,
+        "function": "createComponent"
+      }
+    },
+    {
+      "id": "render-failed--onboardingactivity--activity-onboardingactivity",
+      "componentId": "OnboardingActivity",
+      "preview": "activity__OnboardingActivity",
+      "phase": "render",
+      "errorClass": "java.lang.IllegalStateException",
+      "message": "Hilt Activity must be attached to an @HiltAndroidApp Application. Did you forget to specify your Application's class name in your manifest's <application />'s android:name attribute?",
+      "stackTrace": "java.lang.IllegalStateException: Hilt Activity must be attached to an @HiltAndroidApp Application. Did you forget to specify your Application's class name in your manifest's <application />'s android:name attribute?\n\tat dagger.hilt.android.internal.managers.ActivityComponentManager.createComponent(ActivityComponentManager.java:86)\n\tat dagger.hilt.android.internal.managers.ActivityComponentManager.generatedComponent(ActivityComponentManager.java:66)\n\tat io.homeassistant.companion.android.onboarding.Hilt_OnboardingActivity.generatedComponent(Hilt_OnboardingActivity.java:78)\n\tat io.homeassistant.companion.android.onboarding.Hilt_OnboardingActivity.inject(Hilt_OnboardingActivity.java:100)\n\tat io.homeassistant.companion.android.onboarding.Hilt_OnboardingActivity$1.onContextAvailable(Hilt_OnboardingActivity.java:47)\n\tat androidx.activity.contextaware.ContextAwareHelper.dispatchOnContextAvailable(ContextAwareHelper.kt:78)\n\tat androidx.activity.ComponentActivity.onCreate(ComponentActivity.kt:327)\n\tat androidx.fragment.app.FragmentActivity.onCreate(FragmentActivity.java:217)\n\tat io.homeassistant.companion.android.onboarding.Hilt_OnboardingActivity.onCreate(Hilt_OnboardingActivity.java:64)\n\tat io.homeassistant.companion.android.onboarding.OnboardingActivity.onCreate(OnboardingActivity.kt:57)\n\tat android.app.Activity.performCreate(Activity.java:9002)\n\tat android.app.Activity.performCreate(Activity.java:8980)\n\tat android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1526)\n\tat org.robolectric.android.internal.RoboMonitoringInstrumentation.callActivityOnCreate(RoboMonitoringInstrumentation.java:382)\n\tat org.robolectric.android.controller.ActivityController.lambda$create$0(ActivityController.java:136)\n\tat org.robolectric.shadows.ShadowPausedLooper.runPaused(ShadowPausedLooper.java:257)\n\tat org.robolectric.android.controller.ActivityController.create(ActivityController.java:134)\n\tat org.robolectric.android.controller.ActivityController.create(ActivityController.java:144)\n\tat org.robolectric.android.controller.ActivityController.setup(ActivityController.java:340)\n\tat ee.schimke.composeai.renderer.AppTourRenderer$TourSession.launchIntent(AppTourRenderer.kt:196)\n\tat ee.schimke.composeai.renderer.AppTourRenderer$TourSession.launch(AppTourRenderer.kt:122)\n\tat ee.schimke.composeai.renderer.AppTourRenderer$render$statement$1.evaluate(AppTourRenderer.kt:75)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$testWithDisposal$1.evaluate(AndroidComposeTestRule.android.kt:418)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invokeSuspend(AndroidComposeTestRule.android.kt:438)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invokeSuspend(ComposeUiTest.android.kt:682)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invoke(ComposeUiTest.android.kt)\n\tat androidx.compose.ui.test.IdlingStrategy.withStrategy$suspendImpl(IdlingStrategy.android.kt:55)\n\tat androidx.compose.ui.test.IdlingStrategy.withStrategy(IdlingStrategy.android.kt)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invokeSuspend(ComposeUiTest.android.kt:679)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invoke(ComposeUiTest.android.kt)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt$runTest$2$1$1.invokeSuspend(TestBuilders.kt:318)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)\n\tat kotlinx.coroutines.test.TestDispatcher.processEvent$kotlinx_coroutines_test(TestDispatcher.kt:24)\n\tat kotlinx.coroutines.test.TestCoroutineScheduler.tryRunNextTaskUnless$kotlinx_coroutines_test(TestCoroutineScheduler.kt:99)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt$runTest$2$1$workRunner$1.invokeSuspend(TestBuilders.kt:327)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)\n\tat kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)\n\tat kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:95)\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:69)\n\tat kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:47)\n\tat kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)\n\tat kotlinx.coroutines.test.TestBuildersJvmKt.createTestResult(TestBuildersJvm.kt:10)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt.runTest-8Mi8wO0(TestBuilders.kt:310)\n\tat kotlinx.coroutines.test.TestBuildersKt.runTest-8Mi8wO0(Unknown Source)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt.runTest-8Mi8wO0(TestBuilders.kt:168)\n\tat kotlinx.coroutines.test.TestBuildersKt.runTest-8Mi8wO0(Unknown Source)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment.runTest(ComposeUiTest.android.kt:658)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1.evaluate(AndroidComposeTestRule.android.kt:438)\n\tat ee.schimke.composeai.renderer.AppTourRenderer.render(AppTourRenderer.kt:99)\n\tat ee.schimke.composeai.renderer.RobolectricRenderTestBase.renderPreview(RobolectricRenderTest.kt:650)\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:542)\n\tat org.robolectric.internal.SandboxTestRunner.lambda$executeInSandbox$4(SandboxTestRunner.java:429)\n\tat org.robolectric.internal.SandboxTestRunner.runInSandbox(SandboxTestRunner.java:455)\n\tat org.robolectric.internal.SandboxTestRunner.executeInSandbox(SandboxTestRunner.java:420)\n\tat org.robolectric.internal.SandboxTestRunner$5.evaluate(SandboxTestRunner.java:405)\n\tat org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)\n\tat org.robolectric.internal.SandboxTestRunner.access$000(SandboxTestRunner.java:64)\n\tat org.robolectric.internal.SandboxTestRunner$4.evaluate(SandboxTestRunner.java:294)\n\tat org.robolectric.internal.SandboxTestRunner$2.evaluate(SandboxTestRunner.java:260)\n\tat org.robolectric.internal.SandboxTestRunner$3.lambda$evaluate$0(SandboxTestRunner.java:280)\n\tat org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThreadWithClassLoader$1(Sandbox.java:112)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)\n\tat java.base/java.lang.Thread.run(Thread.java:1583)\n",
+      "topAppFrame": {
+        "file": "ActivityComponentManager.java",
+        "line": 86,
+        "function": "createComponent"
+      }
+    },
+    {
+      "id": "render-failed--mobileappintegrationactivity--activity-mobileappintegrationactivity",
+      "componentId": "MobileAppIntegrationActivity",
+      "preview": "activity__MobileAppIntegrationActivity",
+      "phase": "render",
+      "errorClass": "java.lang.IllegalStateException",
+      "message": "Hilt Activity must be attached to an @HiltAndroidApp Application. Did you forget to specify your Application's class name in your manifest's <application />'s android:name attribute?",
+      "stackTrace": "java.lang.IllegalStateException: Hilt Activity must be attached to an @HiltAndroidApp Application. Did you forget to specify your Application's class name in your manifest's <application />'s android:name attribute?\n\tat dagger.hilt.android.internal.managers.ActivityComponentManager.createComponent(ActivityComponentManager.java:86)\n\tat dagger.hilt.android.internal.managers.ActivityComponentManager.generatedComponent(ActivityComponentManager.java:66)\n\tat io.homeassistant.companion.android.onboarding.integration.Hilt_MobileAppIntegrationActivity.generatedComponent(Hilt_MobileAppIntegrationActivity.java:78)\n\tat io.homeassistant.companion.android.onboarding.integration.Hilt_MobileAppIntegrationActivity.inject(Hilt_MobileAppIntegrationActivity.java:100)\n\tat io.homeassistant.companion.android.onboarding.integration.Hilt_MobileAppIntegrationActivity$1.onContextAvailable(Hilt_MobileAppIntegrationActivity.java:47)\n\tat androidx.activity.contextaware.ContextAwareHelper.dispatchOnContextAvailable(ContextAwareHelper.kt:78)\n\tat androidx.activity.ComponentActivity.onCreate(ComponentActivity.kt:327)\n\tat androidx.fragment.app.FragmentActivity.onCreate(FragmentActivity.java:217)\n\tat io.homeassistant.companion.android.onboarding.integration.Hilt_MobileAppIntegrationActivity.onCreate(Hilt_MobileAppIntegrationActivity.java:64)\n\tat io.homeassistant.companion.android.onboarding.integration.MobileAppIntegrationActivity.onCreate(MobileAppIntegrationActivity.kt:35)\n\tat android.app.Activity.performCreate(Activity.java:9002)\n\tat android.app.Activity.performCreate(Activity.java:8980)\n\tat android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1526)\n\tat org.robolectric.android.internal.RoboMonitoringInstrumentation.callActivityOnCreate(RoboMonitoringInstrumentation.java:382)\n\tat org.robolectric.android.controller.ActivityController.lambda$create$0(ActivityController.java:136)\n\tat org.robolectric.shadows.ShadowPausedLooper.runPaused(ShadowPausedLooper.java:257)\n\tat org.robolectric.android.controller.ActivityController.create(ActivityController.java:134)\n\tat org.robolectric.android.controller.ActivityController.create(ActivityController.java:144)\n\tat org.robolectric.android.controller.ActivityController.setup(ActivityController.java:340)\n\tat ee.schimke.composeai.renderer.AppTourRenderer$TourSession.launchIntent(AppTourRenderer.kt:196)\n\tat ee.schimke.composeai.renderer.AppTourRenderer$TourSession.launch(AppTourRenderer.kt:122)\n\tat ee.schimke.composeai.renderer.AppTourRenderer$render$statement$1.evaluate(AppTourRenderer.kt:75)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$testWithDisposal$1.evaluate(AndroidComposeTestRule.android.kt:418)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invokeSuspend(AndroidComposeTestRule.android.kt:438)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invokeSuspend(ComposeUiTest.android.kt:682)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invoke(ComposeUiTest.android.kt)\n\tat androidx.compose.ui.test.IdlingStrategy.withStrategy$suspendImpl(IdlingStrategy.android.kt:55)\n\tat androidx.compose.ui.test.IdlingStrategy.withStrategy(IdlingStrategy.android.kt)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invokeSuspend(ComposeUiTest.android.kt:679)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invoke(ComposeUiTest.android.kt)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt$runTest$2$1$1.invokeSuspend(TestBuilders.kt:318)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)\n\tat kotlinx.coroutines.test.TestDispatcher.processEvent$kotlinx_coroutines_test(TestDispatcher.kt:24)\n\tat kotlinx.coroutines.test.TestCoroutineScheduler.tryRunNextTaskUnless$kotlinx_coroutines_test(TestCoroutineScheduler.kt:99)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt$runTest$2$1$workRunner$1.invokeSuspend(TestBuilders.kt:327)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)\n\tat kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)\n\tat kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:95)\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:69)\n\tat kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:47)\n\tat kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)\n\tat kotlinx.coroutines.test.TestBuildersJvmKt.createTestResult(TestBuildersJvm.kt:10)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt.runTest-8Mi8wO0(TestBuilders.kt:310)\n\tat kotlinx.coroutines.test.TestBuildersKt.runTest-8Mi8wO0(Unknown Source)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt.runTest-8Mi8wO0(TestBuilders.kt:168)\n\tat kotlinx.coroutines.test.TestBuildersKt.runTest-8Mi8wO0(Unknown Source)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment.runTest(ComposeUiTest.android.kt:658)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1.evaluate(AndroidComposeTestRule.android.kt:438)\n\tat ee.schimke.composeai.renderer.AppTourRenderer.render(AppTourRenderer.kt:99)\n\tat ee.schimke.composeai.renderer.RobolectricRenderTestBase.renderPreview(RobolectricRenderTest.kt:650)\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:542)\n\tat org.robolectric.internal.SandboxTestRunner.lambda$executeInSandbox$4(SandboxTestRunner.java:429)\n\tat org.robolectric.internal.SandboxTestRunner.runInSandbox(SandboxTestRunner.java:455)\n\tat org.robolectric.internal.SandboxTestRunner.executeInSandbox(SandboxTestRunner.java:420)\n\tat org.robolectric.internal.SandboxTestRunner$5.evaluate(SandboxTestRunner.java:405)\n\tat org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)\n\tat org.robolectric.internal.SandboxTestRunner.access$000(SandboxTestRunner.java:64)\n\tat org.robolectric.internal.SandboxTestRunner$4.evaluate(SandboxTestRunner.java:294)\n\tat org.robolectric.internal.SandboxTestRunner$2.evaluate(SandboxTestRunner.java:260)\n\tat org.robolectric.internal.SandboxTestRunner$3.lambda$evaluate$0(SandboxTestRunner.java:280)\n\tat org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThreadWithClassLoader$1(Sandbox.java:112)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)\n\tat java.base/java.lang.Thread.run(Thread.java:1583)\n",
+      "topAppFrame": {
+        "file": "ActivityComponentManager.java",
+        "line": 86,
+        "function": "createComponent"
+      }
+    },
+    {
+      "id": "render-failed--manualsetupactivity--activity-manualsetupactivity",
+      "componentId": "ManualSetupActivity",
+      "preview": "activity__ManualSetupActivity",
+      "phase": "render",
+      "errorClass": "java.lang.IllegalStateException",
+      "message": "Hilt Activity must be attached to an @HiltAndroidApp Application. Did you forget to specify your Application's class name in your manifest's <application />'s android:name attribute?",
+      "stackTrace": "java.lang.IllegalStateException: Hilt Activity must be attached to an @HiltAndroidApp Application. Did you forget to specify your Application's class name in your manifest's <application />'s android:name attribute?\n\tat dagger.hilt.android.internal.managers.ActivityComponentManager.createComponent(ActivityComponentManager.java:86)\n\tat dagger.hilt.android.internal.managers.ActivityComponentManager.generatedComponent(ActivityComponentManager.java:66)\n\tat io.homeassistant.companion.android.onboarding.manual.Hilt_ManualSetupActivity.generatedComponent(Hilt_ManualSetupActivity.java:78)\n\tat io.homeassistant.companion.android.onboarding.manual.Hilt_ManualSetupActivity.inject(Hilt_ManualSetupActivity.java:100)\n\tat io.homeassistant.companion.android.onboarding.manual.Hilt_ManualSetupActivity$1.onContextAvailable(Hilt_ManualSetupActivity.java:47)\n\tat androidx.activity.contextaware.ContextAwareHelper.dispatchOnContextAvailable(ContextAwareHelper.kt:78)\n\tat androidx.activity.ComponentActivity.onCreate(ComponentActivity.kt:327)\n\tat androidx.fragment.app.FragmentActivity.onCreate(FragmentActivity.java:217)\n\tat io.homeassistant.companion.android.onboarding.manual.Hilt_ManualSetupActivity.onCreate(Hilt_ManualSetupActivity.java:64)\n\tat io.homeassistant.companion.android.onboarding.manual.ManualSetupActivity.onCreate(ManualSetupActivity.kt:34)\n\tat android.app.Activity.performCreate(Activity.java:9002)\n\tat android.app.Activity.performCreate(Activity.java:8980)\n\tat android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1526)\n\tat org.robolectric.android.internal.RoboMonitoringInstrumentation.callActivityOnCreate(RoboMonitoringInstrumentation.java:382)\n\tat org.robolectric.android.controller.ActivityController.lambda$create$0(ActivityController.java:136)\n\tat org.robolectric.shadows.ShadowPausedLooper.runPaused(ShadowPausedLooper.java:257)\n\tat org.robolectric.android.controller.ActivityController.create(ActivityController.java:134)\n\tat org.robolectric.android.controller.ActivityController.create(ActivityController.java:144)\n\tat org.robolectric.android.controller.ActivityController.setup(ActivityController.java:340)\n\tat ee.schimke.composeai.renderer.AppTourRenderer$TourSession.launchIntent(AppTourRenderer.kt:196)\n\tat ee.schimke.composeai.renderer.AppTourRenderer$TourSession.launch(AppTourRenderer.kt:122)\n\tat ee.schimke.composeai.renderer.AppTourRenderer$render$statement$1.evaluate(AppTourRenderer.kt:75)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$testWithDisposal$1.evaluate(AndroidComposeTestRule.android.kt:418)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invokeSuspend(AndroidComposeTestRule.android.kt:438)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invokeSuspend(ComposeUiTest.android.kt:682)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invoke(ComposeUiTest.android.kt)\n\tat androidx.compose.ui.test.IdlingStrategy.withStrategy$suspendImpl(IdlingStrategy.android.kt:55)\n\tat androidx.compose.ui.test.IdlingStrategy.withStrategy(IdlingStrategy.android.kt)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invokeSuspend(ComposeUiTest.android.kt:679)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invoke(ComposeUiTest.android.kt)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt$runTest$2$1$1.invokeSuspend(TestBuilders.kt:318)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)\n\tat kotlinx.coroutines.test.TestDispatcher.processEvent$kotlinx_coroutines_test(TestDispatcher.kt:24)\n\tat kotlinx.coroutines.test.TestCoroutineScheduler.tryRunNextTaskUnless$kotlinx_coroutines_test(TestCoroutineScheduler.kt:99)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt$runTest$2$1$workRunner$1.invokeSuspend(TestBuilders.kt:327)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)\n\tat kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)\n\tat kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:95)\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:69)\n\tat kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:47)\n\tat kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)\n\tat kotlinx.coroutines.test.TestBuildersJvmKt.createTestResult(TestBuildersJvm.kt:10)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt.runTest-8Mi8wO0(TestBuilders.kt:310)\n\tat kotlinx.coroutines.test.TestBuildersKt.runTest-8Mi8wO0(Unknown Source)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt.runTest-8Mi8wO0(TestBuilders.kt:168)\n\tat kotlinx.coroutines.test.TestBuildersKt.runTest-8Mi8wO0(Unknown Source)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment.runTest(ComposeUiTest.android.kt:658)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1.evaluate(AndroidComposeTestRule.android.kt:438)\n\tat ee.schimke.composeai.renderer.AppTourRenderer.render(AppTourRenderer.kt:99)\n\tat ee.schimke.composeai.renderer.RobolectricRenderTestBase.renderPreview(RobolectricRenderTest.kt:650)\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:542)\n\tat org.robolectric.internal.SandboxTestRunner.lambda$executeInSandbox$4(SandboxTestRunner.java:429)\n\tat org.robolectric.internal.SandboxTestRunner.runInSandbox(SandboxTestRunner.java:455)\n\tat org.robolectric.internal.SandboxTestRunner.executeInSandbox(SandboxTestRunner.java:420)\n\tat org.robolectric.internal.SandboxTestRunner$5.evaluate(SandboxTestRunner.java:405)\n\tat org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)\n\tat org.robolectric.internal.SandboxTestRunner.access$000(SandboxTestRunner.java:64)\n\tat org.robolectric.internal.SandboxTestRunner$4.evaluate(SandboxTestRunner.java:294)\n\tat org.robolectric.internal.SandboxTestRunner$2.evaluate(SandboxTestRunner.java:260)\n\tat org.robolectric.internal.SandboxTestRunner$3.lambda$evaluate$0(SandboxTestRunner.java:280)\n\tat org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThreadWithClassLoader$1(Sandbox.java:112)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)\n\tat java.base/java.lang.Thread.run(Thread.java:1583)\n",
+      "topAppFrame": {
+        "file": "ActivityComponentManager.java",
+        "line": 86,
+        "function": "createComponent"
+      }
+    },
+    {
+      "id": "render-failed--complicationconfigactivity--activity-complicationconfigactivity",
+      "componentId": "ComplicationConfigActivity",
+      "preview": "activity__ComplicationConfigActivity",
+      "phase": "render",
+      "errorClass": "java.lang.IllegalStateException",
+      "message": "Hilt Activity must be attached to an @HiltAndroidApp Application. Did you forget to specify your Application's class name in your manifest's <application />'s android:name attribute?",
+      "stackTrace": "java.lang.IllegalStateException: Hilt Activity must be attached to an @HiltAndroidApp Application. Did you forget to specify your Application's class name in your manifest's <application />'s android:name attribute?\n\tat dagger.hilt.android.internal.managers.ActivityComponentManager.createComponent(ActivityComponentManager.java:86)\n\tat dagger.hilt.android.internal.managers.ActivityComponentManager.generatedComponent(ActivityComponentManager.java:66)\n\tat io.homeassistant.companion.android.complications.Hilt_ComplicationConfigActivity.generatedComponent(Hilt_ComplicationConfigActivity.java:78)\n\tat io.homeassistant.companion.android.complications.Hilt_ComplicationConfigActivity.inject(Hilt_ComplicationConfigActivity.java:100)\n\tat io.homeassistant.companion.android.complications.Hilt_ComplicationConfigActivity$1.onContextAvailable(Hilt_ComplicationConfigActivity.java:47)\n\tat androidx.activity.contextaware.ContextAwareHelper.dispatchOnContextAvailable(ContextAwareHelper.kt:78)\n\tat androidx.activity.ComponentActivity.onCreate(ComponentActivity.kt:327)\n\tat io.homeassistant.companion.android.complications.Hilt_ComplicationConfigActivity.onCreate(Hilt_ComplicationConfigActivity.java:64)\n\tat io.homeassistant.companion.android.complications.ComplicationConfigActivity.onCreate(ComplicationConfigActivity.kt:33)\n\tat android.app.Activity.performCreate(Activity.java:9002)\n\tat android.app.Activity.performCreate(Activity.java:8980)\n\tat android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1526)\n\tat org.robolectric.android.internal.RoboMonitoringInstrumentation.callActivityOnCreate(RoboMonitoringInstrumentation.java:382)\n\tat org.robolectric.android.controller.ActivityController.lambda$create$0(ActivityController.java:136)\n\tat org.robolectric.shadows.ShadowPausedLooper.runPaused(ShadowPausedLooper.java:257)\n\tat org.robolectric.android.controller.ActivityController.create(ActivityController.java:134)\n\tat org.robolectric.android.controller.ActivityController.create(ActivityController.java:144)\n\tat org.robolectric.android.controller.ActivityController.setup(ActivityController.java:340)\n\tat ee.schimke.composeai.renderer.AppTourRenderer$TourSession.launchIntent(AppTourRenderer.kt:196)\n\tat ee.schimke.composeai.renderer.AppTourRenderer$TourSession.launch(AppTourRenderer.kt:122)\n\tat ee.schimke.composeai.renderer.AppTourRenderer$render$statement$1.evaluate(AppTourRenderer.kt:75)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$testWithDisposal$1.evaluate(AndroidComposeTestRule.android.kt:418)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invokeSuspend(AndroidComposeTestRule.android.kt:438)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invokeSuspend(ComposeUiTest.android.kt:682)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invoke(ComposeUiTest.android.kt)\n\tat androidx.compose.ui.test.IdlingStrategy.withStrategy$suspendImpl(IdlingStrategy.android.kt:55)\n\tat androidx.compose.ui.test.IdlingStrategy.withStrategy(IdlingStrategy.android.kt)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invokeSuspend(ComposeUiTest.android.kt:679)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invoke(ComposeUiTest.android.kt)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt$runTest$2$1$1.invokeSuspend(TestBuilders.kt:318)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)\n\tat kotlinx.coroutines.test.TestDispatcher.processEvent$kotlinx_coroutines_test(TestDispatcher.kt:24)\n\tat kotlinx.coroutines.test.TestCoroutineScheduler.tryRunNextTaskUnless$kotlinx_coroutines_test(TestCoroutineScheduler.kt:99)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt$runTest$2$1$workRunner$1.invokeSuspend(TestBuilders.kt:327)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)\n\tat kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)\n\tat kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:95)\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:69)\n\tat kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:47)\n\tat kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)\n\tat kotlinx.coroutines.test.TestBuildersJvmKt.createTestResult(TestBuildersJvm.kt:10)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt.runTest-8Mi8wO0(TestBuilders.kt:310)\n\tat kotlinx.coroutines.test.TestBuildersKt.runTest-8Mi8wO0(Unknown Source)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt.runTest-8Mi8wO0(TestBuilders.kt:168)\n\tat kotlinx.coroutines.test.TestBuildersKt.runTest-8Mi8wO0(Unknown Source)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment.runTest(ComposeUiTest.android.kt:658)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1.evaluate(AndroidComposeTestRule.android.kt:438)\n\tat ee.schimke.composeai.renderer.AppTourRenderer.render(AppTourRenderer.kt:99)\n\tat ee.schimke.composeai.renderer.RobolectricRenderTestBase.renderPreview(RobolectricRenderTest.kt:650)\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:542)\n\tat org.robolectric.internal.SandboxTestRunner.lambda$executeInSandbox$4(SandboxTestRunner.java:429)\n\tat org.robolectric.internal.SandboxTestRunner.runInSandbox(SandboxTestRunner.java:455)\n\tat org.robolectric.internal.SandboxTestRunner.executeInSandbox(SandboxTestRunner.java:420)\n\tat org.robolectric.internal.SandboxTestRunner$5.evaluate(SandboxTestRunner.java:405)\n\tat org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)\n\tat org.robolectric.internal.SandboxTestRunner.access$000(SandboxTestRunner.java:64)\n\tat org.robolectric.internal.SandboxTestRunner$4.evaluate(SandboxTestRunner.java:294)\n\tat org.robolectric.internal.SandboxTestRunner$2.evaluate(SandboxTestRunner.java:260)\n\tat org.robolectric.internal.SandboxTestRunner$3.lambda$evaluate$0(SandboxTestRunner.java:280)\n\tat org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThreadWithClassLoader$1(Sandbox.java:112)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)\n\tat java.base/java.lang.Thread.run(Thread.java:1583)\n",
+      "topAppFrame": {
+        "file": "ActivityComponentManager.java",
+        "line": 86,
+        "function": "createComponent"
+      }
+    },
+    {
+      "id": "render-failed--opentilesettingsactivity--activity-opentilesettingsactivity",
+      "componentId": "OpenTileSettingsActivity",
+      "preview": "activity__OpenTileSettingsActivity",
+      "phase": "render",
+      "errorClass": "java.lang.IllegalStateException",
+      "message": "Hilt Activity must be attached to an @HiltAndroidApp Application. Did you forget to specify your Application's class name in your manifest's <application />'s android:name attribute?",
+      "stackTrace": "java.lang.IllegalStateException: Hilt Activity must be attached to an @HiltAndroidApp Application. Did you forget to specify your Application's class name in your manifest's <application />'s android:name attribute?\n\tat dagger.hilt.android.internal.managers.ActivityComponentManager.createComponent(ActivityComponentManager.java:86)\n\tat dagger.hilt.android.internal.managers.ActivityComponentManager.generatedComponent(ActivityComponentManager.java:66)\n\tat io.homeassistant.companion.android.tiles.Hilt_OpenTileSettingsActivity.generatedComponent(Hilt_OpenTileSettingsActivity.java:78)\n\tat io.homeassistant.companion.android.tiles.Hilt_OpenTileSettingsActivity.inject(Hilt_OpenTileSettingsActivity.java:100)\n\tat io.homeassistant.companion.android.tiles.Hilt_OpenTileSettingsActivity$1.onContextAvailable(Hilt_OpenTileSettingsActivity.java:47)\n\tat androidx.activity.contextaware.ContextAwareHelper.dispatchOnContextAvailable(ContextAwareHelper.kt:78)\n\tat androidx.activity.ComponentActivity.onCreate(ComponentActivity.kt:327)\n\tat androidx.fragment.app.FragmentActivity.onCreate(FragmentActivity.java:217)\n\tat io.homeassistant.companion.android.tiles.Hilt_OpenTileSettingsActivity.onCreate(Hilt_OpenTileSettingsActivity.java:64)\n\tat io.homeassistant.companion.android.tiles.OpenTileSettingsActivity.onCreate(OpenTileSettingsActivity.kt:19)\n\tat android.app.Activity.performCreate(Activity.java:9002)\n\tat android.app.Activity.performCreate(Activity.java:8980)\n\tat android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1526)\n\tat org.robolectric.android.internal.RoboMonitoringInstrumentation.callActivityOnCreate(RoboMonitoringInstrumentation.java:382)\n\tat org.robolectric.android.controller.ActivityController.lambda$create$0(ActivityController.java:136)\n\tat org.robolectric.shadows.ShadowPausedLooper.runPaused(ShadowPausedLooper.java:257)\n\tat org.robolectric.android.controller.ActivityController.create(ActivityController.java:134)\n\tat org.robolectric.android.controller.ActivityController.create(ActivityController.java:144)\n\tat org.robolectric.android.controller.ActivityController.setup(ActivityController.java:340)\n\tat ee.schimke.composeai.renderer.AppTourRenderer$TourSession.launchIntent(AppTourRenderer.kt:196)\n\tat ee.schimke.composeai.renderer.AppTourRenderer$TourSession.launch(AppTourRenderer.kt:122)\n\tat ee.schimke.composeai.renderer.AppTourRenderer$render$statement$1.evaluate(AppTourRenderer.kt:75)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$testWithDisposal$1.evaluate(AndroidComposeTestRule.android.kt:418)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invokeSuspend(AndroidComposeTestRule.android.kt:438)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invokeSuspend(ComposeUiTest.android.kt:682)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invoke(ComposeUiTest.android.kt)\n\tat androidx.compose.ui.test.IdlingStrategy.withStrategy$suspendImpl(IdlingStrategy.android.kt:55)\n\tat androidx.compose.ui.test.IdlingStrategy.withStrategy(IdlingStrategy.android.kt)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invokeSuspend(ComposeUiTest.android.kt:679)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invoke(ComposeUiTest.android.kt)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt$runTest$2$1$1.invokeSuspend(TestBuilders.kt:318)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)\n\tat kotlinx.coroutines.test.TestDispatcher.processEvent$kotlinx_coroutines_test(TestDispatcher.kt:24)\n\tat kotlinx.coroutines.test.TestCoroutineScheduler.tryRunNextTaskUnless$kotlinx_coroutines_test(TestCoroutineScheduler.kt:99)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt$runTest$2$1$workRunner$1.invokeSuspend(TestBuilders.kt:327)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)\n\tat kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)\n\tat kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:95)\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:69)\n\tat kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:47)\n\tat kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)\n\tat kotlinx.coroutines.test.TestBuildersJvmKt.createTestResult(TestBuildersJvm.kt:10)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt.runTest-8Mi8wO0(TestBuilders.kt:310)\n\tat kotlinx.coroutines.test.TestBuildersKt.runTest-8Mi8wO0(Unknown Source)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt.runTest-8Mi8wO0(TestBuilders.kt:168)\n\tat kotlinx.coroutines.test.TestBuildersKt.runTest-8Mi8wO0(Unknown Source)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment.runTest(ComposeUiTest.android.kt:658)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1.evaluate(AndroidComposeTestRule.android.kt:438)\n\tat ee.schimke.composeai.renderer.AppTourRenderer.render(AppTourRenderer.kt:99)\n\tat ee.schimke.composeai.renderer.RobolectricRenderTestBase.renderPreview(RobolectricRenderTest.kt:650)\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:542)\n\tat org.robolectric.internal.SandboxTestRunner.lambda$executeInSandbox$4(SandboxTestRunner.java:429)\n\tat org.robolectric.internal.SandboxTestRunner.runInSandbox(SandboxTestRunner.java:455)\n\tat org.robolectric.internal.SandboxTestRunner.executeInSandbox(SandboxTestRunner.java:420)\n\tat org.robolectric.internal.SandboxTestRunner$5.evaluate(SandboxTestRunner.java:405)\n\tat org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)\n\tat org.robolectric.internal.SandboxTestRunner.access$000(SandboxTestRunner.java:64)\n\tat org.robolectric.internal.SandboxTestRunner$4.evaluate(SandboxTestRunner.java:294)\n\tat org.robolectric.internal.SandboxTestRunner$2.evaluate(SandboxTestRunner.java:260)\n\tat org.robolectric.internal.SandboxTestRunner$3.lambda$evaluate$0(SandboxTestRunner.java:280)\n\tat org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThreadWithClassLoader$1(Sandbox.java:112)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)\n\tat java.base/java.lang.Thread.run(Thread.java:1583)\n",
+      "topAppFrame": {
+        "file": "ActivityComponentManager.java",
+        "line": 86,
+        "function": "createComponent"
+      }
+    },
+    {
+      "id": "render-failed--conversationactivity--activity-conversationactivity",
+      "componentId": "ConversationActivity",
+      "preview": "activity__ConversationActivity",
+      "phase": "render",
+      "errorClass": "java.lang.IllegalStateException",
+      "message": "Hilt Activity must be attached to an @HiltAndroidApp Application. Did you forget to specify your Application's class name in your manifest's <application />'s android:name attribute?",
+      "stackTrace": "java.lang.IllegalStateException: Hilt Activity must be attached to an @HiltAndroidApp Application. Did you forget to specify your Application's class name in your manifest's <application />'s android:name attribute?\n\tat dagger.hilt.android.internal.managers.ActivityComponentManager.createComponent(ActivityComponentManager.java:86)\n\tat dagger.hilt.android.internal.managers.ActivityComponentManager.generatedComponent(ActivityComponentManager.java:66)\n\tat io.homeassistant.companion.android.conversation.Hilt_ConversationActivity.generatedComponent(Hilt_ConversationActivity.java:78)\n\tat io.homeassistant.companion.android.conversation.Hilt_ConversationActivity.inject(Hilt_ConversationActivity.java:100)\n\tat io.homeassistant.companion.android.conversation.Hilt_ConversationActivity$1.onContextAvailable(Hilt_ConversationActivity.java:47)\n\tat androidx.activity.contextaware.ContextAwareHelper.dispatchOnContextAvailable(ContextAwareHelper.kt:78)\n\tat androidx.activity.ComponentActivity.onCreate(ComponentActivity.kt:327)\n\tat io.homeassistant.companion.android.conversation.Hilt_ConversationActivity.onCreate(Hilt_ConversationActivity.java:64)\n\tat io.homeassistant.companion.android.conversation.ConversationActivity.onCreate(ConversationActivity.kt:50)\n\tat android.app.Activity.performCreate(Activity.java:9002)\n\tat android.app.Activity.performCreate(Activity.java:8980)\n\tat android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1526)\n\tat org.robolectric.android.internal.RoboMonitoringInstrumentation.callActivityOnCreate(RoboMonitoringInstrumentation.java:382)\n\tat org.robolectric.android.controller.ActivityController.lambda$create$0(ActivityController.java:136)\n\tat org.robolectric.shadows.ShadowPausedLooper.runPaused(ShadowPausedLooper.java:257)\n\tat org.robolectric.android.controller.ActivityController.create(ActivityController.java:134)\n\tat org.robolectric.android.controller.ActivityController.create(ActivityController.java:144)\n\tat org.robolectric.android.controller.ActivityController.setup(ActivityController.java:340)\n\tat ee.schimke.composeai.renderer.AppTourRenderer$TourSession.launchIntent(AppTourRenderer.kt:196)\n\tat ee.schimke.composeai.renderer.AppTourRenderer$TourSession.launch(AppTourRenderer.kt:122)\n\tat ee.schimke.composeai.renderer.AppTourRenderer$render$statement$1.evaluate(AppTourRenderer.kt:75)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$testWithDisposal$1.evaluate(AndroidComposeTestRule.android.kt:418)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invokeSuspend(AndroidComposeTestRule.android.kt:438)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invokeSuspend(ComposeUiTest.android.kt:682)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invoke(ComposeUiTest.android.kt)\n\tat androidx.compose.ui.test.IdlingStrategy.withStrategy$suspendImpl(IdlingStrategy.android.kt:55)\n\tat androidx.compose.ui.test.IdlingStrategy.withStrategy(IdlingStrategy.android.kt)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invokeSuspend(ComposeUiTest.android.kt:679)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invoke(ComposeUiTest.android.kt)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt$runTest$2$1$1.invokeSuspend(TestBuilders.kt:318)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)\n\tat kotlinx.coroutines.test.TestDispatcher.processEvent$kotlinx_coroutines_test(TestDispatcher.kt:24)\n\tat kotlinx.coroutines.test.TestCoroutineScheduler.tryRunNextTaskUnless$kotlinx_coroutines_test(TestCoroutineScheduler.kt:99)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt$runTest$2$1$workRunner$1.invokeSuspend(TestBuilders.kt:327)\n\tat kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)\n\tat kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)\n\tat kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)\n\tat kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:95)\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:69)\n\tat kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)\n\tat kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:47)\n\tat kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)\n\tat kotlinx.coroutines.test.TestBuildersJvmKt.createTestResult(TestBuildersJvm.kt:10)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt.runTest-8Mi8wO0(TestBuilders.kt:310)\n\tat kotlinx.coroutines.test.TestBuildersKt.runTest-8Mi8wO0(Unknown Source)\n\tat kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt.runTest-8Mi8wO0(TestBuilders.kt:168)\n\tat kotlinx.coroutines.test.TestBuildersKt.runTest-8Mi8wO0(Unknown Source)\n\tat androidx.compose.ui.test.AndroidComposeUiTestEnvironment.runTest(ComposeUiTest.android.kt:658)\n\tat androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1.evaluate(AndroidComposeTestRule.android.kt:438)\n\tat ee.schimke.composeai.renderer.AppTourRenderer.render(AppTourRenderer.kt:99)\n\tat ee.schimke.composeai.renderer.RobolectricRenderTestBase.renderPreview(RobolectricRenderTest.kt:650)\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:542)\n\tat org.robolectric.internal.SandboxTestRunner.lambda$executeInSandbox$4(SandboxTestRunner.java:429)\n\tat org.robolectric.internal.SandboxTestRunner.runInSandbox(SandboxTestRunner.java:455)\n\tat org.robolectric.internal.SandboxTestRunner.executeInSandbox(SandboxTestRunner.java:420)\n\tat org.robolectric.internal.SandboxTestRunner$5.evaluate(SandboxTestRunner.java:405)\n\tat org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)\n\tat org.robolectric.internal.SandboxTestRunner.access$000(SandboxTestRunner.java:64)\n\tat org.robolectric.internal.SandboxTestRunner$4.evaluate(SandboxTestRunner.java:294)\n\tat org.robolectric.internal.SandboxTestRunner$2.evaluate(SandboxTestRunner.java:260)\n\tat org.robolectric.internal.SandboxTestRunner$3.lambda$evaluate$0(SandboxTestRunner.java:280)\n\tat org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThreadWithClassLoader$1(Sandbox.java:112)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)\n\tat java.base/java.lang.Thread.run(Thread.java:1583)\n",
+      "topAppFrame": {
+        "file": "ActivityComponentManager.java",
+        "line": 86,
+        "function": "createComponent"
+      }
+    }
+  ],
   "liveBundle": {
     "path": "bundle/",
     "file": "bundle.png"
