@@ -1,0 +1,32 @@
+{
+  "schema": "compose-preview-revision-index/v1",
+  "current": [
+    "components-icon-dialog__ideal__default",
+    "components-icon-dialog__ideal__results",
+    "components-icon-dialog__ideal__search",
+    "onboarding-matter-commissioning__ideal__default",
+    "onboarding-notification-permission__ideal__default__compact",
+    "onboarding-welcome__ideal__default__compact",
+    "onboarding-welcome__ideal__default__dark__compact",
+    "settings-android-auto-favorites__ideal__default__dark__compact",
+    "settings-android-auto-favorites__ideal__default__light__compact",
+    "settings-app-shortcuts__ideal__default__dark__compact",
+    "settings-app-shortcuts__ideal__default__light__compact",
+    "settings-external-url__ideal__cloud-off",
+    "settings-external-url__ideal__cloud-unavailable",
+    "settings-external-url__ideal__default",
+    "settings-notification-detail__ideal__default",
+    "settings-quick-settings-tiles__ideal__default__dark__compact",
+    "settings-quick-settings-tiles__ideal__default__light__compact",
+    "settings-sensor-list__ideal__default__dark__compact",
+    "settings-sensor-list__ideal__default__light__compact",
+    "settings-wear-companion__ideal__default__compact",
+    "settings-wear-companion__ideal__favorites__dark__compact",
+    "settings-wear-companion__ideal__favorites__light__compact",
+    "settings-wi-fi-ssids__ideal__default",
+    "settings-wi-fi-ssids__ideal__empty",
+    "settings-widgets__ideal__default__dark__compact",
+    "settings-widgets__ideal__default__light__compact"
+  ],
+  "revisions": []
+}
