@@ -15,7 +15,7 @@
           <g id="Row">
               <rect x="16" y="175" width="422" height="104" rx="52" ry="52" fill="#474747"/>
             <g id="ImageKt">
-              <image href="tiles-shortcut-selection.figma-raster/209.png" x="44" y="203" width="48" height="48"/>
+              <image href="tiles-shortcut-selection.figma-raster/53.png" x="44" y="203" width="48" height="48"/>
             </g>
             <g id="Spacer">
             </g>
@@ -25,7 +25,7 @@
             <g id="Spacer">
             </g>
             <g id="Spacer">
-              <image href="tiles-shortcut-selection.figma-raster/216.png" x="346" y="203" width="64" height="48"/>
+              <image href="tiles-shortcut-selection.figma-raster/60.png" x="346" y="203" width="64" height="48"/>
             </g>
           </g>
           <g id="Box" opacity="0.99">
@@ -49,7 +49,7 @@
         </g>
       </g>
       <g id="Layout">
-        <image href="tiles-shortcut-selection.figma-raster/195.png" x="0" y="0" width="454" height="454"/>
+        <image href="tiles-shortcut-selection.figma-raster/39.png" x="0" y="0" width="454" height="454"/>
         <g id="ReusableComposeNode">
         </g>
       </g>
