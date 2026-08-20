@@ -32,6 +32,7 @@ classgraph = "4.8.192"
 cmake = "4.1.2"
 community-material-typeface = "7.0.96.2-kotlin"
 compose-bom = "2026.06.01"
+compose-ai-preview = "1.21.0"
 composeLintChecks = "1.5.4"
 connectClient = "1.1.0"
 constraintlayout = "2.2.2"
@@ -114,6 +115,7 @@ compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
 screenshot = { id = "com.android.compose.screenshot", version.ref = "screenshot" }
+compose-ai-preview = { id = "ee.schimke.composeai.preview", version.ref = "compose-ai-preview" }
 
 # Plugins defined by this project in `:build-logic:convention` module.
 homeassistant-android-application = { id = "homeassistant.android.application" }

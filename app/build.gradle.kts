@@ -4,6 +4,13 @@ plugins {
     alias(libs.plugins.firebase.appdistribution)
     alias(libs.plugins.homeassistant.android.dependencies)
     alias(libs.plugins.kotlin.parcelize)
+    alias(libs.plugins.compose.ai.preview)
+}
+
+// Renders the full-flavor phone/tablet @Preview functions used by catalog.spec.json.
+composePreview {
+    variant.set("fullDebug")
+    sdkVersion.set(35)
 }
 
 android {

@@ -1,5 +1,12 @@
 plugins {
     alias(libs.plugins.homeassistant.android.application)
+    alias(libs.plugins.compose.ai.preview)
+}
+
+// Renders the Wear OS @Preview functions used by catalog.wear.spec.json.
+composePreview {
+    variant.set("debug")
+    sdkVersion.set(35)
 }
 
 android {

@@ -1,0 +1,71 @@
+name: Design Artifacts
+
+# This workflow is intentionally fork-only. It renders the semi-permanent `previews`
+# branch and force-pushes generated catalogs to design-artifacts/<system>, ready for
+# preview.coo.ee to serve after the systems are registered there.
+on:
+  # Re-render on demand without needing a commit on `previews` — the renderer is pinned
+  # by version, so a compose-ai-tools release can change the output with nothing to push.
+  workflow_dispatch:
+  push:
+    branches:
+      - previews
+    paths:
+      - 'catalog*.spec.json'
+      - 'app/src/**'
+      - 'app/build.gradle.kts'
+      - 'app/google-services.json'
+      - 'wear/src/**'
+      - 'wear/build.gradle.kts'
+      - 'wear/google-services.json'
+      - 'common/src/**'
+      - 'common/build.gradle.kts'
+      - 'build.gradle.kts'
+      - 'gradle/libs.versions.toml'
+      - 'gradle/wrapper/**'
+      - '.github/workflows/design-artifacts.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: design-artifacts-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: ${{ github.repository == 'yschimke/home-assistant-android' }}
+    name: ${{ matrix.system }}
+    permissions:
+      contents: write
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - system: home-assistant-android
+            spec: catalog.spec.json
+            module: ':app'
+          - system: home-assistant-wear
+            spec: catalog.wear.spec.json
+            module: ':wear'
+    uses: yschimke/compose-ai-tools/.github/workflows/design-artifacts-reusable.yml@main
+    with:
+      system: ${{ matrix.system }}
+      spec: ${{ matrix.spec }}
+      module: ${{ matrix.module }}
+      ref: previews
+      cli-version: catalog
+      catalog-key: compose-ai-preview
+      publish-live-bundle: true
+      embed-deps: true
+      split-per-preview: true
+      # Keep the complete live bundle, but avoid duplicating its dependency graph into
+      # every per-preview archive (the Android catalog otherwise exhausts the runner heap).
+      split-mode: view-only
+      # compose-ai-tools also discovers manifest activities. The Hilt launchers cannot
+      # run under its deliberately inert preview Application, while every catalogued
+      # authored @Preview renders successfully; allow those synthetic misses for now.
+      allow-incomplete: true
+      commit-user-name: Yuri Schimke
+      commit-user-email: yuri@schimke.ee
+      timeout-minutes: 90

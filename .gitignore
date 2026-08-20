@@ -375,3 +375,10 @@ merged_results.sarif
 !.claude/skills
 !.claude/settings.json
 .cursor
+
+## Fork: mock Firebase config committed so preview/catalog CI can build the full flavor
+!app/google-services.json
+!wear/google-services.json
+
+## Fork: compose-ai-preview render history
+.compose-preview-history/
