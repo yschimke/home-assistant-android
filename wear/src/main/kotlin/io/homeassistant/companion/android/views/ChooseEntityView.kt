@@ -32,6 +32,7 @@ import io.homeassistant.companion.android.theme.WearAppTheme
 import io.homeassistant.companion.android.theme.getFilledTonalButtonColors
 import io.homeassistant.companion.android.util.playPreviewEntityScene1
 import io.homeassistant.companion.android.util.playPreviewEntityScene2
+import io.homeassistant.companion.android.util.previewEntity1
 import io.homeassistant.companion.android.util.stringForDomain
 import java.util.Locale
 
@@ -180,4 +181,15 @@ fun ChooseEntityViewWithDataPreview() {
         onEntitySelected = {},
         allowNone = false,
     )
+}
+
+@Preview(device = "id:wearos_large_round", showSystemUi = true)
+@Composable
+private fun PreviewChooseEntityChip() {
+    WearAppTheme {
+        ChooseEntityChip(
+            entity = EntityDisplayWithoutContext(previewEntity1),
+            onEntitySelected = {},
+        )
+    }
 }

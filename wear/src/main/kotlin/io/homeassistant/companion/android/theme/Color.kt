@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.wear.compose.material3.ButtonDefaults
 import androidx.wear.compose.material3.ColorScheme
+import androidx.wear.compose.material3.MaterialTheme
 import androidx.wear.compose.material3.SliderDefaults
 import androidx.wear.compose.material3.SwitchButtonDefaults
 
@@ -51,24 +52,24 @@ internal val wearColorScheme: ColorScheme = ColorScheme(
 
 @Composable
 fun getSwitchButtonColors() = SwitchButtonDefaults.switchButtonColors(
-    checkedThumbColor = wearColorScheme.tertiary,
-    checkedTrackColor = wearColorScheme.onTertiary,
-    checkedTrackBorderColor = wearColorScheme.tertiary,
-    checkedThumbIconColor = wearColorScheme.tertiary,
-    checkedContainerColor = wearColorScheme.surfaceContainerHigh,
-    uncheckedContainerColor = wearColorScheme.surfaceContainerLow,
+    checkedThumbColor = MaterialTheme.colorScheme.tertiary,
+    checkedTrackColor = MaterialTheme.colorScheme.onTertiary,
+    checkedTrackBorderColor = MaterialTheme.colorScheme.tertiary,
+    checkedThumbIconColor = MaterialTheme.colorScheme.tertiary,
+    checkedContainerColor = MaterialTheme.colorScheme.surfaceContainerHigh,
+    uncheckedContainerColor = MaterialTheme.colorScheme.surfaceContainerLow,
 )
 
 @Composable
 fun getFilledTonalButtonColors() = ButtonDefaults.filledTonalButtonColors(
-    containerColor = wearColorScheme.surfaceContainerLow,
-    disabledContainerColor = wearColorScheme.surfaceContainerLow.copy(alpha = 0.38f),
+    containerColor = MaterialTheme.colorScheme.surfaceContainerLow,
+    disabledContainerColor = MaterialTheme.colorScheme.surfaceContainerLow.copy(alpha = 0.38f),
 )
 
 @Composable
-fun getPrimaryButtonColors() = ButtonDefaults.buttonColors(containerColor = wearColorScheme.primary)
+fun getPrimaryButtonColors() = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
 
 @Composable
 fun getInlineSliderDefaultColors() = SliderDefaults.sliderColors(
-    containerColor = wearColorScheme.surfaceContainerLow,
+    containerColor = MaterialTheme.colorScheme.surfaceContainerLow,
 )

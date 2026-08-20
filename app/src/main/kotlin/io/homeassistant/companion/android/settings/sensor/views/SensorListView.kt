@@ -13,6 +13,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import com.mikepenz.iconics.IconicsDrawable
 import io.homeassistant.companion.android.common.R as commonR
+import io.homeassistant.companion.android.common.sensors.BatterySensorManager
 import io.homeassistant.companion.android.common.sensors.SensorManager
 import io.homeassistant.companion.android.common.sensors.id
 import io.homeassistant.companion.android.database.sensor.Sensor
@@ -20,12 +21,33 @@ import io.homeassistant.companion.android.settings.sensor.SensorSettingsViewMode
 import io.homeassistant.companion.android.settings.views.SettingsRow
 import io.homeassistant.companion.android.settings.views.SettingsSubheader
 import io.homeassistant.companion.android.settings.views.SettingsSubheaderDefaults
+import io.homeassistant.companion.android.util.PreviewSensorManager
+import io.homeassistant.companion.android.util.compose.HomeAssistantPreviewTheme
+import io.homeassistant.companion.android.util.compose.ScreenThemeCatalog
 import io.homeassistant.companion.android.util.safeBottomPaddingValues
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun SensorListView(
     viewModel: SensorSettingsViewModel,
+    onSensorClicked: (String) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    SensorListContent(
+        allSensors = viewModel.allSensors,
+        sensors = viewModel.sensors,
+        onSensorClicked = onSensorClicked,
+        modifier = modifier,
+    )
+}
+
+/**
+ * Stateless body of the sensor list, so it can be rendered by @Preview without a ViewModel.
+ */
+@OptIn(ExperimentalFoundationApi::class)
+@Composable
+fun SensorListContent(
+    allSensors: Map<SensorManager, List<SensorManager.BasicSensor>>,
+    sensors: Map<String, Sensor>,
     onSensorClicked: (String) -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -33,7 +55,7 @@ fun SensorListView(
         modifier = modifier,
         contentPadding = safeBottomPaddingValues(applyHorizontal = false),
     ) {
-        viewModel.allSensors.filter { it.value.isNotEmpty() }.forEach { (manager, currentSensors) ->
+        allSensors.filter { it.value.isNotEmpty() }.forEach { (manager, currentSensors) ->
             stickyHeader(
                 key = manager.id(),
             ) {
@@ -53,11 +75,11 @@ fun SensorListView(
             ) { basicSensor ->
                 SensorRow(
                     basicSensor = basicSensor,
-                    dbSensor = viewModel.sensors[basicSensor.id],
+                    dbSensor = sensors[basicSensor.id],
                     onSensorClicked = onSensorClicked,
                 )
             }
-            if (currentSensors.any() && manager.id() != viewModel.allSensors.keys.last().id()) {
+            if (currentSensors.any() && manager.id() != allSensors.keys.last().id()) {
                 item {
                     Divider()
                 }
@@ -103,4 +125,32 @@ fun SensorRow(
         enabled = dbSensor?.enabled == true,
         modifier = modifier,
     ) { onSensorClicked(basicSensor.id) }
+}
+
+@ScreenThemeCatalog
+@Composable
+private fun PreviewSensorList() {
+    val basicSensors = listOf(
+        BatterySensorManager.isChargingState.copy(
+            id = "battery_level",
+            statelessIcon = "mdi:battery",
+            unitOfMeasurement = "%",
+        ),
+        BatterySensorManager.isChargingState,
+    )
+    HomeAssistantPreviewTheme {
+        SensorListContent(
+            allSensors = mapOf(PreviewSensorManager(sensors = basicSensors) to basicSensors),
+            sensors = basicSensors.associate { sensor ->
+                sensor.id to Sensor(
+                    id = sensor.id,
+                    serverId = 1,
+                    enabled = true,
+                    state = if (sensor.id == "battery_level") "82" else "Charging",
+                    icon = sensor.statelessIcon,
+                )
+            },
+            onSensorClicked = {},
+        )
+    }
 }

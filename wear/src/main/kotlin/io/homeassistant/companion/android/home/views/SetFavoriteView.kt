@@ -11,9 +11,15 @@ import androidx.wear.compose.material3.Text
 import com.mikepenz.iconics.compose.Image
 import io.homeassistant.companion.android.common.R as commonR
 import io.homeassistant.companion.android.common.data.integration.display.EntityDisplay
+import io.homeassistant.companion.android.common.data.integration.display.EntityDisplayWithoutContext
 import io.homeassistant.companion.android.theme.WearAppTheme
+import io.homeassistant.companion.android.theme.WearPreviewTheme
+import io.homeassistant.companion.android.theme.WearThemeCatalog
 import io.homeassistant.companion.android.theme.getSwitchButtonColors
 import io.homeassistant.companion.android.theme.wearColorScheme
+import io.homeassistant.companion.android.util.previewEntity1
+import io.homeassistant.companion.android.util.previewEntity2
+import io.homeassistant.companion.android.util.previewEntity3
 import io.homeassistant.companion.android.views.ExpandableListHeader
 import io.homeassistant.companion.android.views.ListHeader
 import io.homeassistant.companion.android.views.ThemeLazyColumn
@@ -90,4 +96,19 @@ private fun FavoriteToggleChip(
         },
         colors = getSwitchButtonColors(),
     )
+}
+
+@WearThemeCatalog
+@Composable
+private fun PreviewSetFavorites() {
+    val lights = listOf(EntityDisplayWithoutContext(previewEntity1))
+    val scenes = listOf(EntityDisplayWithoutContext(previewEntity2), EntityDisplayWithoutContext(previewEntity3))
+    WearPreviewTheme {
+        SetFavoritesView(
+            entitiesByDomain = mapOf("light" to lights, "scene" to scenes),
+            domainNames = mapOf("light" to "Lights", "scene" to "Scenes"),
+            favoriteEntityIds = listOf(previewEntity1.entityId),
+            onFavoriteSelected = { _, _ -> },
+        )
+    }
 }

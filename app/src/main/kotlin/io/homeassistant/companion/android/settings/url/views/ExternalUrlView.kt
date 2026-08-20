@@ -86,7 +86,7 @@ fun ExternalUrlCloudView(useCloud: Boolean, onUseCloudToggle: (Boolean) -> Unit,
     }
 }
 
-@Preview
+@Preview(showBackground = true, backgroundColor = 0xFFFFFFFF)
 @Composable
 fun PreviewExternalUrlViewCloudOn() {
     ExternalUrlView(
@@ -98,7 +98,7 @@ fun PreviewExternalUrlViewCloudOn() {
     )
 }
 
-@Preview
+@Preview(showBackground = true, backgroundColor = 0xFFFFFFFF)
 @Composable
 fun PreviewExternalUrlViewCloudOff() {
     ExternalUrlView(
@@ -110,7 +110,7 @@ fun PreviewExternalUrlViewCloudOff() {
     )
 }
 
-@Preview
+@Preview(showBackground = true, backgroundColor = 0xFFFFFFFF)
 @Composable
 fun PreviewExternalUrlViewCloudNone() {
     ExternalUrlView(

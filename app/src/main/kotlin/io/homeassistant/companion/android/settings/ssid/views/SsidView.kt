@@ -396,7 +396,7 @@ fun SsidPrioritizeInternal(prioritize: Boolean, onChanged: (Boolean) -> Unit, mo
     }
 }
 
-@Preview
+@Preview(showBackground = true, backgroundColor = 0xFFFFFFFF)
 @Composable
 private fun PreviewSsidViewEmpty() {
     SsidView(
@@ -417,7 +417,7 @@ private fun PreviewSsidViewEmpty() {
     )
 }
 
-@Preview
+@Preview(showBackground = true, backgroundColor = 0xFFFFFFFF)
 @Composable
 private fun PreviewSsidViewItems() {
     SsidView(

@@ -33,14 +33,21 @@ import com.mikepenz.iconics.compose.Image
 import com.mikepenz.iconics.typeface.library.community.material.CommunityMaterial
 import io.homeassistant.companion.android.common.R as commonR
 import io.homeassistant.companion.android.common.data.integration.display.EntityDisplay
+import io.homeassistant.companion.android.common.data.integration.display.EntityDisplayWithContext
+import io.homeassistant.companion.android.common.data.integration.display.EntityDisplayWithoutContext
 import io.homeassistant.companion.android.common.util.STATE_UNKNOWN
 import io.homeassistant.companion.android.home.MainViewModel
 import io.homeassistant.companion.android.theme.WearAppTheme
+import io.homeassistant.companion.android.theme.WearPreviewTheme
+import io.homeassistant.companion.android.theme.WearThemeCatalog
 import io.homeassistant.companion.android.theme.getFilledTonalButtonColors
 import io.homeassistant.companion.android.theme.getPrimaryButtonColors
 import io.homeassistant.companion.android.theme.wearColorScheme
 import io.homeassistant.companion.android.util.getIcon
 import io.homeassistant.companion.android.util.onEntityClickedFeedback
+import io.homeassistant.companion.android.util.previewEntity1
+import io.homeassistant.companion.android.util.previewEntity2
+import io.homeassistant.companion.android.util.previewEntity3
 import io.homeassistant.companion.android.views.ExpandableListHeader
 import io.homeassistant.companion.android.views.ListHeader
 import io.homeassistant.companion.android.views.ThemeLazyColumn
@@ -331,5 +338,33 @@ fun MainView(
                 )
             }
         }
+    }
+}
+
+@WearThemeCatalog
+@Composable
+private fun PreviewMain() {
+    val displayItems = listOf(previewEntity1, previewEntity2, previewEntity3)
+        .map { EntityDisplayWithContext(EntityDisplayWithoutContext(it)) }
+        .associateBy { it.entityId }
+    WearPreviewTheme {
+        MainView(
+            uiState = MainViewModel.MainViewUiState(
+                displayItems = displayItems,
+                favoriteEntityIds = listOf(previewEntity1.entityId, previewEntity2.entityId),
+                loadingState = MainViewModel.LoadingState.READY,
+                entitiesByDomainFilteredOrder = listOf("scene"),
+                entitiesByDomainFiltered = mapOf("scene" to listOf(previewEntity3.entityId)),
+                allDisplayItemsByDomain = mapOf("scene" to listOf(displayItems.getValue(previewEntity3.entityId))),
+            ),
+            entityClassification = MainViewModel.EntityClassification(),
+            onEntityClicked = { _, _ -> },
+            onEntityLongClicked = {},
+            onRetryLoadEntitiesClicked = {},
+            onSettingsClicked = {},
+            onNavigationClicked = { _, _, _ -> },
+            isHapticEnabled = false,
+            isToastEnabled = false,
+        )
     }
 }

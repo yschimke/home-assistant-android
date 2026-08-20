@@ -125,7 +125,7 @@ fun SettingWearLandingView(
     }
 }
 
-@Preview
+@Preview(showSystemUi = true, showBackground = true, backgroundColor = 0xFFFFFFFF)
 @Composable
 private fun PreviewSettingWearLandingView() {
     SettingWearLandingView(

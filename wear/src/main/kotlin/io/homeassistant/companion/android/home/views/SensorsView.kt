@@ -48,7 +48,7 @@ fun getSensorManagers(allManagers: List<SensorManager>): List<SensorManager> {
     return allManagers.sortedBy { context.getString(it.name) }.filter { it.hasSensor() }
 }
 
-@Preview(device = WearDevices.LARGE_ROUND)
+@Preview(device = WearDevices.LARGE_ROUND, showBackground = true, backgroundColor = 0xFF000000)
 @Composable
 private fun PreviewSensorsView() {
     CompositionLocalProvider {

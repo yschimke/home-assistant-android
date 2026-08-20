@@ -171,7 +171,7 @@ fun MainConfigView(
     }
 }
 
-@Preview(device = WearDevices.LARGE_ROUND)
+@Preview(device = WearDevices.LARGE_ROUND, showBackground = true, backgroundColor = 0xFF000000)
 @Composable
 fun PreviewMainConfigView() {
     MainConfigView(

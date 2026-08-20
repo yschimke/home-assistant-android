@@ -102,7 +102,7 @@ fun RefreshIntervalPickerView(currentInterval: Int, onSelectInterval: (Int) -> U
     }
 }
 
-@Preview(device = WearDevices.LARGE_ROUND)
+@Preview(device = WearDevices.LARGE_ROUND, showBackground = true, backgroundColor = 0xFF000000)
 @Composable
 private fun PreviewRefreshIntervalPickerView() {
     CompositionLocalProvider {

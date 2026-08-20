@@ -87,7 +87,7 @@ fun EntityViewList(
     }
 }
 
-@Preview(device = WearDevices.LARGE_ROUND)
+@Preview(device = WearDevices.LARGE_ROUND, showBackground = true, backgroundColor = 0xFF000000)
 @Composable
 private fun PreviewEntityListView() {
     EntityViewList(
@@ -104,7 +104,7 @@ private fun PreviewEntityListView() {
     )
 }
 
-@Preview(device = WearDevices.LARGE_ROUND)
+@Preview(device = WearDevices.LARGE_ROUND, showBackground = true, backgroundColor = 0xFF000000)
 @Composable
 private fun PreviewEntityListScenes() {
     EntityViewList(
@@ -125,7 +125,7 @@ private fun PreviewEntityListScenes() {
     )
 }
 
-@Preview(device = WearDevices.LARGE_ROUND)
+@Preview(device = WearDevices.LARGE_ROUND, showBackground = true, backgroundColor = 0xFF000000)
 @Composable
 private fun PreviewEntityListEmpty() {
     EntityViewList(

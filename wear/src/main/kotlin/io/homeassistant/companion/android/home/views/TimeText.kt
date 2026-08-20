@@ -8,16 +8,20 @@ import androidx.wear.compose.foundation.lazy.ScalingLazyListState
 import androidx.wear.compose.foundation.lazy.rememberScalingLazyListState
 import androidx.wear.compose.material.TimeText
 import androidx.wear.compose.material.scrollAway
+import androidx.wear.compose.material3.MaterialTheme
 import androidx.wear.tooling.preview.devices.WearDevices
 
 @Composable
 fun TimeText(scalingLazyListState: ScalingLazyListState) {
     TimeText(
         modifier = Modifier.scrollAway(scrollState = scalingLazyListState),
+        timeTextStyle = androidx.wear.compose.material.MaterialTheme.typography.caption1.copy(
+            color = MaterialTheme.colorScheme.onBackground,
+        ),
     )
 }
 
-@Preview(device = WearDevices.LARGE_ROUND)
+@Preview(device = WearDevices.LARGE_ROUND, showBackground = true, backgroundColor = 0xFF000000)
 @Composable
 private fun PreviewTimeText() {
     CompositionLocalProvider {
